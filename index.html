@@ -2,319 +2,247 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Zokirov Education</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:Arial,sans-serif;
-    background:#f4f7fb;
-    color:#172033;
-    transition:.3s;
-}
-
-body.dark{
-    background:#101827;
-    color:#fff;
+  font-family:Arial,sans-serif;
+  background:#f3f6fb;
+  color:#172033;
+  min-height:100vh;
 }
 
 header{
-    background:linear-gradient(135deg,#1677ff,#6846e8);
-    color:white;
-    padding:25px 15px;
-    text-align:center;
+  background:linear-gradient(135deg,#3157d5,#673ab7);
+  color:white;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 4px 15px #0002;
 }
 
-header h1{
-    font-size:32px;
-}
-
-header p{
-    margin-top:8px;
-}
-
-nav{
-    margin-top:18px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:7px;
-}
-
-nav button{
-    border:0;
-    padding:10px 14px;
-    border-radius:10px;
-    cursor:pointer;
-    background:white;
-    color:#1677ff;
-    font-weight:bold;
-}
+header h1{font-size:30px}
+header p{margin-top:7px;opacity:.9}
 
 .container{
-    width:92%;
-    max-width:1100px;
-    margin:30px auto;
-}
-
-.page{
-    display:none;
-}
-
-.page.active{
-    display:block;
+  max-width:1100px;
+  margin:25px auto;
+  padding:0 15px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    margin-bottom:20px;
-    box-shadow:0 5px 20px #0002;
+  background:white;
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:20px;
+  box-shadow:0 5px 20px #0000000d;
 }
 
-.dark .card{
-    background:#1d293b;
-}
-
-.center{
-    text-align:center;
-}
-
-.login-card{
-    max-width:500px;
-    margin:50px auto;
-}
-
-input{
-    width:100%;
-    padding:14px;
-    margin:8px 0;
-    border:2px solid #ddd;
-    border-radius:10px;
-    font-size:16px;
-    outline:none;
-}
-
-input:focus{
-    border-color:#1677ff;
-}
-
-.main{
-    border:0;
-    background:#1677ff;
-    color:white;
-    padding:13px 22px;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-    margin-top:8px;
-}
-
-.main:hover{
-    background:#095dc9;
-}
-
-.secondary{
-    border:0;
-    background:#eef3ff;
-    color:#1677ff;
-    padding:12px 20px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-.dark .secondary{
-    background:#2b3950;
-    color:white;
-}
-
-.tabs{
-    display:flex;
-    gap:8px;
-    margin-bottom:15px;
-}
-
-.tabs button{
-    flex:1;
-    padding:12px;
-    border:0;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.tabs .active-tab{
-    background:#1677ff;
-    color:white;
-}
+h2{margin-bottom:18px}
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
 }
 
-.stat{
-    text-align:center;
+.subject{
+  padding:25px 15px;
+  border-radius:16px;
+  border:2px solid #e4e8f2;
+  background:white;
+  cursor:pointer;
+  transition:.2s;
+  text-align:center;
 }
 
-.stat strong{
-    display:block;
-    font-size:34px;
-    color:#1677ff;
-    margin-bottom:8px;
+.subject:hover{
+  transform:translateY(-3px);
+  border-color:#526be0;
+  box-shadow:0 7px 20px #526be025;
 }
 
-.lesson{
-    border-left:5px solid #1677ff;
+.subject .icon{
+  font-size:38px;
+  margin-bottom:10px;
 }
 
-.lesson h3{
-    margin-bottom:10px;
+.level{
+  padding:20px;
+  border-radius:15px;
+  cursor:pointer;
+  border:2px solid #e5e8ef;
+  background:white;
+  transition:.2s;
 }
 
-.lesson p{
-    line-height:1.7;
+.level:hover{
+  transform:translateY(-3px);
+  border-color:#526be0;
 }
 
-.search{
-    margin-bottom:20px;
+.level.green{border-left:7px solid #20a45a}
+.level.yellow{border-left:7px solid #e5ad00}
+.level.orange{border-left:7px solid #f07818}
+.level.red{border-left:7px solid #d9363e}
+
+.tests{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:13px;
 }
 
-.option{
-    display:block;
-    width:100%;
-    text-align:left;
-    padding:15px;
-    margin:10px 0;
-    border:2px solid #ddd;
-    background:white;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:15px;
+.test-btn{
+  padding:18px;
+  border:none;
+  border-radius:14px;
+  background:#eef2ff;
+  color:#2946bd;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.dark .option{
-    background:#29374c;
-    color:white;
+.test-btn:hover{
+  background:#dce4ff;
 }
 
-.option:hover{
-    border-color:#1677ff;
+.back{
+  border:none;
+  background:#edf0f5;
+  padding:10px 17px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-bottom:18px;
 }
 
-.option.correct{
-    background:#b8f5c4;
-    color:#123;
-    border-color:#24a148;
+.question-number{
+  color:#64748b;
+  margin-bottom:10px;
 }
 
-.option.wrong{
-    background:#ffc4c4;
-    color:#300;
-    border-color:#d22;
+.question{
+  font-size:21px;
+  font-weight:bold;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+.answers{
+  display:grid;
+  gap:12px;
+}
+
+.answer{
+  padding:16px;
+  border:2px solid #e1e5ed;
+  border-radius:12px;
+  background:white;
+  cursor:pointer;
+  text-align:left;
+  font-size:16px;
+  transition:.15s;
+}
+
+.answer:hover{
+  border-color:#526be0;
+  background:#f5f7ff;
+}
+
+.answer.selected{
+  border-color:#526be0;
+  background:#e9edff;
+}
+
+.answer.correct{
+  background:#dff7e8;
+  border-color:#28a45b;
+}
+
+.answer.wrong{
+  background:#ffe2e2;
+  border-color:#df4141;
+}
+
+.next{
+  margin-top:20px;
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:12px;
+  background:#3157d5;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.next:disabled{
+  background:#aab4cf;
+  cursor:not-allowed;
 }
 
 .progress{
-    height:14px;
-    background:#ddd;
-    border-radius:20px;
-    overflow:hidden;
-    margin:15px 0;
+  height:9px;
+  background:#e7eaf1;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:20px;
 }
 
 .progress-bar{
-    height:100%;
-    width:0;
-    background:#1677ff;
-    transition:.3s;
+  height:100%;
+  background:#3157d5;
+  transition:.3s;
 }
 
-.rating-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px;
-    margin:8px 0;
-    border-radius:10px;
-    background:#f1f4f8;
+.result{
+  text-align:center;
 }
 
-.dark .rating-item{
-    background:#2a384d;
+.result .big{
+  font-size:55px;
+  font-weight:bold;
+  color:#3157d5;
+  margin:15px;
 }
 
-.score{
-    color:#1677ff;
-    font-weight:bold;
+.stat{
+  display:inline-block;
+  padding:15px 25px;
+  margin:7px;
+  background:#f2f4fa;
+  border-radius:12px;
 }
 
-.hidden{
-    display:none!important;
+.hidden{display:none}
+
+nav{
+  max-width:1100px;
+  margin:15px auto 0;
+  padding:0 15px;
 }
 
-.error{
-    color:#e53935;
-    margin-top:10px;
-}
-
-.success{
-    color:#159447;
-    margin-top:10px;
-}
-
-.profile-avatar{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#1677ff,#6846e8);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:40px;
-    margin:0 auto 15px;
-}
-
-.logout{
-    background:#e53935!important;
-    color:white!important;
+.navbtn{
+  border:0;
+  padding:10px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-right:7px;
+  background:#fff;
 }
 
 footer{
-    margin-top:50px;
-    padding:30px;
-    text-align:center;
-    background:#1677ff;
-    color:white;
-}
-
-.small{
-    font-size:13px;
-    opacity:.8;
+  text-align:center;
+  padding:30px;
+  color:#64748b;
 }
 
 @media(max-width:600px){
-    header h1{
-        font-size:25px;
-    }
-
-    nav button{
-        font-size:13px;
-        padding:9px 10px;
-    }
-
-    .card{
-        padding:18px;
-    }
+  header h1{font-size:24px}
+  .question{font-size:18px}
 }
 </style>
 </head>
@@ -322,1538 +250,858 @@ footer{
 <body>
 
 <header>
-
-<h1>🎓 Zokirov Education</h1>
-
-<p>Bilim ol • Test ishlang • Ball to‘plang • Rivojlaning</p>
-
-<nav id="mainNav" class="hidden">
-
-<button onclick="showPage('home')">🏠 Bosh sahifa</button>
-<button onclick="showPage('lessons')">📚 Darslar</button>
-<button onclick="showPage('tests')">📝 Testlar</button>
-<button onclick="showPage('rating')">🏆 Reyting</button>
-<button onclick="showPage('profile')">👤 Profil</button>
-<button onclick="toggleDark()">🌙</button>
-
-</nav>
-
+  <h1>🎓 Zokirov Education</h1>
+  <p>Bilimingni sinab ko‘r va reytingda yuqoriga ko‘taril!</p>
 </header>
 
+<nav>
+  <button class="navbtn" onclick="goHome()">🏠 Bosh sahifa</button>
+  <button class="navbtn" onclick="showRanking()">🏆 Reyting</button>
+</nav>
 
 <div class="container">
 
+<!-- SUBJECTS -->
+<section id="subjects" class="card">
+  <h2>📚 Fanni tanlang</h2>
 
-<!-- LOGIN -->
+  <div class="grid">
 
-<div id="authPage">
+    <div class="subject" onclick="selectSubject('matematika')">
+      <div class="icon">📐</div>
+      <h3>Matematika</h3>
+      <p>Hisoblash va mantiq</p>
+    </div>
 
-<div class="card login-card">
+    <div class="subject" onclick="selectSubject('ingliz')">
+      <div class="icon">🇬🇧</div>
+      <h3>Ingliz tili</h3>
+      <p>Grammar va vocabulary</p>
+    </div>
 
-<div class="tabs">
+    <div class="subject" onclick="selectSubject('informatika')">
+      <div class="icon">💻</div>
+      <h3>Informatika</h3>
+      <p>IT va dasturlash</p>
+    </div>
 
-<button id="loginTab"
-class="active-tab"
-onclick="switchAuth('login')">
-Kirish
-</button>
+    <div class="subject" onclick="selectSubject('tarix')">
+      <div class="icon">📜</div>
+      <h3>Tarix</h3>
+      <p>Tarixiy bilimlar</p>
+    </div>
 
-<button id="registerTab"
-onclick="switchAuth('register')">
-Ro‘yxatdan o‘tish
-</button>
+    <div class="subject" onclick="selectSubject('biologiya')">
+      <div class="icon">🧬</div>
+      <h3>Biologiya</h3>
+      <p>Tabiat va tirik organizmlar</p>
+    </div>
+
+    <div class="subject" onclick="selectSubject('kimyo')">
+      <div class="icon">⚗️</div>
+      <h3>Kimyo</h3>
+      <p>Moddalar va reaksiyalar</p>
+    </div>
+
+    <div class="subject" onclick="selectSubject('geografiya')">
+      <div class="icon">🌍</div>
+      <h3>Geografiya</h3>
+      <p>Dunyo va tabiat</p>
+    </div>
+
+    <div class="subject" onclick="selectSubject('ona-tili')">
+      <div class="icon">🇺🇿</div>
+      <h3>Ona tili</h3>
+      <p>Til va grammatika</p>
+    </div>
+
+    <div class="subject" onclick="selectSubject('mantiq')">
+      <div class="icon">🧠</div>
+      <h3>Mantiq</h3>
+      <p>Mantiqiy masalalar</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- LEVELS -->
+<section id="levels" class="card hidden">
+  <button class="back" onclick="goHome()">← Fanlarga qaytish</button>
+
+  <h2 id="levelTitle">Darajani tanlang</h2>
+
+  <div class="grid">
+
+    <div class="level green" onclick="selectLevel('boshlangich')">
+      <h3>🟢 Boshlang‘ich</h3>
+      <p>Asosiy bilimlarni tekshirish</p>
+      <br>
+      <b>5 ball / savol</b>
+    </div>
+
+    <div class="level yellow" onclick="selectLevel('orta')">
+      <h3>🟡 O‘rta</h3>
+      <p>O‘rtacha murakkablikdagi savollar</p>
+      <br>
+      <b>10 ball / savol</b>
+    </div>
+
+    <div class="level orange" onclick="selectLevel('yuqori')">
+      <h3>🟠 Yuqori</h3>
+      <p>Chuqurroq bilim talab qiladi</p>
+      <br>
+      <b>15 ball / savol</b>
+    </div>
+
+    <div class="level red" onclick="selectLevel('qiyin')">
+      <h3>🔴 Qiyin</h3>
+      <p>Murakkab va fikrlash talab qiladigan savollar</p>
+      <br>
+      <b>20 ball / savol</b>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TESTS -->
+<section id="tests" class="card hidden">
+
+  <button class="back" onclick="backToLevels()">← Darajaga qaytish</button>
+
+  <h2 id="testsTitle">Testni tanlang</h2>
+
+  <p style="margin-bottom:18px;color:#64748b">
+    Har bir testda 20 ta savol mavjud.
+  </p>
+
+  <div id="testList" class="tests"></div>
+
+</section>
+
+
+<!-- QUIZ -->
+<section id="quiz" class="card hidden">
+
+  <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+    <b id="quizTitle"></b>
+    <span id="counter"></span>
+  </div>
+
+  <div class="progress">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+  <div class="question-number" id="questionNumber"></div>
+
+  <div class="question" id="questionText"></div>
+
+  <div id="answers" class="answers"></div>
+
+  <button id="nextBtn" class="next" disabled onclick="nextQuestion()">
+    Keyingi savol →
+  </button>
+
+</section>
+
+
+<!-- RESULT -->
+<section id="result" class="card hidden">
+
+  <div class="result">
+
+    <h2>🎉 Test yakunlandi!</h2>
+
+    <div class="big" id="resultScore">0/20</div>
+
+    <div>
+      <div class="stat">
+        ✅ To‘g‘ri: <b id="correctCount">0</b>
+      </div>
+
+      <div class="stat">
+        ❌ Xato: <b id="wrongCount">0</b>
+      </div>
+
+      <div class="stat">
+        ⭐ Ball: <b id="earnedPoints">0</b>
+      </div>
+    </div>
+
+    <br>
+
+    <button class="next" onclick="goHome()">
+      🏠 Bosh sahifaga qaytish
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- RANKING -->
+<section id="ranking" class="card hidden">
+
+  <button class="back" onclick="goHome()">← Bosh sahifa</button>
+
+  <h2>🏆 Reyting</h2>
+
+  <div id="rankingList"></div>
+
+</section>
 
 </div>
-
-
-<!-- LOGIN FORM -->
-
-<div id="loginForm">
-
-<h2>🔐 Hisobga kirish</h2>
-
-<p style="margin:10px 0 15px">
-Email va parolingizni kiriting.
-</p>
-
-<input
-id="loginEmail"
-type="email"
-placeholder="Email"
->
-
-<input
-id="loginPassword"
-type="password"
-placeholder="Parol"
->
-
-<button class="main" onclick="loginUser()">
-🚀 Kirish
-</button>
-
-<p id="loginMessage" class="error"></p>
-
-</div>
-
-
-<!-- REGISTER FORM -->
-
-<div id="registerForm" class="hidden">
-
-<h2>🎓 Yangi hisob yaratish</h2>
-
-<p style="margin:10px 0 15px">
-Username bir marta tanlanadi va keyinchalik o‘zgartirilmaydi.
-</p>
-
-<input
-id="registerUsername"
-placeholder="Username (3-20 belgi)"
-maxlength="20"
->
-
-<input
-id="registerEmail"
-type="email"
-placeholder="Email"
->
-
-<input
-id="registerPassword"
-type="password"
-placeholder="Parol (kamida 6 belgi)"
->
-
-<button class="main" onclick="registerUser()">
-✨ Hisob yaratish
-</button>
-
-<p id="registerMessage" class="error"></p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- HOME -->
-
-<div id="home" class="page">
-
-<div class="card center">
-
-<h2 id="welcomeText">
-👋 Zokirov Education'ga xush kelibsiz!
-</h2>
-
-<p style="margin:15px 0">
-Bugun yangi bilim olish uchun ajoyib kun! 📚
-</p>
-
-<button class="main"
-onclick="showPage('lessons')">
-📚 Darslarni boshlash
-</button>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card stat">
-<strong>📚</strong>
-Darsliklar
-</div>
-
-<div class="card stat">
-<strong>📝</strong>
-Testlar
-</div>
-
-<div class="card stat">
-<strong id="homeScore">0</strong>
-Ball
-</div>
-
-<div class="card stat">
-<strong id="homeLevel">1</strong>
-Daraja
-</div>
-
-</div>
-
-</div>
-
-
-<!-- LESSONS -->
-
-<div id="lessons" class="page">
-
-<div class="card">
-
-<h2>📚 Darsliklar</h2>
-
-<input
-class="search"
-id="lessonSearch"
-placeholder="🔎 Dars qidirish..."
-oninput="searchLessons()"
->
-
-</div>
-
-
-<div id="lessonList">
-
-<div class="card lesson"
-data-name="matematika sonlar">
-
-<h3>📐 Matematika — Sonlar</h3>
-
-<p>
-Natural sonlar, qo‘shish, ayirish,
-ko‘paytirish va bo‘lish amallarini o‘rganamiz.
-</p>
-
-<br>
-
-<b>Misol:</b>
-
-<p>5 × 6 = 30</p>
-
-</div>
-
-
-<div class="card lesson"
-data-name="ingliz tili english salomlashish">
-
-<h3>🇬🇧 Ingliz tili — Salomlashish</h3>
-
-<p>
-Ingliz tilida salomlashish uchun
-Hello yoki Hi so‘zlaridan foydalaniladi.
-</p>
-
-<br>
-
-<b>Hello = Salom</b>
-
-</div>
-
-
-<div class="card lesson"
-data-name="dasturlash html">
-
-<h3>💻 Dasturlash — HTML</h3>
-
-<p>
-HTML web-sahifaning tuzilishini yaratish
-uchun ishlatiladigan belgilash tilidir.
-</p>
-
-<br>
-
-<code>&lt;h1&gt;Salom!&lt;/h1&gt;</code>
-
-</div>
-
-
-<div class="card lesson"
-data-name="css dizayn">
-
-<h3>🎨 Dasturlash — CSS</h3>
-
-<p>
-CSS web-sahifaning ranglari, o‘lchamlari,
-joylashuvi va dizaynini boshqaradi.
-</p>
-
-</div>
-
-
-<div class="card lesson"
-data-name="fizika tezlik">
-
-<h3>🔬 Fizika — Tezlik</h3>
-
-<p>
-Tezlik jismning ma'lum vaqt ichida
-bosib o‘tgan masofasini bildiradi.
-</p>
-
-<br>
-
-<b>Formula:</b>
-
-<p>v = s / t</p>
-
-</div>
-
-
-<div class="card lesson"
-data-name="ona tili so'z">
-
-<h3>📖 Ona tili — So‘z turkumlari</h3>
-
-<p>
-Ot, sifat, son, olmosh va fe'l kabi
-so‘z turkumlarini o‘rganamiz.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- TEST -->
-
-<div id="tests" class="page">
-
-<div class="card">
-
-<h2>📝 Bilim testi</h2>
-
-<p id="questionNumber">1 / 10</p>
-
-<div class="progress">
-
-<div
-class="progress-bar"
-id="progressBar">
-</div>
-
-</div>
-
-<h3
-id="question"
-style="margin:20px 0">
-</h3>
-
-<div id="options"></div>
-
-<button
-class="main"
-id="nextButton"
-onclick="nextQuestion()">
-Keyingi →
-</button>
-
-</div>
-
-
-<div
-id="testResult"
-class="card center hidden">
-
-<h2>🎉 Test tugadi!</h2>
-
-<h3
-id="resultText"
-style="margin:15px 0">
-</h3>
-
-<p id="resultScore"></p>
-
-<button
-class="main"
-onclick="startTest()">
-🔄 Qayta ishlash
-</button>
-
-</div>
-
-</div>
-
-
-<!-- RATING -->
-
-<div id="rating" class="page">
-
-<div class="card">
-
-<h2>🏆 O‘quvchilar reytingi</h2>
-
-<p style="margin:10px 0 20px">
-Firebase orqali saqlanadigan umumiy reyting.
-</p>
-
-<div id="ratingList">
-Yuklanmoqda...
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PROFILE -->
-
-<div id="profile" class="page">
-
-<div class="card center">
-
-<div class="profile-avatar">
-👤
-</div>
-
-<h2 id="profileName">
-Foydalanuvchi
-</h2>
-
-<p
-id="profileEmail"
-class="small">
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card stat">
-
-<strong id="profileScore">
-0
-</strong>
-
-Umumiy ball
-
-</div>
-
-
-<div class="card stat">
-
-<strong id="profileTests">
-0
-</strong>
-
-Testlar
-
-</div>
-
-
-<div class="card stat">
-
-<strong id="profileCorrect">
-0
-</strong>
-
-To‘g‘ri javoblar
-
-</div>
-
-
-<div class="card stat">
-
-<strong id="profileLevel">
-1
-</strong>
-
-Daraja
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<h3>🔒 Username</h3>
-
-<p style="margin:10px 0">
-Username o‘zgartirilmaydi.
-</p>
-
-<input
-id="fixedUsername"
-disabled
->
-
-<button
-class="main logout"
-onclick="logoutUser()">
-🚪 Hisobdan chiqish
-</button>
-
-</div>
-
-</div>
-
-</div>
-
 
 <footer>
-
-<h3>🎓 Zokirov Education</h3>
-
-<p style="margin-top:8px">
-Bilim — kelajak poydevori!
-</p>
-
+  © 2026 Zokirov Education
 </footer>
 
 
-<!-- FIREBASE -->
+<script>
 
-<script type="module">
+/*
+==================================================
+  TEST TIZIMI
+==================================================
+*/
 
-import {
-initializeApp
-} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+const subjects = {
+  matematika: "📐 Matematika",
+  ingliz: "🇬🇧 Ingliz tili",
+  informatika: "💻 Informatika",
+  tarix: "📜 Tarix",
+  biologiya: "🧬 Biologiya",
+  kimyo: "⚗️ Kimyo",
+  geografiya: "🌍 Geografiya",
+  "ona-tili": "🇺🇿 Ona tili",
+  mantiq: "🧠 Mantiq"
+};
 
-import {
-getAuth,
-createUserWithEmailAndPassword,
-signInWithEmailAndPassword,
-onAuthStateChanged,
-signOut
-} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
-
-import {
-getFirestore,
-doc,
-getDoc,
-setDoc,
-collection,
-query,
-orderBy,
-limit,
-getDocs,
-runTransaction,
-increment
-} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
-
-
-const firebaseConfig = {
-
-apiKey:
-"AIzaSyAdHgnxrD0cGrX9FVj1NKx3MwMWc46UXpg",
-
-authDomain:
-"zokirov-education.firebaseapp.com",
-
-projectId:
-"zokirov-education",
-
-storageBucket:
-"zokirov-education.firebasestorage.app",
-
-messagingSenderId:
-"315505802643",
-
-appId:
-"1:315505802643:web:74e44450fbe5e351637c66",
-
-measurementId:
-"G-WW2XZTJMME"
-
+const levels = {
+  boshlangich: {
+    name:"🟢 Boshlang‘ich",
+    points:5
+  },
+  orta:{
+    name:"🟡 O‘rta",
+    points:10
+  },
+  yuqori:{
+    name:"🟠 Yuqori",
+    points:15
+  },
+  qiyin:{
+    name:"🔴 Qiyin",
+    points:20
+  }
 };
 
 
-const app = initializeApp(firebaseConfig);
+/*
+==================================================
+  SAVOLLAR BAZASI
+==================================================
+
+  Bu yerga juda ko‘p savollar qo‘shish mumkin.
+
+  Har bir savol:
+
+  {
+    q: "Savol",
+    a: ["A","B","C","D"],
+    correct: 0
+  }
+
+  correct:
+  0 = A
+  1 = B
+  2 = C
+  3 = D
+*/
+
+const questionBank = {
+
+matematika: {
+
+boshlangich: [
+
+{q:"5 + 7 nechaga teng?",a:["10","11","12","13"],correct:2},
+{q:"9 × 3 nechaga teng?",a:["18","27","21","30"],correct:1},
+{q:"100 ning yarmi nechaga teng?",a:["25","40","50","75"],correct:2},
+{q:"15 - 8 nechaga teng?",a:["5","6","7","8"],correct:2},
+{q:"4 × 5 nechaga teng?",a:["15","20","25","10"],correct:1},
+{q:"81 ning kvadrat ildizi?",a:["7","8","9","10"],correct:2},
+{q:"20 + 30 nechaga teng?",a:["40","50","60","70"],correct:1},
+{q:"50 - 25 nechaga teng?",a:["15","20","25","30"],correct:2},
+{q:"6 × 6 nechaga teng?",a:["30","36","42","48"],correct:1},
+{q:"72 ÷ 8 nechaga teng?",a:["7","8","9","10"],correct:2},
+{q:"1 metr necha santimetr?",a:["10","50","100","1000"],correct:2},
+{q:"3² nechaga teng?",a:["6","8","9","12"],correct:2},
+{q:"10% of 100?",a:["1","5","10","20"],correct:2},
+{q:"25 + 25?",a:["40","45","50","55"],correct:2},
+{q:"100 ÷ 10?",a:["5","10","20","25"],correct:1},
+{q:"7 × 8?",a:["54","56","58","64"],correct:1},
+{q:"90 - 45?",a:["35","40","45","50"],correct:2},
+{q:"12 + 18?",a:["20","25","30","35"],correct:2},
+{q:"5²?",a:["10","20","25","30"],correct:2},
+{q:"64 ÷ 8?",a:["6","7","8","9"],correct:2}
 
-const auth = getAuth(app);
-
-const db = getFirestore(app);
-
-
-let currentUser = null;
-
-let currentProfile = null;
-
-
-/* =========================
-AUTH TAB
-========================= */
-
-window.switchAuth = function(type){
-
-const loginForm =
-document.getElementById("loginForm");
-
-const registerForm =
-document.getElementById("registerForm");
-
-const loginTab =
-document.getElementById("loginTab");
-
-const registerTab =
-document.getElementById("registerTab");
-
-
-if(type === "login"){
-
-loginForm.classList.remove("hidden");
-registerForm.classList.add("hidden");
-
-loginTab.classList.add("active-tab");
-registerTab.classList.remove("active-tab");
-
-}else{
-
-loginForm.classList.add("hidden");
-registerForm.classList.remove("hidden");
-
-loginTab.classList.remove("active-tab");
-registerTab.classList.add("active-tab");
-
-}
-
-};
-
-
-/* =========================
-REGISTER
-========================= */
-
-window.registerUser = async function(){
-
-const username =
-document
-.getElementById("registerUsername")
-.value.trim();
-
-const email =
-document
-.getElementById("registerEmail")
-.value.trim();
-
-const password =
-document
-.getElementById("registerPassword")
-.value;
-
-const message =
-document.getElementById("registerMessage");
-
-
-message.className="error";
-
-const normalized =
-username.toLowerCase();
-
-
-if(!/^[a-zA-Z0-9_]{3,20}$/.test(username)){
-
-message.innerText =
-"Username 3-20 ta harf, raqam yoki _ dan iborat bo‘lishi kerak.";
-
-return;
-
-}
-
-if(!email){
-
-message.innerText =
-"Email kiriting.";
-
-return;
-
-}
-
-if(password.length < 6){
-
-message.innerText =
-"Parol kamida 6 belgidan iborat bo‘lishi kerak.";
-
-return;
-
-}
-
-
-message.innerText =
-"⏳ Hisob yaratilmoqda...";
-
-
-try{
-
-const usernameRef =
-doc(db,"usernames",normalized);
-
-
-const usernameExists =
-await getDoc(usernameRef);
-
-
-if(usernameExists.exists()){
-
-message.innerText =
-"❌ Bu username allaqachon olingan.";
-
-return;
-
-}
-
-
-const credential =
-await createUserWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-
-const uid =
-credential.user.uid;
-
-
-await runTransaction(db,async(transaction)=>{
-
-const check =
-await transaction.get(usernameRef);
-
-if(check.exists()){
-
-throw new Error(
-"USERNAME_TAKEN"
-);
-
-}
-
-
-transaction.set(
-usernameRef,
-{
-uid:uid,
-username:username
-}
-);
-
-
-transaction.set(
-doc(db,"users",uid),
-{
-uid:uid,
-username:username,
-usernameNormalized:normalized,
-email:email,
-score:0,
-tests:0,
-correctAnswers:0,
-createdAt:new Date().toISOString()
-}
-);
-
-});
-
-
-message.className="success";
-
-message.innerText =
-"✅ Hisob yaratildi!";
-
-
-}catch(error){
-
-console.error(error);
-
-if(error.message === "USERNAME_TAKEN"){
-
-message.innerText =
-"❌ Bu username allaqachon olingan.";
-
-}else{
-
-message.innerText =
-"❌ " + firebaseError(error.code);
-
-}
-
-}
-
-};
-
-
-/* =========================
-LOGIN
-========================= */
-
-window.loginUser = async function(){
-
-const email =
-document.getElementById("loginEmail")
-.value.trim();
-
-const password =
-document.getElementById("loginPassword")
-.value;
-
-const message =
-document.getElementById("loginMessage");
-
-
-if(!email || !password){
-
-message.innerText =
-"Email va parolni kiriting.";
-
-return;
-
-}
-
-
-message.innerText =
-"⏳ Kirilmoqda...";
-
-
-try{
-
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-message.innerText="";
-
-}catch(error){
-
-message.innerText =
-"❌ " + firebaseError(error.code);
-
-}
-
-};
-
-
-/* =========================
-ERRORS
-========================= */
-
-function firebaseError(code){
-
-switch(code){
-
-case "auth/invalid-credential":
-return "Email yoki parol noto‘g‘ri.";
-
-case "auth/email-already-in-use":
-return "Bu email allaqachon ro‘yxatdan o‘tgan.";
-
-case "auth/invalid-email":
-return "Email noto‘g‘ri.";
-
-case "auth/weak-password":
-return "Parol juda qisqa.";
-
-default:
-return "Xatolik yuz berdi.";
-
-}
-
-}
-
-
-/* =========================
-AUTH STATE
-========================= */
-
-onAuthStateChanged(auth,async(user)=>{
-
-if(user){
-
-currentUser=user;
-
-const profileRef =
-doc(db,"users",user.uid);
-
-const snapshot =
-await getDoc(profileRef);
-
-
-if(snapshot.exists()){
-
-currentProfile =
-snapshot.data();
-
-showLoggedIn();
-
-}
-
-}else{
-
-currentUser=null;
-
-currentProfile=null;
-
-showLoggedOut();
-
-}
-
-});
-
-
-function showLoggedIn(){
-
-document
-.getElementById("authPage")
-.classList.add("hidden");
-
-document
-.getElementById("mainNav")
-.classList.remove("hidden");
-
-showPage("home");
-
-updateProfile();
-
-}
-
-
-function showLoggedOut(){
-
-document
-.getElementById("authPage")
-.classList.remove("hidden");
-
-document
-.getElementById("mainNav")
-.classList.add("hidden");
-
-document
-.querySelectorAll(".page")
-.forEach(p=>p.classList.remove("active"));
-
-}
-
-
-/* =========================
-LOGOUT
-========================= */
-
-window.logoutUser = async function(){
-
-await signOut(auth);
-
-};
-
-
-/* =========================
-PAGES
-========================= */
-
-window.showPage = function(page){
-
-document
-.querySelectorAll(".page")
-.forEach(p=>
-p.classList.remove("active")
-);
-
-const target =
-document.getElementById(page);
-
-if(target)
-target.classList.add("active");
-
-
-if(page === "tests")
-startTest();
-
-if(page === "rating")
-loadRating();
-
-updateProfile();
-
-};
-
-
-/* =========================
-PROFILE
-========================= */
-
-function updateProfile(){
-
-if(!currentProfile)
-return;
-
-
-const username =
-currentProfile.username;
-
-const score =
-Number(currentProfile.score || 0);
-
-const tests =
-Number(currentProfile.tests || 0);
-
-const correct =
-Number(currentProfile.correctAnswers || 0);
-
-const level =
-Math.floor(score / 100) + 1;
-
-
-document.getElementById("welcomeText")
-.innerText =
-"👋 Salom, " + username + "!";
-
-
-document.getElementById("homeScore")
-.innerText =
-score;
-
-
-document.getElementById("homeLevel")
-.innerText =
-level;
-
-
-document.getElementById("profileName")
-.innerText =
-username;
-
-
-document.getElementById("profileEmail")
-.innerText =
-currentProfile.email || "";
-
-
-document.getElementById("profileScore")
-.innerText =
-score;
-
-
-document.getElementById("profileTests")
-.innerText =
-tests;
-
-
-document.getElementById("profileCorrect")
-.innerText =
-correct;
-
-
-document.getElementById("profileLevel")
-.innerText =
-level;
-
-
-document.getElementById("fixedUsername")
-.value =
-username;
-
-}
-
-
-/* =========================
-LESSON SEARCH
-========================= */
-
-window.searchLessons = function(){
-
-const search =
-document
-.getElementById("lessonSearch")
-.value
-.toLowerCase();
-
-
-document
-.querySelectorAll(".lesson")
-.forEach(lesson=>{
-
-const text =
-lesson.dataset.name
-.toLowerCase();
-
-lesson.style.display =
-text.includes(search)
-? "block"
-: "none";
-
-});
-
-};
-
-
-/* =========================
-QUESTIONS
-========================= */
-
-const questions=[
-
-{
-q:"5 × 6 nechiga teng?",
-options:["25","30","35","40"],
-answer:1
-},
-
-{
-q:"12 + 8 nechiga teng?",
-options:["18","20","22","24"],
-answer:1
-},
-
-{
-q:"100 - 45 nechiga teng?",
-options:["45","50","55","65"],
-answer:2
-},
-
-{
-q:"9 × 9 nechiga teng?",
-options:["72","81","90","99"],
-answer:1
-},
-
-{
-q:"HTML nima uchun ishlatiladi?",
-options:[
-"Web sahifa yaratish",
-"Video montaj",
-"Rasm chizish",
-"Musiqa yozish"
 ],
-answer:0
-},
 
-{
-q:"Hello so‘zining ma'nosi nima?",
-options:[
-"Rahmat",
-"Salom",
-"Xayr",
-"Kitob"
+orta: [
+
+{q:"2x + 6 = 14. x nechaga teng?",a:["2","3","4","5"],correct:2},
+{q:"15 ning 20% i nechaga teng?",a:["2","3","4","5"],correct:2},
+{q:"12² nechaga teng?",a:["124","144","154","164"],correct:1},
+{q:"3x = 27. x = ?",a:["6","7","8","9"],correct:3},
+{q:"144 ning ildizi?",a:["10","11","12","13"],correct:2},
+{q:"1/2 + 1/4 = ?",a:["1/4","1/2","3/4","1"],correct:2},
+{q:"5³ nechaga teng?",a:["25","75","125","150"],correct:2},
+{q:"20 ning 25% i?",a:["4","5","6","8"],correct:1},
+{q:"7² + 3² = ?",a:["49","52","58","64"],correct:2},
+{q:"0.5 × 10 = ?",a:["0.5","5","10","50"],correct:1},
+{q:"2/3 + 1/3 = ?",a:["1/3","2/3","1","4/3"],correct:2},
+{q:"18 ÷ 0.5 = ?",a:["9","18","36","40"],correct:2},
+{q:"x - 12 = 20. x?",a:["28","30","32","34"],correct:2},
+{q:"25² nechaga teng?",a:["525","625","725","825"],correct:1},
+{q:"3/4 ning 20 ga ko‘paytmasi?",a:["10","12","15","18"],correct:2},
+{q:"10³?",a:["100","500","1000","10000"],correct:2},
+{q:"45 ning 1/5 qismi?",a:["5","9","10","15"],correct:1},
+{q:"2.5 + 3.5?",a:["5","6","7","8"],correct:1},
+{q:"9² - 5²?",a:["46","52","56","60"],correct:2},
+{q:"80 ning 75% i?",a:["50","60","65","70"],correct:1}
+
 ],
-answer:1
-},
 
-{
-q:"Tezlik formulasi qaysi?",
-options:[
-"v = s / t",
-"v = s × t",
-"v = t / s",
-"v = s + t"
+yuqori: [
+
+{q:"x² - 9 = 0 tenglamaning musbat ildizi?",a:["1","2","3","9"],correct:2},
+{q:"2x² = 18. x ning musbat qiymati?",a:["2","3","4","9"],correct:1},
+{q:"(x+3)(x-3) ifodasi?",a:["x²+9","x²-9","x²+6x","x²-6x"],correct:1},
+{q:"log₂(8) nechaga teng?",a:["2","3","4","8"],correct:1},
+{q:"3x - 7 = 2x + 5. x?",a:["10","11","12","13"],correct:2},
+{q:"2⁵ × 2² = ?",a:["32","64","128","256"],correct:2},
+{q:"√50 soddalashtirilsa?",a:["2√5","5√2","10√5","25√2"],correct:1},
+{q:"x² - 5x + 6 = 0 ildizlar yig‘indisi?",a:["3","5","6","-5"],correct:1},
+{q:"sin 90°?",a:["0","1/2","1","√2"],correct:2},
+{q:"cos 0°?",a:["0","1/2","1","-1"],correct:2},
+{q:"4! nechaga teng?",a:["12","16","24","32"],correct:2},
+{q:"2x + 3y = 12. Bu qanday tenglama?",a:["Chiziqli","Kvadrat","Kubik","Eksponensial"],correct:0},
+{q:"(a+b)² formulasi?",a:["a²+b²","a²+2ab+b²","a²-ab+b²","2a+2b"],correct:1},
+{q:"5! / 3! nechaga teng?",a:["10","15","20","30"],correct:2},
+{q:"2x = 1/8. x?",a:["1/2","1/4","1/8","1/16"],correct:3},
+{q:"3⁴?",a:["27","54","81","108"],correct:2},
+{q:"f(x)=2x+1, f(4)=?",a:["7","8","9","10"],correct:2},
+{q:"|−15|?",a:["-15","0","15","30"],correct:2},
+{q:"√81 + √16?",a:["11","12","13","14"],correct:2},
+{q:"2/5 ÷ 4/5 = ?",a:["1/2","2/5","4/5","1"],correct:0}
+
 ],
-answer:0
+
+qiyin: [
+
+{q:"x²−7x+12=0 tenglamaning ildizlari?",a:["2 va 5","3 va 4","1 va 12","6 va 2"],correct:1},
+{q:"log₃(81)=?",a:["3","4","5","6"],correct:1},
+{q:"2ˣ=32 bo‘lsa x?",a:["4","5","6","8"],correct:1},
+{q:"x³−8=0 tenglamaning haqiqiy ildizi?",a:["1","2","3","4"],correct:1},
+{q:"∫2x dx?",a:["x²+C","2x²+C","x+C","2x+C"],correct:0},
+{q:"lim(x→0) sin(x)/x?",a:["0","1","∞","−1"],correct:1},
+{q:"d/dx(x³)=?",a:["x²","2x²","3x²","3x"],correct:2},
+{q:"det [[1,2],[3,4]]?",a:["-2","2","4","10"],correct:0},
+{q:"2ˣ = 1/16 bo‘lsa x?",a:["-4","-2","2","4"],correct:0},
+{q:"x²+y²=25 aylananing radiusi?",a:["4","5","10","25"],correct:1},
+{q:"arcsin(1)=?",a:["0°","45°","90°","180°"],correct:2},
+{q:"3⁵ / 3² = ?",a:["3","9","27","81"],correct:2},
+{q:"x²−4x+4 ifodasi?",a:["(x−2)²","(x+2)²","(x−4)²","x²−4"],correct:0},
+{q:"1+2+...+100 yig‘indisi?",a:["5000","5050","5100","5150"],correct:1},
+{q:"P(5,2) nechaga teng?",a:["10","15","20","25"],correct:2},
+{q:"C(5,2) nechaga teng?",a:["5","10","15","20"],correct:1},
+{q:"√2 × √8 = ?",a:["2","4","6","8"],correct:1},
+{q:"x + 1/x = 3 bo‘lsa x² + 1/x²?",a:["5","7","9","11"],correct:1},
+{q:"tan 45°?",a:["0","1","√2","2"],correct:1},
+{q:"e⁰?",a:["0","1","e","∞"],correct:1}
+
+]
+
 },
 
-{
-q:"2 + 2 × 2 nechiga teng?",
-options:["6","8","4","10"],
-answer:0
-},
 
-{
-q:"CSS asosan nima uchun ishlatiladi?",
-options:[
-"Web sahifani bezash",
-"Hisoblash",
-"Video olish",
-"Fayl o‘chirish"
+ingliz: {
+
+boshlangich:[
+{q:"Choose: I ___ a student.",a:["am","is","are","be"],correct:0},
+{q:"She ___ my sister.",a:["am","are","is","be"],correct:2},
+{q:"They ___ happy.",a:["is","am","are","be"],correct:2},
+{q:"What is the opposite of 'big'?",a:["small","long","high","fast"],correct:0},
+{q:"Plural of 'book'?",a:["bookes","books","bookies","book"],correct:1},
+{q:"I ___ football every day.",a:["play","plays","playing","played"],correct:0},
+{q:"He ___ to school.",a:["go","goes","going","gone"],correct:1},
+{q:"What is 'olma' in English?",a:["orange","apple","pear","grape"],correct:1},
+{q:"What is 'kitob'?",a:["pen","book","table","door"],correct:1},
+{q:"Choose the color: grass is usually...",a:["blue","green","black","pink"],correct:1},
+{q:"Past of 'go'?",a:["goed","went","gone","goes"],correct:1},
+{q:"I have ___ apple.",a:["a","an","the","-"],correct:1},
+{q:"There ___ two books.",a:["is","am","are","be"],correct:2},
+{q:"She can ___ English.",a:["speaks","speak","speaking","spoke"],correct:1},
+{q:"Opposite of 'hot'?",a:["warm","cold","high","dark"],correct:1},
+{q:"We ___ friends.",a:["is","am","are","be"],correct:2},
+{q:"He is ___ than me.",a:["tall","taller","tallest","more tall"],correct:1},
+{q:"What day comes after Monday?",a:["Sunday","Tuesday","Wednesday","Friday"],correct:1},
+{q:"I ___ breakfast at 8.",a:["have","has","having","had"],correct:0},
+{q:"Which is a fruit?",a:["car","apple","chair","house"],correct:1}
 ],
-answer:0
-},
 
-{
-q:"Python nima?",
-options:[
-"Brauzer",
-"Dasturlash tili",
-"Operatsion tizim",
-"Telefon"
+orta:[
+{q:"I have lived here ___ 2020.",a:["for","since","from","at"],correct:1},
+{q:"If it rains, we ___ home.",a:["stay","will stay","stayed","would stayed"],correct:1},
+{q:"She has ___ her homework.",a:["finish","finished","finishing","finishes"],correct:1},
+{q:"This book is ___ than that one.",a:["interesting","more interesting","most interesting","interest"],correct:1},
+{q:"They ___ dinner when I arrived.",a:["have","were having","had","are having"],correct:1},
+{q:"You ___ smoke here.",a:["must","mustn't","can to","should to"],correct:1},
+{q:"I haven't seen him ___ Monday.",a:["for","since","during","by"],correct:1},
+{q:"She asked me where I ___.",a:["live","lived","living","have live"],correct:1},
+{q:"The letter ___ yesterday.",a:["sent","was sent","is send","send"],correct:1},
+{q:"He is interested ___ science.",a:["on","at","in","for"],correct:2},
+{q:"We have known each other ___ five years.",a:["since","for","from","during"],correct:1},
+{q:"If I had money, I ___ a car.",a:["buy","will buy","would buy","bought"],correct:2},
+{q:"She speaks English very ___.",a:["good","well","best","better"],correct:1},
+{q:"Neither Tom nor John ___ here.",a:["are","were","is","be"],correct:2},
+{q:"I wish I ___ taller.",a:["am","was","were","be"],correct:2},
+{q:"The movie was ___ boring.",a:["too","enough","many","much"],correct:0},
+{q:"He has already ___ home.",a:["go","went","gone","going"],correct:2},
+{q:"Could you tell me where the station ___?",a:["is","are","be","was"],correct:0},
+{q:"She is good ___ mathematics.",a:["in","at","on","for"],correct:1},
+{q:"I used to ___ football.",a:["playing","played","play","plays"],correct:2}
 ],
-answer:1
+
+yuqori:[
+{q:"Had I known, I ___ you.",a:["would tell","would have told","will tell","told"],correct:1},
+{q:"By next year, she ___ here for ten years.",a:["works","will have worked","worked","has worked"],correct:1},
+{q:"The proposal was rejected, ___ surprised everyone.",a:["who","which","what","where"],correct:1},
+{q:"He denied ___ the money.",a:["steal","to steal","stealing","stole"],correct:2},
+{q:"Not only ___ late, but he also forgot his homework.",a:["he was","was he","he is","is he"],correct:1},
+{q:"If I ___ you, I would reconsider.",a:["am","was","were","be"],correct:2},
+{q:"She insisted that he ___ immediately.",a:["leave","leaves","left","leaving"],correct:0},
+{q:"The book is worth ___.",a:["read","to read","reading","reads"],correct:2},
+{q:"No sooner had he arrived ___ it started raining.",a:["when","than","then","that"],correct:1},
+{q:"I would rather you ___ tomorrow.",a:["come","came","will come","coming"],correct:1},
+{q:"He is believed ___ abroad.",a:["live","to live","living","lived"],correct:1},
+{q:"Scarcely had we sat down ___ the phone rang.",a:["than","when","then","that"],correct:1},
+{q:"She speaks as though she ___ everything.",a:["knows","knew","known","know"],correct:1},
+{q:"The project requires that every member ___ present.",a:["is","be","was","being"],correct:1},
+{q:"Despite ___ tired, he continued working.",a:["be","being","was","been"],correct:1},
+{q:"Were I richer, I ___ more.",a:["travel","would travel","will travel","traveled"],correct:1},
+{q:"He objected to ___ treated unfairly.",a:["be","being","been","was"],correct:1},
+{q:"Little ___ that his decision would change everything.",a:["he knew","did he know","he knows","knows he"],correct:1},
+{q:"The sooner you start, the ___ you finish.",a:["fast","faster","fastest","more fast"],correct:1},
+{q:"She suggested ___ earlier.",a:["leave","to leave","leaving","left"],correct:2}
+],
+
+qiyin:[
+{q:"What does 'ubiquitous' mean?",a:["rare","present everywhere","dangerous","ancient"],correct:1},
+{q:"Choose the correct inversion: ___ had he left when she called.",a:["Hardly","Hardly he","Hard he","He hardly"],correct:0},
+{q:"The committee recommended that the proposal ___ revised.",a:["is","be","was","being"],correct:1},
+{q:"'Meticulous' most nearly means:",a:["careless","very careful","angry","quick"],correct:1},
+{q:"If she had studied harder, she ___ the exam.",a:["passes","would pass","would have passed","passed"],correct:2},
+{q:"He speaks with an air of ___ confidence.",a:["unwarranted","unwarrant","warrant","warranting"],correct:0},
+{q:"The evidence was ___ to support the claim.",a:["insufficient","insufficiency","insufficiently","suffice"],correct:0},
+{q:"'Ambiguous' means:",a:["clear","having multiple possible meanings","false","short"],correct:1},
+{q:"Were it not for your help, I ___ failed.",a:["will have","would have","had","have"],correct:1},
+{q:"The scientist's findings were considered ___ by her peers.",a:["groundbreaking","groundbreak","grounded","breakthroughly"],correct:0},
+{q:"He acted as though he ___ the answer.",a:["knows","knew","has known","will know"],correct:1},
+{q:"The phrase 'by and large' means:",a:["rarely","generally","immediately","secretly"],correct:1},
+{q:"She is averse ___ taking unnecessary risks.",a:["to","for","at","with"],correct:0},
+{q:"His argument was compelling, ___ not entirely conclusive.",a:["although","because","therefore","unless"],correct:0},
+{q:"'Pragmatic' most closely means:",a:["practical","theoretical","emotional","fictional"],correct:0},
+{q:"The policy was implemented ___ widespread opposition.",a:["despite","because","therefore","unless"],correct:0},
+{q:"He would sooner resign than ___ the principle.",a:["betray","betrayed","betraying","to betray"],correct:0},
+{q:"Her explanation was so ___ that nobody understood it.",a:["lucid","opaque","simple","obvious"],correct:1},
+{q:"The results are ___ with the original hypothesis.",a:["consistent","consistency","consist","consisted"],correct:0},
+{q:"What is the closest meaning of 'conundrum'?",a:["solution","difficult problem","celebration","argument"],correct:1}
+]
+
 }
-
-];
-
-
-let currentQuestion=0;
-
-let testScore=0;
-
-let selected=false;
-
-
-/* =========================
-START TEST
-========================= */
-
-window.startTest=function(){
-
-currentQuestion=0;
-
-testScore=0;
-
-selected=false;
-
-
-document
-.getElementById("testResult")
-.classList.add("hidden");
-
-
-document
-.getElementById("nextButton")
-.style.display="block";
-
-
-showQuestion();
 
 };
 
 
-/* =========================
-SHOW QUESTION
-========================= */
+/*
+==================================================
+  YORDAMCHI FUNKSIYALAR
+==================================================
+*/
+
+let currentSubject = "";
+let currentLevel = "";
+let currentTest = 0;
+
+let quizQuestions = [];
+let currentQuestion = 0;
+let correctAnswers = 0;
+let selectedAnswer = null;
+let earnedPoints = 0;
+
+
+function hideAll(){
+
+  document.getElementById("subjects").classList.add("hidden");
+  document.getElementById("levels").classList.add("hidden");
+  document.getElementById("tests").classList.add("hidden");
+  document.getElementById("quiz").classList.add("hidden");
+  document.getElementById("result").classList.add("hidden");
+  document.getElementById("ranking").classList.add("hidden");
+
+}
+
+
+function goHome(){
+
+  hideAll();
+
+  document.getElementById("subjects").classList.remove("hidden");
+
+}
+
+
+function selectSubject(subject){
+
+  currentSubject = subject;
+
+  hideAll();
+
+  document.getElementById("levels").classList.remove("hidden");
+
+  document.getElementById("levelTitle").textContent =
+    subjects[subject] + " — darajani tanlang";
+
+}
+
+
+function selectLevel(level){
+
+  currentLevel = level;
+
+  hideAll();
+
+  document.getElementById("tests").classList.remove("hidden");
+
+  document.getElementById("testsTitle").textContent =
+    subjects[currentSubject] + " — " +
+    levels[level].name;
+
+  createTests();
+
+}
+
+
+function createTests(){
+
+  const list = document.getElementById("testList");
+
+  list.innerHTML = "";
+
+  /*
+    50 ta test ko‘rinadi.
+    Keyinchalik bu sonni 100, 500 yoki undan
+    ko‘p qilish mumkin.
+  */
+
+  for(let i=1;i<=50;i++){
+
+    const btn = document.createElement("button");
+
+    btn.className = "test-btn";
+
+    btn.innerHTML =
+      "📝 " + i + "-test<br>" +
+      "<small>20 ta savol</small>";
+
+    btn.onclick = () => startTest(i);
+
+    list.appendChild(btn);
+
+  }
+
+}
+
+
+function shuffle(array){
+
+  const arr = [...array];
+
+  for(let i=arr.length-1;i>0;i--){
+
+    const j = Math.floor(Math.random()*(i+1));
+
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+
+  }
+
+  return arr;
+
+}
+
+
+function startTest(testNumber){
+
+  currentTest = testNumber;
+
+  const bank =
+    questionBank[currentSubject]?.[currentLevel] || [];
+
+  if(bank.length < 20){
+
+    /*
+      Savollar 20 tadan kam bo‘lsa,
+      mavjud savollarni aylantirib foydalanadi.
+      Keyinchalik bazaga minglab savollar
+      qo‘shilganda random takrorlanish juda kamayadi.
+    */
+
+    quizQuestions = [];
+
+    for(let i=0;i<20;i++){
+
+      quizQuestions.push(
+        JSON.parse(
+          JSON.stringify(bank[i % bank.length])
+        )
+      );
+
+    }
+
+  }else{
+
+    quizQuestions = shuffle(bank).slice(0,20);
+
+  }
+
+  /*
+    Javob variantlarini ham aralashtiramiz.
+  */
+
+  quizQuestions = quizQuestions.map(q => {
+
+    const correctText = q.a[q.correct];
+
+    const answers = shuffle(q.a);
+
+    return {
+      q:q.q,
+      a:answers,
+      correct:answers.indexOf(correctText)
+    };
+
+  });
+
+  currentQuestion = 0;
+  correctAnswers = 0;
+  selectedAnswer = null;
+  earnedPoints = 0;
+
+  hideAll();
+
+  document.getElementById("quiz").classList.remove("hidden");
+
+  document.getElementById("quizTitle").textContent =
+    subjects[currentSubject] + " • " +
+    levels[currentLevel].name +
+    " • " + currentTest + "-test";
+
+  showQuestion();
+
+}
+
 
 function showQuestion(){
 
-selected=false;
+  const q = quizQuestions[currentQuestion];
 
-const q =
-questions[currentQuestion];
+  selectedAnswer = null;
 
+  document.getElementById("questionNumber").textContent =
+    "Savol " + (currentQuestion+1) + " / 20";
 
-document.getElementById("questionNumber")
-.innerText =
-(currentQuestion+1)
-+" / "
-+questions.length;
+  document.getElementById("counter").textContent =
+    Math.round((currentQuestion/20)*100) + "%";
 
+  document.getElementById("progressBar").style.width =
+    ((currentQuestion)/20*100) + "%";
 
-document.getElementById("question")
-.innerText =
-q.q;
+  document.getElementById("questionText").textContent =
+    q.q;
 
+  const answers =
+    document.getElementById("answers");
 
-document.getElementById("progressBar")
-.style.width =
-((currentQuestion+1)
-/
-questions.length
-*100)+"%";
+  answers.innerHTML = "";
 
+  q.a.forEach((answer,index)=>{
 
-const options =
-document.getElementById("options");
+    const btn = document.createElement("button");
 
-options.innerHTML="";
+    btn.className = "answer";
 
+    btn.textContent =
+      String.fromCharCode(65+index) + ") " + answer;
 
-q.options.forEach(
-(option,index)=>{
+    btn.onclick = () =>
+      selectAnswer(index);
 
-const button =
-document.createElement("button");
+    answers.appendChild(btn);
 
+  });
 
-button.className="option";
+  const next =
+    document.getElementById("nextBtn");
 
+  next.disabled = true;
 
-button.innerText =
-String.fromCharCode(65+index)
-+") "+option;
-
-
-button.onclick=()=>{
-
-if(selected)
-return;
-
-selected=true;
-
-
-if(index===q.answer){
-
-button.classList.add("correct");
-
-testScore++;
-
-}else{
-
-button.classList.add("wrong");
-
-}
-
-};
-
-
-options.appendChild(button);
-
-});
+  next.textContent =
+    currentQuestion === 19
+    ? "🏁 Testni yakunlash"
+    : "Keyingi savol →";
 
 }
 
 
-/* =========================
-NEXT
-========================= */
+function selectAnswer(index){
 
-window.nextQuestion=function(){
+  selectedAnswer = index;
 
-if(!selected){
+  const buttons =
+    document.querySelectorAll(".answer");
 
-alert(
-"⚠️ Avval javobni tanlang!"
-);
+  buttons.forEach((button,i)=>{
 
-return;
+    button.classList.toggle(
+      "selected",
+      i === index
+    );
 
-}
+  });
 
-
-currentQuestion++;
-
-
-if(
-currentQuestion >=
-questions.length
-){
-
-finishTest();
-
-return;
+  document.getElementById("nextBtn").disabled = false;
 
 }
 
 
-showQuestion();
+function nextQuestion(){
 
-};
+  if(selectedAnswer === null) return;
 
+  const q = quizQuestions[currentQuestion];
 
-/* =========================
-FINISH TEST
-========================= */
+  if(selectedAnswer === q.correct){
 
-async function finishTest(){
+    correctAnswers++;
 
-const points =
-testScore * 10;
+  }
 
+  currentQuestion++;
 
-try{
+  if(currentQuestion >= 20){
 
-await setDoc(
-doc(db,"users",currentUser.uid),
-{
-score:increment(points),
-tests:increment(1),
-correctAnswers:increment(testScore)
-},
-{merge:true}
-);
+    finishTest();
 
+  }else{
 
-const snapshot =
-await getDoc(
-doc(db,"users",currentUser.uid)
-);
+    showQuestion();
 
-currentProfile =
-snapshot.data();
-
-
-}catch(error){
-
-console.error(error);
-
-alert(
-"Natijani saqlashda xatolik yuz berdi."
-);
-
-return;
+  }
 
 }
 
 
-document
-.getElementById("question")
-.innerText="";
+function finishTest(){
 
+  earnedPoints =
+    correctAnswers *
+    levels[currentLevel].points;
 
-document
-.getElementById("options")
-.innerHTML="";
+  hideAll();
 
+  document.getElementById("result").classList.remove("hidden");
 
-document
-.getElementById("nextButton")
-.style.display="none";
+  document.getElementById("resultScore").textContent =
+    correctAnswers + "/20";
 
+  document.getElementById("correctCount").textContent =
+    correctAnswers;
 
-document
-.getElementById("testResult")
-.classList.remove("hidden");
+  document.getElementById("wrongCount").textContent =
+    20-correctAnswers;
 
+  document.getElementById("earnedPoints").textContent =
+    earnedPoints;
 
-document
-.getElementById("resultText")
-.innerText =
-currentProfile.username
-+", siz "
-+questions.length
-+" ta savoldan "
-+testScore
-+" tasiga to‘g‘ri javob berdingiz.";
-
-
-document
-.getElementById("resultScore")
-.innerText =
-"⭐ Sizga "
-+points
-+" ball qo‘shildi!";
-
-
-updateProfile();
+  saveScore();
 
 }
 
 
-/* =========================
-RATING
-========================= */
+function saveScore(){
 
-async function loadRating(){
+  /*
+    Hozircha localStorage.
+    Firebase bilan birlashtirilganda shu joyga
+    Firestore score update qo‘shiladi.
+  */
 
-const list =
-document.getElementById("ratingList");
+  let oldScore =
+    Number(localStorage.getItem("zokirovScore") || 0);
 
-list.innerHTML =
-"⏳ Reyting yuklanmoqda...";
+  oldScore += earnedPoints;
 
-
-try{
-
-const q =
-query(
-collection(db,"users"),
-orderBy("score","desc"),
-limit(50)
-);
-
-
-const snapshot =
-await getDocs(q);
-
-
-list.innerHTML="";
-
-
-if(snapshot.empty){
-
-list.innerHTML =
-"📭 Hali reyting bo‘sh.";
-
-return;
+  localStorage.setItem(
+    "zokirovScore",
+    oldScore
+  );
 
 }
 
 
-snapshot.forEach(
-(docSnap,index)=>{
+/*
+==================================================
+  REYTING
+==================================================
+*/
 
-const person =
-docSnap.data();
+function showRanking(){
 
+  hideAll();
 
-const div =
-document.createElement("div");
+  document.getElementById("ranking").classList.remove("hidden");
 
+  const score =
+    Number(localStorage.getItem("zokirovScore") || 0);
 
-div.className="rating-item";
+  document.getElementById("rankingList").innerHTML = `
 
+    <div class="card">
+      <h3>👤 Sizning natijangiz</h3>
+      <br>
+      <h2>⭐ ${score} ball</h2>
+    </div>
 
-let medal="";
+    <p style="color:#64748b">
+      Firebase ulanganidan keyin bu bo‘lim barcha
+      foydalanuvchilarning umumiy reytingini ko‘rsatadi.
+    </p>
 
-if(index===0)
-medal="🥇";
-
-else if(index===1)
-medal="🥈";
-
-else if(index===2)
-medal="🥉";
-
-else
-medal=(index+1)+".";
-
-
-div.innerHTML=`
-
-<span>
-${medal}
-<strong>
-${escapeHTML(person.username)}
-</strong>
-</span>
-
-<span class="score">
-${Number(person.score || 0)} ⭐
-</span>
-
-`;
-
-
-list.appendChild(div);
-
-});
-
-}catch(error){
-
-console.error(error);
-
-list.innerHTML =
-"❌ Reytingni yuklab bo‘lmadi.";
-
-}
+  `;
 
 }
 
 
-/* =========================
-HTML SECURITY
-========================= */
+/*
+==================================================
+  BOSHLASH
+==================================================
+*/
 
-function escapeHTML(text){
-
-return String(text)
-.replaceAll("&","&amp;")
-.replaceAll("<","&lt;")
-.replaceAll(">","&gt;")
-.replaceAll('"',"&quot;")
-.replaceAll("'","&#039;");
-
-}
-
-
-/* =========================
-DARK MODE
-========================= */
-
-window.toggleDark=function(){
-
-document
-.body
-.classList.toggle("dark");
-
-localStorage.setItem(
-"zokirovDark",
-document.body.classList.contains("dark")
-);
-
-};
-
-
-if(
-localStorage.getItem("zokirovDark")
-==="true"
-){
-
-document
-.body
-.classList.add("dark");
-
-}
+goHome();
 
 </script>
 
