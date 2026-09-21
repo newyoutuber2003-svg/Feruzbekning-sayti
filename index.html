@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening dasturim</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #0002;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #1677ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #natija {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Salom! 👋</h1>
+
+        <p>Ismingizni kiriting:</p>
+
+        <input id="ism" type="text" placeholder="Masalan: Ali">
+
+        <br>
+
+        <button onclick="salomBer()">Bosish</button>
+
+        <div id="natija"></div>
+    </div>
+
+    <script>
+        function salomBer() {
+            let ism = document.getElementById("ism").value;
+
+            if (ism === "") {
+                document.getElementById("natija").innerText =
+                    "Iltimos, ismingizni yozing!";
+            } else {
+                document.getElementById("natija").innerText =
+                    "Salom, " + ism + "! 🎉";
+            }
+        }
+    </script>
+
+</body>
+</html>
