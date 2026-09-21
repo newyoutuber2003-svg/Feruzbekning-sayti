@@ -7,254 +7,314 @@
 <title>Zokirov Education</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #222;
-    transition: 0.3s;
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    transition:.3s;
 }
 
-body.dark {
-    background: #121826;
-    color: white;
+body.dark{
+    background:#101827;
+    color:#fff;
 }
 
-header {
-    background: linear-gradient(135deg, #1677ff, #6246ea);
-    color: white;
-    padding: 20px;
-    text-align: center;
+header{
+    background:linear-gradient(135deg,#1677ff,#6846e8);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
 }
 
-header h1 {
-    font-size: 30px;
+header h1{
+    font-size:32px;
 }
 
-nav {
-    margin-top: 15px;
+header p{
+    margin-top:8px;
 }
 
-nav button {
-    border: none;
-    background: white;
-    color: #1677ff;
-    padding: 10px 15px;
-    margin: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+nav{
+    margin-top:18px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:7px;
 }
 
-.container {
-    width: 92%;
-    max-width: 1100px;
-    margin: 30px auto;
+nav button{
+    border:0;
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:#1677ff;
+    font-weight:bold;
 }
 
-.page {
-    display: none;
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:30px auto;
 }
 
-.page.active {
-    display: block;
+.page{
+    display:none;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px #0002;
+.page.active{
+    display:block;
 }
 
-.dark .card {
-    background: #1d2638;
+.card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px #0002;
 }
 
-.welcome {
-    text-align: center;
-    padding: 45px 20px;
+.dark .card{
+    background:#1d293b;
 }
 
-input {
-    padding: 14px;
-    width: 80%;
-    max-width: 400px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    margin: 20px 0;
-    font-size: 16px;
+.center{
+    text-align:center;
 }
 
-button.main {
-    background: #1677ff;
-    color: white;
-    border: none;
-    padding: 13px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
+.login-card{
+    max-width:500px;
+    margin:50px auto;
 }
 
-button.main:hover {
-    background: #0d5dcc;
+input{
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+input:focus{
+    border-color:#1677ff;
 }
 
-.subject {
-    text-align: center;
-    cursor: pointer;
-    transition: 0.2s;
+.main{
+    border:0;
+    background:#1677ff;
+    color:white;
+    padding:13px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:8px;
 }
 
-.subject:hover {
-    transform: translateY(-5px);
+.main:hover{
+    background:#095dc9;
 }
 
-.icon {
-    font-size: 50px;
+.secondary{
+    border:0;
+    background:#eef3ff;
+    color:#1677ff;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
 }
 
-.subject button {
-    margin-top: 15px;
-    background: #1677ff;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
+.dark .secondary{
+    background:#2b3950;
+    color:white;
 }
 
-.search {
-    width: 100%;
-    max-width: none;
-    margin-bottom: 20px;
+.tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:15px;
 }
 
-.lesson {
-    border-left: 5px solid #1677ff;
+.tabs button{
+    flex:1;
+    padding:12px;
+    border:0;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.lesson h3 {
-    margin-bottom: 10px;
+.tabs .active-tab{
+    background:#1677ff;
+    color:white;
 }
 
-.lesson p {
-    line-height: 1.7;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:18px;
 }
 
-.rating-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    margin: 8px 0;
-    border-radius: 10px;
-    background: #f1f4f8;
+.stat{
+    text-align:center;
 }
 
-.dark .rating-item {
-    background: #283348;
+.stat strong{
+    display:block;
+    font-size:34px;
+    color:#1677ff;
+    margin-bottom:8px;
 }
 
-.first {
-    background: #fff0a8 !important;
+.lesson{
+    border-left:5px solid #1677ff;
 }
 
-.second {
-    background: #ddd !important;
+.lesson h3{
+    margin-bottom:10px;
 }
 
-.third {
-    background: #e9c7ad !important;
+.lesson p{
+    line-height:1.7;
 }
 
-.score {
-    color: #1677ff;
-    font-weight: bold;
+.search{
+    margin-bottom:20px;
 }
 
-.option {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    background: white;
-    border-radius: 10px;
-    cursor: pointer;
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:15px;
+    margin:10px 0;
+    border:2px solid #ddd;
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
 }
 
-.dark .option {
-    background: #283348;
-    color: white;
+.dark .option{
+    background:#29374c;
+    color:white;
 }
 
-.option:hover {
-    border-color: #1677ff;
+.option:hover{
+    border-color:#1677ff;
 }
 
-.option.correct {
-    background: #b9f6c5;
-    border-color: green;
+.option.correct{
+    background:#b8f5c4;
+    color:#123;
+    border-color:#24a148;
 }
 
-.option.wrong {
-    background: #ffc1c1;
-    border-color: red;
+.option.wrong{
+    background:#ffc4c4;
+    color:#300;
+    border-color:#d22;
 }
 
-.progress {
-    width: 100%;
-    height: 15px;
-    background: #ddd;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 15px 0;
+.progress{
+    height:14px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
 }
 
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #1677ff;
-    transition: 0.3s;
+.progress-bar{
+    height:100%;
+    width:0;
+    background:#1677ff;
+    transition:.3s;
 }
 
-.stat {
-    text-align: center;
+.rating-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    margin:8px 0;
+    border-radius:10px;
+    background:#f1f4f8;
 }
 
-.stat strong {
-    display: block;
-    font-size: 35px;
-    color: #1677ff;
+.dark .rating-item{
+    background:#2a384d;
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    background: #1677ff;
-    color: white;
+.score{
+    color:#1677ff;
+    font-weight:bold;
 }
 
-.hidden {
-    display: none;
+.hidden{
+    display:none!important;
 }
 
-h2 {
-    margin-bottom: 15px;
+.error{
+    color:#e53935;
+    margin-top:10px;
+}
+
+.success{
+    color:#159447;
+    margin-top:10px;
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#1677ff,#6846e8);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    margin:0 auto 15px;
+}
+
+.logout{
+    background:#e53935!important;
+    color:white!important;
+}
+
+footer{
+    margin-top:50px;
+    padding:30px;
+    text-align:center;
+    background:#1677ff;
+    color:white;
+}
+
+.small{
+    font-size:13px;
+    opacity:.8;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:25px;
+    }
+
+    nav button{
+        font-size:13px;
+        padding:9px 10px;
+    }
+
+    .card{
+        padding:18px;
+    }
 }
 </style>
 </head>
@@ -265,38 +325,115 @@ h2 {
 
 <h1>🎓 Zokirov Education</h1>
 
-<p>Bilim ol, rivojlan va kelajagingni qur!</p>
+<p>Bilim ol • Test ishlang • Ball to‘plang • Rivojlaning</p>
 
-<nav>
+<nav id="mainNav" class="hidden">
+
 <button onclick="showPage('home')">🏠 Bosh sahifa</button>
-<button onclick="showPage('lessons')">📚 Darsliklar</button>
+<button onclick="showPage('lessons')">📚 Darslar</button>
 <button onclick="showPage('tests')">📝 Testlar</button>
 <button onclick="showPage('rating')">🏆 Reyting</button>
 <button onclick="showPage('profile')">👤 Profil</button>
-<button onclick="darkMode()">🌙</button>
+<button onclick="toggleDark()">🌙</button>
+
 </nav>
 
 </header>
 
+
 <div class="container">
 
-<!-- KIRISH -->
 
-<div id="login" class="card welcome">
+<!-- LOGIN -->
 
-<h2>👋 Zokirov Education'ga xush kelibsiz!</h2>
+<div id="authPage">
 
-<p>O‘qishni boshlash uchun ismingizni kiriting.</p>
+<div class="card login-card">
 
-<input id="username" placeholder="Ismingiz">
+<div class="tabs">
 
-<br>
-
-<button class="main" onclick="login()">
-🚀 Ta'limni boshlash
+<button id="loginTab"
+class="active-tab"
+onclick="switchAuth('login')">
+Kirish
 </button>
 
-<p id="loginError" style="color:red;margin-top:15px;"></p>
+<button id="registerTab"
+onclick="switchAuth('register')">
+Ro‘yxatdan o‘tish
+</button>
+
+</div>
+
+
+<!-- LOGIN FORM -->
+
+<div id="loginForm">
+
+<h2>🔐 Hisobga kirish</h2>
+
+<p style="margin:10px 0 15px">
+Email va parolingizni kiriting.
+</p>
+
+<input
+id="loginEmail"
+type="email"
+placeholder="Email"
+>
+
+<input
+id="loginPassword"
+type="password"
+placeholder="Parol"
+>
+
+<button class="main" onclick="loginUser()">
+🚀 Kirish
+</button>
+
+<p id="loginMessage" class="error"></p>
+
+</div>
+
+
+<!-- REGISTER FORM -->
+
+<div id="registerForm" class="hidden">
+
+<h2>🎓 Yangi hisob yaratish</h2>
+
+<p style="margin:10px 0 15px">
+Username bir marta tanlanadi va keyinchalik o‘zgartirilmaydi.
+</p>
+
+<input
+id="registerUsername"
+placeholder="Username (3-20 belgi)"
+maxlength="20"
+>
+
+<input
+id="registerEmail"
+type="email"
+placeholder="Email"
+>
+
+<input
+id="registerPassword"
+type="password"
+placeholder="Parol (kamida 6 belgi)"
+>
+
+<button class="main" onclick="registerUser()">
+✨ Hisob yaratish
+</button>
+
+<p id="registerMessage" class="error"></p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -305,27 +442,29 @@ h2 {
 
 <div id="home" class="page">
 
-<div class="card welcome">
+<div class="card center">
 
-<h2 id="hello">👋 Salom!</h2>
+<h2 id="welcomeText">
+👋 Zokirov Education'ga xush kelibsiz!
+</h2>
 
-<p>
+<p style="margin:15px 0">
 Bugun yangi bilim olish uchun ajoyib kun! 📚
 </p>
 
-<br>
-
-<button class="main" onclick="showPage('lessons')">
+<button class="main"
+onclick="showPage('lessons')">
 📚 Darslarni boshlash
 </button>
 
 </div>
 
+
 <div class="grid">
 
 <div class="card stat">
 <strong>📚</strong>
-Darslar
+Darsliklar
 </div>
 
 <div class="card stat">
@@ -365,91 +504,102 @@ oninput="searchLessons()"
 
 </div>
 
+
 <div id="lessonList">
 
-<div class="card lesson" data-name="matematika">
+<div class="card lesson"
+data-name="matematika sonlar">
 
 <h3>📐 Matematika — Sonlar</h3>
 
 <p>
-Natural sonlar, qo‘shish, ayirish, ko‘paytirish
-va bo‘lish amallarini o‘rganamiz.
+Natural sonlar, qo‘shish, ayirish,
+ko‘paytirish va bo‘lish amallarini o‘rganamiz.
 </p>
 
 <br>
 
 <b>Misol:</b>
 
-<p>
-5 × 6 = 30
-</p>
+<p>5 × 6 = 30</p>
 
 </div>
 
 
-<div class="card lesson" data-name="ingliz tili english">
+<div class="card lesson"
+data-name="ingliz tili english salomlashish">
 
 <h3>🇬🇧 Ingliz tili — Salomlashish</h3>
 
 <p>
 Ingliz tilida salomlashish uchun
-<b>Hello</b> yoki <b>Hi</b> so‘zlaridan foydalaniladi.
-</p>
-
-<p>
-Hello = Salom
-</p>
-
-</div>
-
-
-<div class="card lesson" data-name="dasturlash html">
-
-<h3>💻 Dasturlash — HTML</h3>
-
-<p>
-HTML web-sahifaning tuzilishini yaratish uchun
-ishlatiladigan belgilash tilidir.
+Hello yoki Hi so‘zlaridan foydalaniladi.
 </p>
 
 <br>
 
-<b>Misol:</b>
+<b>Hello = Salom</b>
+
+</div>
+
+
+<div class="card lesson"
+data-name="dasturlash html">
+
+<h3>💻 Dasturlash — HTML</h3>
 
 <p>
-&lt;h1&gt;Salom!&lt;/h1&gt;
+HTML web-sahifaning tuzilishini yaratish
+uchun ishlatiladigan belgilash tilidir.
+</p>
+
+<br>
+
+<code>&lt;h1&gt;Salom!&lt;/h1&gt;</code>
+
+</div>
+
+
+<div class="card lesson"
+data-name="css dizayn">
+
+<h3>🎨 Dasturlash — CSS</h3>
+
+<p>
+CSS web-sahifaning ranglari, o‘lchamlari,
+joylashuvi va dizaynini boshqaradi.
 </p>
 
 </div>
 
 
-<div class="card lesson" data-name="fizika">
+<div class="card lesson"
+data-name="fizika tezlik">
 
 <h3>🔬 Fizika — Tezlik</h3>
 
 <p>
-Tezlik jismning ma'lum vaqt ichida qancha
-masofa bosib o‘tganini ko‘rsatadi.
+Tezlik jismning ma'lum vaqt ichida
+bosib o‘tgan masofasini bildiradi.
 </p>
 
 <br>
 
 <b>Formula:</b>
 
-<p>
-v = s / t
-</p>
+<p>v = s / t</p>
 
 </div>
 
 
-<div class="card lesson" data-name="ona tili">
+<div class="card lesson"
+data-name="ona tili so'z">
 
 <h3>📖 Ona tili — So‘z turkumlari</h3>
 
 <p>
-Ot, sifat, son, olmosh, fe'l kabi so‘z
-turkumlarini o‘rganamiz.
+Ot, sifat, son, olmosh va fe'l kabi
+so‘z turkumlarini o‘rganamiz.
 </p>
 
 </div>
@@ -459,7 +609,7 @@ turkumlarini o‘rganamiz.
 </div>
 
 
-<!-- TESTS -->
+<!-- TEST -->
 
 <div id="tests" class="page">
 
@@ -470,28 +620,47 @@ turkumlarini o‘rganamiz.
 <p id="questionNumber">1 / 10</p>
 
 <div class="progress">
-<div class="progress-bar" id="progressBar"></div>
+
+<div
+class="progress-bar"
+id="progressBar">
 </div>
 
-<h3 id="question"></h3>
+</div>
+
+<h3
+id="question"
+style="margin:20px 0">
+</h3>
 
 <div id="options"></div>
 
-<button class="main" id="nextButton" onclick="nextQuestion()">
+<button
+class="main"
+id="nextButton"
+onclick="nextQuestion()">
 Keyingi →
 </button>
 
 </div>
 
-<div id="testResult" class="card hidden">
+
+<div
+id="testResult"
+class="card center hidden">
 
 <h2>🎉 Test tugadi!</h2>
 
-<h3 id="resultText"></h3>
+<h3
+id="resultText"
+style="margin:15px 0">
+</h3>
 
 <p id="resultScore"></p>
 
-<button class="main" onclick="restartTest()">
+<button
+class="main"
+onclick="startTest()">
 🔄 Qayta ishlash
 </button>
 
@@ -508,9 +677,13 @@ Keyingi →
 
 <h2>🏆 O‘quvchilar reytingi</h2>
 
-<p>Eng ko‘p ball to‘plagan o‘quvchilar.</p>
+<p style="margin:10px 0 20px">
+Firebase orqali saqlanadigan umumiy reyting.
+</p>
 
-<div id="ratingList"></div>
+<div id="ratingList">
+Yuklanmoqda...
+</div>
 
 </div>
 
@@ -521,37 +694,90 @@ Keyingi →
 
 <div id="profile" class="page">
 
-<div class="card">
+<div class="card center">
 
-<h2>👤 Mening profilim</h2>
+<div class="profile-avatar">
+👤
+</div>
 
-<h3 id="profileName">Foydalanuvchi</h3>
+<h2 id="profileName">
+Foydalanuvchi
+</h2>
 
-<br>
+<p
+id="profileEmail"
+class="small">
+</p>
+
+</div>
+
 
 <div class="grid">
 
 <div class="card stat">
-<strong id="profileScore">0</strong>
+
+<strong id="profileScore">
+0
+</strong>
+
 Umumiy ball
+
 </div>
 
+
 <div class="card stat">
-<strong id="profileTests">0</strong>
+
+<strong id="profileTests">
+0
+</strong>
+
 Testlar
+
 </div>
 
+
 <div class="card stat">
-<strong id="profileCorrect">0</strong>
+
+<strong id="profileCorrect">
+0
+</strong>
+
 To‘g‘ri javoblar
+
 </div>
+
 
 <div class="card stat">
-<strong id="profileLevel">1</strong>
+
+<strong id="profileLevel">
+1
+</strong>
+
 Daraja
+
 </div>
 
 </div>
+
+
+<div class="card">
+
+<h3>🔒 Username</h3>
+
+<p style="margin:10px 0">
+Username o‘zgartirilmaydi.
+</p>
+
+<input
+id="fixedUsername"
+disabled
+>
+
+<button
+class="main logout"
+onclick="logoutUser()">
+🚪 Hisobdan chiqish
+</button>
 
 </div>
 
@@ -562,563 +788,1070 @@ Daraja
 
 <footer>
 
-<p>🎓 Zokirov Education</p>
+<h3>🎓 Zokirov Education</h3>
 
-<p style="margin-top:8px;">
+<p style="margin-top:8px">
 Bilim — kelajak poydevori!
 </p>
 
 </footer>
 
 
-<script>
+<!-- FIREBASE -->
 
-/* =========================
-   FOYDALANUVCHI
-========================= */
+<script type="module">
 
-let user = localStorage.getItem("zokirovUser");
+import {
+initializeApp
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 
-let score = Number(localStorage.getItem("zokirovScore")) || 0;
+import {
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+onAuthStateChanged,
+signOut
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
-let tests = Number(localStorage.getItem("zokirovTests")) || 0;
-
-let correctAnswers =
-Number(localStorage.getItem("zokirovCorrect")) || 0;
-
-
-function login() {
-
-    let name =
-    document.getElementById("username").value.trim();
-
-    if(name === "") {
-
-        document.getElementById("loginError").innerText =
-        "⚠️ Iltimos, ismingizni kiriting!";
-
-        return;
-    }
-
-    user = name;
-
-    localStorage.setItem("zokirovUser", user);
-
-    document.getElementById("login").style.display = "none";
-
-    updateProfile();
-
-    showPage("home");
-}
+import {
+getFirestore,
+doc,
+getDoc,
+setDoc,
+collection,
+query,
+orderBy,
+limit,
+getDocs,
+runTransaction,
+increment
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 
 
-function updateProfile() {
+const firebaseConfig = {
 
-    if(!user) return;
+apiKey:
+"AIzaSyAdHgnxrD0cGrX9FVj1NKx3MwMWc46UXpg",
 
-    document.getElementById("hello").innerText =
-    "👋 Salom, " + user + "!";
+authDomain:
+"zokirov-education.firebaseapp.com",
 
-    document.getElementById("profileName").innerText =
-    user;
+projectId:
+"zokirov-education",
 
-    document.getElementById("profileScore").innerText =
-    score;
+storageBucket:
+"zokirov-education.firebasestorage.app",
 
-    document.getElementById("homeScore").innerText =
-    score;
+messagingSenderId:
+"315505802643",
 
-    document.getElementById("profileTests").innerText =
-    tests;
+appId:
+"1:315505802643:web:74e44450fbe5e351637c66",
 
-    document.getElementById("profileCorrect").innerText =
-    correctAnswers;
+measurementId:
+"G-WW2XZTJMME"
 
-    let level =
-    Math.floor(score / 100) + 1;
+};
 
-    document.getElementById("profileLevel").innerText =
-    level;
 
-    document.getElementById("homeLevel").innerText =
-    level;
-}
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+
+let currentUser = null;
+
+let currentProfile = null;
 
 
 /* =========================
-   SAHIFALAR
+AUTH TAB
 ========================= */
 
-function showPage(page) {
+window.switchAuth = function(type){
 
-    document.querySelectorAll(".page")
-    .forEach(p => p.classList.remove("active"));
+const loginForm =
+document.getElementById("loginForm");
 
-    document.getElementById(page)
-    .classList.add("active");
+const registerForm =
+document.getElementById("registerForm");
 
-    if(page === "tests") {
-        startTest();
-    }
+const loginTab =
+document.getElementById("loginTab");
 
-    if(page === "rating") {
-        showRating();
-    }
+const registerTab =
+document.getElementById("registerTab");
 
-    updateProfile();
+
+if(type === "login"){
+
+loginForm.classList.remove("hidden");
+registerForm.classList.add("hidden");
+
+loginTab.classList.add("active-tab");
+registerTab.classList.remove("active-tab");
+
+}else{
+
+loginForm.classList.add("hidden");
+registerForm.classList.remove("hidden");
+
+loginTab.classList.remove("active-tab");
+registerTab.classList.add("active-tab");
+
+}
+
+};
+
+
+/* =========================
+REGISTER
+========================= */
+
+window.registerUser = async function(){
+
+const username =
+document
+.getElementById("registerUsername")
+.value.trim();
+
+const email =
+document
+.getElementById("registerEmail")
+.value.trim();
+
+const password =
+document
+.getElementById("registerPassword")
+.value;
+
+const message =
+document.getElementById("registerMessage");
+
+
+message.className="error";
+
+const normalized =
+username.toLowerCase();
+
+
+if(!/^[a-zA-Z0-9_]{3,20}$/.test(username)){
+
+message.innerText =
+"Username 3-20 ta harf, raqam yoki _ dan iborat bo‘lishi kerak.";
+
+return;
+
+}
+
+if(!email){
+
+message.innerText =
+"Email kiriting.";
+
+return;
+
+}
+
+if(password.length < 6){
+
+message.innerText =
+"Parol kamida 6 belgidan iborat bo‘lishi kerak.";
+
+return;
+
+}
+
+
+message.innerText =
+"⏳ Hisob yaratilmoqda...";
+
+
+try{
+
+const usernameRef =
+doc(db,"usernames",normalized);
+
+
+const usernameExists =
+await getDoc(usernameRef);
+
+
+if(usernameExists.exists()){
+
+message.innerText =
+"❌ Bu username allaqachon olingan.";
+
+return;
+
+}
+
+
+const credential =
+await createUserWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+
+const uid =
+credential.user.uid;
+
+
+await runTransaction(db,async(transaction)=>{
+
+const check =
+await transaction.get(usernameRef);
+
+if(check.exists()){
+
+throw new Error(
+"USERNAME_TAKEN"
+);
+
+}
+
+
+transaction.set(
+usernameRef,
+{
+uid:uid,
+username:username
+}
+);
+
+
+transaction.set(
+doc(db,"users",uid),
+{
+uid:uid,
+username:username,
+usernameNormalized:normalized,
+email:email,
+score:0,
+tests:0,
+correctAnswers:0,
+createdAt:new Date().toISOString()
+}
+);
+
+});
+
+
+message.className="success";
+
+message.innerText =
+"✅ Hisob yaratildi!";
+
+
+}catch(error){
+
+console.error(error);
+
+if(error.message === "USERNAME_TAKEN"){
+
+message.innerText =
+"❌ Bu username allaqachon olingan.";
+
+}else{
+
+message.innerText =
+"❌ " + firebaseError(error.code);
+
+}
+
+}
+
+};
+
+
+/* =========================
+LOGIN
+========================= */
+
+window.loginUser = async function(){
+
+const email =
+document.getElementById("loginEmail")
+.value.trim();
+
+const password =
+document.getElementById("loginPassword")
+.value;
+
+const message =
+document.getElementById("loginMessage");
+
+
+if(!email || !password){
+
+message.innerText =
+"Email va parolni kiriting.";
+
+return;
+
+}
+
+
+message.innerText =
+"⏳ Kirilmoqda...";
+
+
+try{
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+message.innerText="";
+
+}catch(error){
+
+message.innerText =
+"❌ " + firebaseError(error.code);
+
+}
+
+};
+
+
+/* =========================
+ERRORS
+========================= */
+
+function firebaseError(code){
+
+switch(code){
+
+case "auth/invalid-credential":
+return "Email yoki parol noto‘g‘ri.";
+
+case "auth/email-already-in-use":
+return "Bu email allaqachon ro‘yxatdan o‘tgan.";
+
+case "auth/invalid-email":
+return "Email noto‘g‘ri.";
+
+case "auth/weak-password":
+return "Parol juda qisqa.";
+
+default:
+return "Xatolik yuz berdi.";
+
+}
+
 }
 
 
 /* =========================
-   DARSLAR QIDIRUVI
+AUTH STATE
 ========================= */
 
-function searchLessons() {
+onAuthStateChanged(auth,async(user)=>{
 
-    let search =
-    document.getElementById("lessonSearch")
-    .value.toLowerCase();
+if(user){
 
-    document.querySelectorAll(".lesson")
-    .forEach(lesson => {
+currentUser=user;
 
-        let text =
-        lesson.dataset.name.toLowerCase();
+const profileRef =
+doc(db,"users",user.uid);
 
-        lesson.style.display =
-        text.includes(search)
-        ? "block"
-        : "none";
+const snapshot =
+await getDoc(profileRef);
 
-    });
+
+if(snapshot.exists()){
+
+currentProfile =
+snapshot.data();
+
+showLoggedIn();
+
+}
+
+}else{
+
+currentUser=null;
+
+currentProfile=null;
+
+showLoggedOut();
+
+}
+
+});
+
+
+function showLoggedIn(){
+
+document
+.getElementById("authPage")
+.classList.add("hidden");
+
+document
+.getElementById("mainNav")
+.classList.remove("hidden");
+
+showPage("home");
+
+updateProfile();
+
+}
+
+
+function showLoggedOut(){
+
+document
+.getElementById("authPage")
+.classList.remove("hidden");
+
+document
+.getElementById("mainNav")
+.classList.add("hidden");
+
+document
+.querySelectorAll(".page")
+.forEach(p=>p.classList.remove("active"));
+
 }
 
 
 /* =========================
-   TEST
+LOGOUT
 ========================= */
 
-const questions = [
+window.logoutUser = async function(){
+
+await signOut(auth);
+
+};
+
+
+/* =========================
+PAGES
+========================= */
+
+window.showPage = function(page){
+
+document
+.querySelectorAll(".page")
+.forEach(p=>
+p.classList.remove("active")
+);
+
+const target =
+document.getElementById(page);
+
+if(target)
+target.classList.add("active");
+
+
+if(page === "tests")
+startTest();
+
+if(page === "rating")
+loadRating();
+
+updateProfile();
+
+};
+
+
+/* =========================
+PROFILE
+========================= */
+
+function updateProfile(){
+
+if(!currentProfile)
+return;
+
+
+const username =
+currentProfile.username;
+
+const score =
+Number(currentProfile.score || 0);
+
+const tests =
+Number(currentProfile.tests || 0);
+
+const correct =
+Number(currentProfile.correctAnswers || 0);
+
+const level =
+Math.floor(score / 100) + 1;
+
+
+document.getElementById("welcomeText")
+.innerText =
+"👋 Salom, " + username + "!";
+
+
+document.getElementById("homeScore")
+.innerText =
+score;
+
+
+document.getElementById("homeLevel")
+.innerText =
+level;
+
+
+document.getElementById("profileName")
+.innerText =
+username;
+
+
+document.getElementById("profileEmail")
+.innerText =
+currentProfile.email || "";
+
+
+document.getElementById("profileScore")
+.innerText =
+score;
+
+
+document.getElementById("profileTests")
+.innerText =
+tests;
+
+
+document.getElementById("profileCorrect")
+.innerText =
+correct;
+
+
+document.getElementById("profileLevel")
+.innerText =
+level;
+
+
+document.getElementById("fixedUsername")
+.value =
+username;
+
+}
+
+
+/* =========================
+LESSON SEARCH
+========================= */
+
+window.searchLessons = function(){
+
+const search =
+document
+.getElementById("lessonSearch")
+.value
+.toLowerCase();
+
+
+document
+.querySelectorAll(".lesson")
+.forEach(lesson=>{
+
+const text =
+lesson.dataset.name
+.toLowerCase();
+
+lesson.style.display =
+text.includes(search)
+? "block"
+: "none";
+
+});
+
+};
+
+
+/* =========================
+QUESTIONS
+========================= */
+
+const questions=[
 
 {
-q: "5 × 6 nechiga teng?",
-options: ["25","30","35","40"],
-answer: 1
+q:"5 × 6 nechiga teng?",
+options:["25","30","35","40"],
+answer:1
 },
 
 {
-q: "12 + 8 nechiga teng?",
-options: ["18","20","22","24"],
-answer: 1
+q:"12 + 8 nechiga teng?",
+options:["18","20","22","24"],
+answer:1
 },
 
 {
-q: "100 - 45 nechiga teng?",
-options: ["45","50","55","65"],
-answer: 2
+q:"100 - 45 nechiga teng?",
+options:["45","50","55","65"],
+answer:2
 },
 
 {
-q: "9 × 9 nechiga teng?",
-options: ["72","81","90","99"],
-answer: 1
+q:"9 × 9 nechiga teng?",
+options:["72","81","90","99"],
+answer:1
 },
 
 {
-q: "HTML nima uchun ishlatiladi?",
-options: [
+q:"HTML nima uchun ishlatiladi?",
+options:[
 "Web sahifa yaratish",
 "Video montaj",
 "Rasm chizish",
 "Musiqa yozish"
 ],
-answer: 0
+answer:0
 },
 
 {
-q: "Hello so‘zining ma'nosi nima?",
-options: [
+q:"Hello so‘zining ma'nosi nima?",
+options:[
 "Rahmat",
 "Salom",
 "Xayr",
 "Kitob"
 ],
-answer: 1
+answer:1
 },
 
 {
-q: "Tezlik formulasi qaysi?",
-options: [
+q:"Tezlik formulasi qaysi?",
+options:[
 "v = s / t",
 "v = s × t",
 "v = t / s",
 "v = s + t"
 ],
-answer: 0
+answer:0
 },
 
 {
-q: "2 + 2 × 2 nechiga teng?",
-options: ["6","8","4","10"],
-answer: 0
+q:"2 + 2 × 2 nechiga teng?",
+options:["6","8","4","10"],
+answer:0
 },
 
 {
-q: "CSS asosan nima uchun ishlatiladi?",
-options: [
+q:"CSS asosan nima uchun ishlatiladi?",
+options:[
 "Web sahifani bezash",
 "Hisoblash",
 "Video olish",
 "Fayl o‘chirish"
 ],
-answer: 0
+answer:0
 },
 
 {
-q: "Python nima?",
-options: [
+q:"Python nima?",
+options:[
 "Brauzer",
 "Dasturlash tili",
 "Operatsion tizim",
 "Telefon"
 ],
-answer: 1
+answer:1
 }
 
 ];
 
-let currentQuestion = 0;
 
-let testScore = 0;
+let currentQuestion=0;
 
-let selected = false;
+let testScore=0;
+
+let selected=false;
 
 
-function startTest() {
+/* =========================
+START TEST
+========================= */
 
-    currentQuestion = 0;
+window.startTest=function(){
 
-    testScore = 0;
+currentQuestion=0;
 
-    selected = false;
+testScore=0;
 
-    document
-    .getElementById("testResult")
-    .classList.add("hidden");
+selected=false;
 
-    document
-    .getElementById("nextButton")
-    .style.display = "block";
 
-    showQuestion();
+document
+.getElementById("testResult")
+.classList.add("hidden");
+
+
+document
+.getElementById("nextButton")
+.style.display="block";
+
+
+showQuestion();
+
+};
+
+
+/* =========================
+SHOW QUESTION
+========================= */
+
+function showQuestion(){
+
+selected=false;
+
+const q =
+questions[currentQuestion];
+
+
+document.getElementById("questionNumber")
+.innerText =
+(currentQuestion+1)
++" / "
++questions.length;
+
+
+document.getElementById("question")
+.innerText =
+q.q;
+
+
+document.getElementById("progressBar")
+.style.width =
+((currentQuestion+1)
+/
+questions.length
+*100)+"%";
+
+
+const options =
+document.getElementById("options");
+
+options.innerHTML="";
+
+
+q.options.forEach(
+(option,index)=>{
+
+const button =
+document.createElement("button");
+
+
+button.className="option";
+
+
+button.innerText =
+String.fromCharCode(65+index)
++") "+option;
+
+
+button.onclick=()=>{
+
+if(selected)
+return;
+
+selected=true;
+
+
+if(index===q.answer){
+
+button.classList.add("correct");
+
+testScore++;
+
+}else{
+
+button.classList.add("wrong");
+
 }
 
-
-function showQuestion() {
-
-    selected = false;
-
-    let q = questions[currentQuestion];
-
-    document.getElementById("questionNumber")
-    .innerText =
-    (currentQuestion + 1)
-    + " / "
-    + questions.length;
-
-    document.getElementById("question")
-    .innerText = q.q;
-
-    document.getElementById("progressBar")
-    .style.width =
-    ((currentQuestion + 1) /
-    questions.length * 100) + "%";
-
-    let options =
-    document.getElementById("options");
-
-    options.innerHTML = "";
-
-    q.options.forEach((option,index) => {
-
-        let button =
-        document.createElement("button");
-
-        button.className = "option";
-
-        button.innerText =
-        String.fromCharCode(65 + index)
-        + ") "
-        + option;
-
-        button.onclick = function() {
-
-            if(selected) return;
-
-            selected = true;
-
-            if(index === q.answer) {
-
-                button.classList.add("correct");
-
-                testScore++;
-
-            } else {
-
-                button.classList.add("wrong");
-
-            }
-
-        };
-
-        options.appendChild(button);
-
-    });
-
-}
+};
 
 
-function nextQuestion() {
+options.appendChild(button);
 
-    if(!selected) {
-
-        alert("⚠️ Avval javobni tanlang!");
-
-        return;
-    }
-
-    currentQuestion++;
-
-    if(currentQuestion >= questions.length) {
-
-        finishTest();
-
-        return;
-    }
-
-    showQuestion();
-}
-
-
-function finishTest() {
-
-    let points =
-    testScore * 10;
-
-    score += points;
-
-    tests++;
-
-    correctAnswers += testScore;
-
-    localStorage.setItem(
-    "zokirovScore",
-    score
-    );
-
-    localStorage.setItem(
-    "zokirovTests",
-    tests
-    );
-
-    localStorage.setItem(
-    "zokirovCorrect",
-    correctAnswers
-    );
-
-    document
-    .getElementById("question")
-    .innerText = "";
-
-    document
-    .getElementById("options")
-    .innerHTML = "";
-
-    document
-    .getElementById("nextButton")
-    .style.display = "none";
-
-    document
-    .getElementById("testResult")
-    .classList.remove("hidden");
-
-    document
-    .getElementById("resultText")
-    .innerText =
-    user + ", siz "
-    + questions.length
-    + " ta savoldan "
-    + testScore
-    + " tasiga to‘g‘ri javob berdingiz.";
-
-    document
-    .getElementById("resultScore")
-    .innerText =
-    "⭐ Sizga "
-    + points
-    + " ball qo‘shildi!";
-
-    updateProfile();
-
-    saveRating();
-}
-
-
-function restartTest() {
-
-    startTest();
+});
 
 }
 
 
 /* =========================
-   REYTING
+NEXT
 ========================= */
 
-function saveRating() {
+window.nextQuestion=function(){
 
-    let ratings =
-    JSON.parse(
-        localStorage.getItem("zokirovRatings")
-    ) || [];
+if(!selected){
 
-    let found =
-    ratings.find(r => r.name === user);
+alert(
+"⚠️ Avval javobni tanlang!"
+);
 
-    if(found) {
-
-        found.score = score;
-
-    } else {
-
-        ratings.push({
-            name: user,
-            score: score
-        });
-
-    }
-
-    localStorage.setItem(
-        "zokirovRatings",
-        JSON.stringify(ratings)
-    );
+return;
 
 }
 
 
-function showRating() {
+currentQuestion++;
 
-    let ratings =
-    JSON.parse(
-        localStorage.getItem("zokirovRatings")
-    ) || [];
 
-    if(user) {
+if(
+currentQuestion >=
+questions.length
+){
 
-        let found =
-        ratings.find(r => r.name === user);
+finishTest();
 
-        if(!found) {
+return;
 
-            ratings.push({
-                name: user,
-                score: score
-            });
+}
 
-        }
 
-    }
+showQuestion();
 
-    ratings.sort(
-        (a,b) => b.score - a.score
-    );
+};
 
-    let list =
-    document.getElementById("ratingList");
 
-    list.innerHTML = "";
+/* =========================
+FINISH TEST
+========================= */
 
-    ratings.forEach((person,index) => {
+async function finishTest(){
 
-        let div =
-        document.createElement("div");
+const points =
+testScore * 10;
 
-        div.className = "rating-item";
 
-        if(index === 0)
-        div.classList.add("first");
+try{
 
-        if(index === 1)
-        div.classList.add("second");
+await setDoc(
+doc(db,"users",currentUser.uid),
+{
+score:increment(points),
+tests:increment(1),
+correctAnswers:increment(testScore)
+},
+{merge:true}
+);
 
-        if(index === 2)
-        div.classList.add("third");
 
-        div.innerHTML =
-        "<span>"
-        + (
-            index === 0 ? "🥇 " :
-            index === 1 ? "🥈 " :
-            index === 2 ? "🥉 " :
-            (index + 1) + ". "
-        )
-        + person.name
-        + "</span>"
-        +
-        "<span class='score'>"
-        + person.score
-        + " ⭐</span>";
+const snapshot =
+await getDoc(
+doc(db,"users",currentUser.uid)
+);
 
-        list.appendChild(div);
+currentProfile =
+snapshot.data();
 
-    });
 
-    localStorage.setItem(
-        "zokirovRatings",
-        JSON.stringify(ratings)
-    );
+}catch(error){
+
+console.error(error);
+
+alert(
+"Natijani saqlashda xatolik yuz berdi."
+);
+
+return;
+
+}
+
+
+document
+.getElementById("question")
+.innerText="";
+
+
+document
+.getElementById("options")
+.innerHTML="";
+
+
+document
+.getElementById("nextButton")
+.style.display="none";
+
+
+document
+.getElementById("testResult")
+.classList.remove("hidden");
+
+
+document
+.getElementById("resultText")
+.innerText =
+currentProfile.username
++", siz "
++questions.length
++" ta savoldan "
++testScore
++" tasiga to‘g‘ri javob berdingiz.";
+
+
+document
+.getElementById("resultScore")
+.innerText =
+"⭐ Sizga "
++points
++" ball qo‘shildi!";
+
+
+updateProfile();
 
 }
 
 
 /* =========================
-   DARK MODE
+RATING
 ========================= */
 
-function darkMode() {
+async function loadRating(){
 
-    document.body.classList.toggle("dark");
+const list =
+document.getElementById("ratingList");
 
-    let dark =
-    document.body.classList.contains("dark");
+list.innerHTML =
+"⏳ Reyting yuklanmoqda...";
 
-    localStorage.setItem(
-        "zokirovDark",
-        dark
-    );
+
+try{
+
+const q =
+query(
+collection(db,"users"),
+orderBy("score","desc"),
+limit(50)
+);
+
+
+const snapshot =
+await getDocs(q);
+
+
+list.innerHTML="";
+
+
+if(snapshot.empty){
+
+list.innerHTML =
+"📭 Hali reyting bo‘sh.";
+
+return;
 
 }
 
 
-if(localStorage.getItem("zokirovDark") === "true") {
+snapshot.forEach(
+(docSnap,index)=>{
 
-    document.body.classList.add("dark");
+const person =
+docSnap.data();
+
+
+const div =
+document.createElement("div");
+
+
+div.className="rating-item";
+
+
+let medal="";
+
+if(index===0)
+medal="🥇";
+
+else if(index===1)
+medal="🥈";
+
+else if(index===2)
+medal="🥉";
+
+else
+medal=(index+1)+".";
+
+
+div.innerHTML=`
+
+<span>
+${medal}
+<strong>
+${escapeHTML(person.username)}
+</strong>
+</span>
+
+<span class="score">
+${Number(person.score || 0)} ⭐
+</span>
+
+`;
+
+
+list.appendChild(div);
+
+});
+
+}catch(error){
+
+console.error(error);
+
+list.innerHTML =
+"❌ Reytingni yuklab bo‘lmadi.";
+
+}
 
 }
 
 
 /* =========================
-   AVVALGI FOYDALANUVCHI
+HTML SECURITY
 ========================= */
 
-if(user) {
+function escapeHTML(text){
 
-    document.getElementById("login")
-    .style.display = "none";
+return String(text)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
 
-    updateProfile();
+}
 
-    showPage("home");
+
+/* =========================
+DARK MODE
+========================= */
+
+window.toggleDark=function(){
+
+document
+.body
+.classList.toggle("dark");
+
+localStorage.setItem(
+"zokirovDark",
+document.body.classList.contains("dark")
+);
+
+};
+
+
+if(
+localStorage.getItem("zokirovDark")
+==="true"
+){
+
+document
+.body
+.classList.add("dark");
 
 }
 
