@@ -1,466 +1,1124 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zokirov Education</title>
+<title>Zokirov Education</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f6fb;
-            color: #222;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    transition: 0.3s;
+}
 
-        header {
-            background: #1677ff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+body.dark {
+    background: #121826;
+    color: white;
+}
 
-        header h1 {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
+header {
+    background: linear-gradient(135deg, #1677ff, #6246ea);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        nav {
-            margin-top: 15px;
-        }
+header h1 {
+    font-size: 30px;
+}
 
-        nav button {
-            border: none;
-            background: white;
-            color: #1677ff;
-            padding: 10px 18px;
-            margin: 4px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+nav {
+    margin-top: 15px;
+}
 
-        nav button:hover {
-            background: #e8f0ff;
-        }
+nav button {
+    border: none;
+    background: white;
+    color: #1677ff;
+    padding: 10px 15px;
+    margin: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 30px auto;
-        }
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
 
-        .welcome {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 5px 20px #0002;
-            margin-bottom: 30px;
-        }
+.page {
+    display: none;
+}
 
-        .welcome h2 {
-            margin-bottom: 15px;
-        }
+.page.active {
+    display: block;
+}
 
-        input {
-            width: 80%;
-            max-width: 400px;
-            padding: 14px;
-            margin: 20px 0;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 16px;
-        }
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px #0002;
+}
 
-        .main-button {
-            background: #1677ff;
-            color: white;
-            border: none;
-            padding: 13px 25px;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+.dark .card {
+    background: #1d2638;
+}
 
-        .main-button:hover {
-            background: #0d5dcc;
-        }
+.welcome {
+    text-align: center;
+    padding: 45px 20px;
+}
 
-        #platforma {
-            display: none;
-        }
+input {
+    padding: 14px;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+}
 
-        .section-title {
-            margin: 25px 0 15px;
-        }
+button.main {
+    background: #1677ff;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+button.main:hover {
+    background: #0d5dcc;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 15px #0001;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-        .card-icon {
-            font-size: 45px;
-        }
+.subject {
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-        .card h3 {
-            margin: 12px 0;
-        }
+.subject:hover {
+    transform: translateY(-5px);
+}
 
-        .card button {
-            margin-top: 15px;
-            background: #1677ff;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+.icon {
+    font-size: 50px;
+}
 
-        /* REYTING */
+.subject button {
+    margin-top: 15px;
+    background: #1677ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .rating {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 15px #0001;
-        }
+.search {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+}
 
-        .student {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            margin: 8px 0;
-            background: #f5f7fa;
-            border-radius: 10px;
-        }
+.lesson {
+    border-left: 5px solid #1677ff;
+}
 
-        .student-name {
-            font-weight: bold;
-        }
+.lesson h3 {
+    margin-bottom: 10px;
+}
 
-        .score {
-            color: #1677ff;
-            font-weight: bold;
-        }
+.lesson p {
+    line-height: 1.7;
+}
 
-        .gold {
-            background: #fff4c2;
-        }
+.rating-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background: #f1f4f8;
+}
 
-        .silver {
-            background: #eeeeee;
-        }
+.dark .rating-item {
+    background: #283348;
+}
 
-        .bronze {
-            background: #f4dfd0;
-        }
+.first {
+    background: #fff0a8 !important;
+}
 
-        #salom {
-            color: #1677ff;
-        }
+.second {
+    background: #ddd !important;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: #1677ff;
-            color: white;
-        }
-    </style>
+.third {
+    background: #e9c7ad !important;
+}
+
+.score {
+    color: #1677ff;
+    font-weight: bold;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dark .option {
+    background: #283348;
+    color: white;
+}
+
+.option:hover {
+    border-color: #1677ff;
+}
+
+.option.correct {
+    background: #b9f6c5;
+    border-color: green;
+}
+
+.option.wrong {
+    background: #ffc1c1;
+    border-color: red;
+}
+
+.progress {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #1677ff;
+    transition: 0.3s;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 35px;
+    color: #1677ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #1677ff;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
 
-    <h1>🎓 Zokirov Education</h1>
+<h1>🎓 Zokirov Education</h1>
 
-    <p>Bilim olish va rivojlanish platformasi</p>
+<p>Bilim ol, rivojlan va kelajagingni qur!</p>
 
-    <nav>
-        <button onclick="boshSahifa()">🏠 Bosh sahifa</button>
-        <button onclick="darslar()">📚 Darslar</button>
-        <button onclick="reyting()">🏆 Reyting</button>
-    </nav>
+<nav>
+<button onclick="showPage('home')">🏠 Bosh sahifa</button>
+<button onclick="showPage('lessons')">📚 Darsliklar</button>
+<button onclick="showPage('tests')">📝 Testlar</button>
+<button onclick="showPage('rating')">🏆 Reyting</button>
+<button onclick="showPage('profile')">👤 Profil</button>
+<button onclick="darkMode()">🌙</button>
+</nav>
 
 </header>
 
-
 <div class="container">
 
-    <!-- KIRISH -->
+<!-- KIRISH -->
 
-    <div class="welcome" id="kirish">
+<div id="login" class="card welcome">
 
-        <h2>👋 Xush kelibsiz!</h2>
+<h2>👋 Zokirov Education'ga xush kelibsiz!</h2>
 
-        <p>
-            Zokirov Education platformasiga kirish uchun
-            ismingizni yozing.
-        </p>
+<p>O‘qishni boshlash uchun ismingizni kiriting.</p>
 
-        <input
-            type="text"
-            id="ism"
-            placeholder="Ismingizni kiriting"
-        >
+<input id="username" placeholder="Ismingiz">
 
-        <br>
+<br>
 
-        <button class="main-button" onclick="boshlash()">
-            🚀 Boshlash
-        </button>
+<button class="main" onclick="login()">
+🚀 Ta'limni boshlash
+</button>
 
-        <p id="xato" style="color:red; margin-top:15px;"></p>
+<p id="loginError" style="color:red;margin-top:15px;"></p>
 
-    </div>
+</div>
 
 
-    <!-- ASOSIY PLATFORMА -->
+<!-- HOME -->
 
-    <div id="platforma">
+<div id="home" class="page">
 
-        <div class="welcome">
+<div class="card welcome">
 
-            <h2 id="salom"></h2>
+<h2 id="hello">👋 Salom!</h2>
 
-            <p style="margin-top:10px;">
-                Zokirov Education'ga xush kelibsiz! 🎓
-            </p>
+<p>
+Bugun yangi bilim olish uchun ajoyib kun! 📚
+</p>
 
-            <p style="margin-top:10px;">
-                Yangi bilimlarni o‘rganishni boshlang.
-            </p>
+<br>
 
-        </div>
+<button class="main" onclick="showPage('lessons')">
+📚 Darslarni boshlash
+</button>
 
+</div>
 
-        <!-- FANLAR -->
+<div class="grid">
 
-        <h2 class="section-title">📚 Fanlar</h2>
+<div class="card stat">
+<strong>📚</strong>
+Darslar
+</div>
 
-        <div class="cards">
+<div class="card stat">
+<strong>📝</strong>
+Testlar
+</div>
 
-            <div class="card">
+<div class="card stat">
+<strong id="homeScore">0</strong>
+Ball
+</div>
 
-                <div class="card-icon">📐</div>
+<div class="card stat">
+<strong id="homeLevel">1</strong>
+Daraja
+</div>
 
-                <h3>Matematika</h3>
+</div>
 
-                <p>
-                    Matematikani o‘rganing.
-                </p>
+</div>
 
-                <button onclick="alert('Matematika darslari tez orada qo‘shiladi!')">
-                    Darsni ko‘rish
-                </button>
 
-            </div>
+<!-- LESSONS -->
 
+<div id="lessons" class="page">
 
-            <div class="card">
+<div class="card">
 
-                <div class="card-icon">🇬🇧</div>
+<h2>📚 Darsliklar</h2>
 
-                <h3>Ingliz tili</h3>
+<input
+class="search"
+id="lessonSearch"
+placeholder="🔎 Dars qidirish..."
+oninput="searchLessons()"
+>
 
-                <p>
-                    Ingliz tilini o‘rganing.
-                </p>
+</div>
 
-                <button onclick="alert('Ingliz tili darslari tez orada qo‘shiladi!')">
-                    Darsni ko‘rish
-                </button>
+<div id="lessonList">
 
-            </div>
+<div class="card lesson" data-name="matematika">
 
+<h3>📐 Matematika — Sonlar</h3>
 
-            <div class="card">
+<p>
+Natural sonlar, qo‘shish, ayirish, ko‘paytirish
+va bo‘lish amallarini o‘rganamiz.
+</p>
 
-                <div class="card-icon">💻</div>
+<br>
 
-                <h3>Dasturlash</h3>
+<b>Misol:</b>
 
-                <p>
-                    Dasturlashni o‘rganing.
-                </p>
+<p>
+5 × 6 = 30
+</p>
 
-                <button onclick="alert('Dasturlash darslari tez orada qo‘shiladi!')">
-                    Darsni ko‘rish
-                </button>
+</div>
 
-            </div>
 
+<div class="card lesson" data-name="ingliz tili english">
 
-            <div class="card">
+<h3>🇬🇧 Ingliz tili — Salomlashish</h3>
 
-                <div class="card-icon">🔬</div>
+<p>
+Ingliz tilida salomlashish uchun
+<b>Hello</b> yoki <b>Hi</b> so‘zlaridan foydalaniladi.
+</p>
 
-                <h3>Fizika</h3>
+<p>
+Hello = Salom
+</p>
 
-                <p>
-                    Fizika fanini o‘rganing.
-                </p>
+</div>
 
-                <button onclick="alert('Fizika darslari tez orada qo‘shiladi!')">
-                    Darsni ko‘rish
-                </button>
 
-            </div>
+<div class="card lesson" data-name="dasturlash html">
 
-        </div>
+<h3>💻 Dasturlash — HTML</h3>
 
+<p>
+HTML web-sahifaning tuzilishini yaratish uchun
+ishlatiladigan belgilash tilidir.
+</p>
 
-        <!-- REYTING -->
+<br>
 
-        <h2 class="section-title">🏆 O‘quvchilar reytingi</h2>
+<b>Misol:</b>
 
-        <div class="rating">
+<p>
+&lt;h1&gt;Salom!&lt;/h1&gt;
+</p>
 
-            <div class="student gold">
-                <span class="student-name">
-                    🥇 1. Ali
-                </span>
+</div>
 
-                <span class="score">
-                    100 ⭐
-                </span>
-            </div>
 
+<div class="card lesson" data-name="fizika">
 
-            <div class="student silver">
-                <span class="student-name">
-                    🥈 2. Muhammad
-                </span>
+<h3>🔬 Fizika — Tezlik</h3>
 
-                <span class="score">
-                    95 ⭐
-                </span>
-            </div>
+<p>
+Tezlik jismning ma'lum vaqt ichida qancha
+masofa bosib o‘tganini ko‘rsatadi.
+</p>
 
+<br>
 
-            <div class="student bronze">
-                <span class="student-name">
-                    🥉 3. Aziz
-                </span>
+<b>Formula:</b>
 
-                <span class="score">
-                    90 ⭐
-                </span>
-            </div>
+<p>
+v = s / t
+</p>
 
+</div>
 
-            <div class="student">
-                <span class="student-name">
-                    4. Feruzbek
-                </span>
 
-                <span class="score">
-                    85 ⭐
-                </span>
-            </div>
+<div class="card lesson" data-name="ona tili">
 
+<h3>📖 Ona tili — So‘z turkumlari</h3>
 
-            <div class="student">
-                <span class="student-name">
-                    5. Sardor
-                </span>
+<p>
+Ot, sifat, son, olmosh, fe'l kabi so‘z
+turkumlarini o‘rganamiz.
+</p>
 
-                <span class="score">
-                    80 ⭐
-                </span>
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
+
+
+<!-- TESTS -->
+
+<div id="tests" class="page">
+
+<div class="card">
+
+<h2>📝 Bilim testi</h2>
+
+<p id="questionNumber">1 / 10</p>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<h3 id="question"></h3>
+
+<div id="options"></div>
+
+<button class="main" id="nextButton" onclick="nextQuestion()">
+Keyingi →
+</button>
+
+</div>
+
+<div id="testResult" class="card hidden">
+
+<h2>🎉 Test tugadi!</h2>
+
+<h3 id="resultText"></h3>
+
+<p id="resultScore"></p>
+
+<button class="main" onclick="restartTest()">
+🔄 Qayta ishlash
+</button>
+
+</div>
+
+</div>
+
+
+<!-- RATING -->
+
+<div id="rating" class="page">
+
+<div class="card">
+
+<h2>🏆 O‘quvchilar reytingi</h2>
+
+<p>Eng ko‘p ball to‘plagan o‘quvchilar.</p>
+
+<div id="ratingList"></div>
+
+</div>
+
+</div>
+
+
+<!-- PROFILE -->
+
+<div id="profile" class="page">
+
+<div class="card">
+
+<h2>👤 Mening profilim</h2>
+
+<h3 id="profileName">Foydalanuvchi</h3>
+
+<br>
+
+<div class="grid">
+
+<div class="card stat">
+<strong id="profileScore">0</strong>
+Umumiy ball
+</div>
+
+<div class="card stat">
+<strong id="profileTests">0</strong>
+Testlar
+</div>
+
+<div class="card stat">
+<strong id="profileCorrect">0</strong>
+To‘g‘ri javoblar
+</div>
+
+<div class="card stat">
+<strong id="profileLevel">1</strong>
+Daraja
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 
 <footer>
 
-    <p>🎓 Zokirov Education</p>
+<p>🎓 Zokirov Education</p>
 
-    <p style="margin-top:8px;">
-        Bilim — kelajak poydevori!
-    </p>
+<p style="margin-top:8px;">
+Bilim — kelajak poydevori!
+</p>
 
 </footer>
 
 
 <script>
 
-function boshlash() {
+/* =========================
+   FOYDALANUVCHI
+========================= */
 
-    let ism = document.getElementById("ism").value.trim();
+let user = localStorage.getItem("zokirovUser");
 
-    if (ism === "") {
+let score = Number(localStorage.getItem("zokirovScore")) || 0;
 
-        document.getElementById("xato").innerText =
-            "⚠️ Iltimos, ismingizni kiriting!";
+let tests = Number(localStorage.getItem("zokirovTests")) || 0;
+
+let correctAnswers =
+Number(localStorage.getItem("zokirovCorrect")) || 0;
+
+
+function login() {
+
+    let name =
+    document.getElementById("username").value.trim();
+
+    if(name === "") {
+
+        document.getElementById("loginError").innerText =
+        "⚠️ Iltimos, ismingizni kiriting!";
 
         return;
     }
 
-    document.getElementById("xato").innerText = "";
+    user = name;
 
-    document.getElementById("kirish").style.display = "none";
+    localStorage.setItem("zokirovUser", user);
 
-    document.getElementById("platforma").style.display = "block";
+    document.getElementById("login").style.display = "none";
 
-    document.getElementById("salom").innerText =
-        "👋 Salom, " + ism + "!";
+    updateProfile();
 
+    showPage("home");
 }
 
 
-function boshSahifa() {
+function updateProfile() {
 
-    document.getElementById("kirish").style.display = "block";
+    if(!user) return;
 
-    document.getElementById("platforma").style.display = "none";
+    document.getElementById("hello").innerText =
+    "👋 Salom, " + user + "!";
 
+    document.getElementById("profileName").innerText =
+    user;
+
+    document.getElementById("profileScore").innerText =
+    score;
+
+    document.getElementById("homeScore").innerText =
+    score;
+
+    document.getElementById("profileTests").innerText =
+    tests;
+
+    document.getElementById("profileCorrect").innerText =
+    correctAnswers;
+
+    let level =
+    Math.floor(score / 100) + 1;
+
+    document.getElementById("profileLevel").innerText =
+    level;
+
+    document.getElementById("homeLevel").innerText =
+    level;
 }
 
 
-function darslar() {
+/* =========================
+   SAHIFALAR
+========================= */
 
-    document.getElementById("kirish").style.display = "none";
+function showPage(page) {
 
-    document.getElementById("platforma").style.display = "block";
+    document.querySelectorAll(".page")
+    .forEach(p => p.classList.remove("active"));
 
+    document.getElementById(page)
+    .classList.add("active");
+
+    if(page === "tests") {
+        startTest();
+    }
+
+    if(page === "rating") {
+        showRating();
+    }
+
+    updateProfile();
 }
 
 
-function reyting() {
+/* =========================
+   DARSLAR QIDIRUVI
+========================= */
 
-    document.getElementById("kirish").style.display = "none";
+function searchLessons() {
 
-    document.getElementById("platforma").style.display = "block";
+    let search =
+    document.getElementById("lessonSearch")
+    .value.toLowerCase();
 
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
+    document.querySelectorAll(".lesson")
+    .forEach(lesson => {
+
+        let text =
+        lesson.dataset.name.toLowerCase();
+
+        lesson.style.display =
+        text.includes(search)
+        ? "block"
+        : "none";
+
     });
+}
+
+
+/* =========================
+   TEST
+========================= */
+
+const questions = [
+
+{
+q: "5 × 6 nechiga teng?",
+options: ["25","30","35","40"],
+answer: 1
+},
+
+{
+q: "12 + 8 nechiga teng?",
+options: ["18","20","22","24"],
+answer: 1
+},
+
+{
+q: "100 - 45 nechiga teng?",
+options: ["45","50","55","65"],
+answer: 2
+},
+
+{
+q: "9 × 9 nechiga teng?",
+options: ["72","81","90","99"],
+answer: 1
+},
+
+{
+q: "HTML nima uchun ishlatiladi?",
+options: [
+"Web sahifa yaratish",
+"Video montaj",
+"Rasm chizish",
+"Musiqa yozish"
+],
+answer: 0
+},
+
+{
+q: "Hello so‘zining ma'nosi nima?",
+options: [
+"Rahmat",
+"Salom",
+"Xayr",
+"Kitob"
+],
+answer: 1
+},
+
+{
+q: "Tezlik formulasi qaysi?",
+options: [
+"v = s / t",
+"v = s × t",
+"v = t / s",
+"v = s + t"
+],
+answer: 0
+},
+
+{
+q: "2 + 2 × 2 nechiga teng?",
+options: ["6","8","4","10"],
+answer: 0
+},
+
+{
+q: "CSS asosan nima uchun ishlatiladi?",
+options: [
+"Web sahifani bezash",
+"Hisoblash",
+"Video olish",
+"Fayl o‘chirish"
+],
+answer: 0
+},
+
+{
+q: "Python nima?",
+options: [
+"Brauzer",
+"Dasturlash tili",
+"Operatsion tizim",
+"Telefon"
+],
+answer: 1
+}
+
+];
+
+let currentQuestion = 0;
+
+let testScore = 0;
+
+let selected = false;
+
+
+function startTest() {
+
+    currentQuestion = 0;
+
+    testScore = 0;
+
+    selected = false;
+
+    document
+    .getElementById("testResult")
+    .classList.add("hidden");
+
+    document
+    .getElementById("nextButton")
+    .style.display = "block";
+
+    showQuestion();
+}
+
+
+function showQuestion() {
+
+    selected = false;
+
+    let q = questions[currentQuestion];
+
+    document.getElementById("questionNumber")
+    .innerText =
+    (currentQuestion + 1)
+    + " / "
+    + questions.length;
+
+    document.getElementById("question")
+    .innerText = q.q;
+
+    document.getElementById("progressBar")
+    .style.width =
+    ((currentQuestion + 1) /
+    questions.length * 100) + "%";
+
+    let options =
+    document.getElementById("options");
+
+    options.innerHTML = "";
+
+    q.options.forEach((option,index) => {
+
+        let button =
+        document.createElement("button");
+
+        button.className = "option";
+
+        button.innerText =
+        String.fromCharCode(65 + index)
+        + ") "
+        + option;
+
+        button.onclick = function() {
+
+            if(selected) return;
+
+            selected = true;
+
+            if(index === q.answer) {
+
+                button.classList.add("correct");
+
+                testScore++;
+
+            } else {
+
+                button.classList.add("wrong");
+
+            }
+
+        };
+
+        options.appendChild(button);
+
+    });
+
+}
+
+
+function nextQuestion() {
+
+    if(!selected) {
+
+        alert("⚠️ Avval javobni tanlang!");
+
+        return;
+    }
+
+    currentQuestion++;
+
+    if(currentQuestion >= questions.length) {
+
+        finishTest();
+
+        return;
+    }
+
+    showQuestion();
+}
+
+
+function finishTest() {
+
+    let points =
+    testScore * 10;
+
+    score += points;
+
+    tests++;
+
+    correctAnswers += testScore;
+
+    localStorage.setItem(
+    "zokirovScore",
+    score
+    );
+
+    localStorage.setItem(
+    "zokirovTests",
+    tests
+    );
+
+    localStorage.setItem(
+    "zokirovCorrect",
+    correctAnswers
+    );
+
+    document
+    .getElementById("question")
+    .innerText = "";
+
+    document
+    .getElementById("options")
+    .innerHTML = "";
+
+    document
+    .getElementById("nextButton")
+    .style.display = "none";
+
+    document
+    .getElementById("testResult")
+    .classList.remove("hidden");
+
+    document
+    .getElementById("resultText")
+    .innerText =
+    user + ", siz "
+    + questions.length
+    + " ta savoldan "
+    + testScore
+    + " tasiga to‘g‘ri javob berdingiz.";
+
+    document
+    .getElementById("resultScore")
+    .innerText =
+    "⭐ Sizga "
+    + points
+    + " ball qo‘shildi!";
+
+    updateProfile();
+
+    saveRating();
+}
+
+
+function restartTest() {
+
+    startTest();
+
+}
+
+
+/* =========================
+   REYTING
+========================= */
+
+function saveRating() {
+
+    let ratings =
+    JSON.parse(
+        localStorage.getItem("zokirovRatings")
+    ) || [];
+
+    let found =
+    ratings.find(r => r.name === user);
+
+    if(found) {
+
+        found.score = score;
+
+    } else {
+
+        ratings.push({
+            name: user,
+            score: score
+        });
+
+    }
+
+    localStorage.setItem(
+        "zokirovRatings",
+        JSON.stringify(ratings)
+    );
+
+}
+
+
+function showRating() {
+
+    let ratings =
+    JSON.parse(
+        localStorage.getItem("zokirovRatings")
+    ) || [];
+
+    if(user) {
+
+        let found =
+        ratings.find(r => r.name === user);
+
+        if(!found) {
+
+            ratings.push({
+                name: user,
+                score: score
+            });
+
+        }
+
+    }
+
+    ratings.sort(
+        (a,b) => b.score - a.score
+    );
+
+    let list =
+    document.getElementById("ratingList");
+
+    list.innerHTML = "";
+
+    ratings.forEach((person,index) => {
+
+        let div =
+        document.createElement("div");
+
+        div.className = "rating-item";
+
+        if(index === 0)
+        div.classList.add("first");
+
+        if(index === 1)
+        div.classList.add("second");
+
+        if(index === 2)
+        div.classList.add("third");
+
+        div.innerHTML =
+        "<span>"
+        + (
+            index === 0 ? "🥇 " :
+            index === 1 ? "🥈 " :
+            index === 2 ? "🥉 " :
+            (index + 1) + ". "
+        )
+        + person.name
+        + "</span>"
+        +
+        "<span class='score'>"
+        + person.score
+        + " ⭐</span>";
+
+        list.appendChild(div);
+
+    });
+
+    localStorage.setItem(
+        "zokirovRatings",
+        JSON.stringify(ratings)
+    );
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+function darkMode() {
+
+    document.body.classList.toggle("dark");
+
+    let dark =
+    document.body.classList.contains("dark");
+
+    localStorage.setItem(
+        "zokirovDark",
+        dark
+    );
+
+}
+
+
+if(localStorage.getItem("zokirovDark") === "true") {
+
+    document.body.classList.add("dark");
+
+}
+
+
+/* =========================
+   AVVALGI FOYDALANUVCHI
+========================= */
+
+if(user) {
+
+    document.getElementById("login")
+    .style.display = "none";
+
+    updateProfile();
+
+    showPage("home");
 
 }
 
