@@ -1,1799 +1,1772 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>Zokirov Education — Online Ta'lim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zokirov Education — fanlarni o'rganish, test ishlash va bilimlarni rivojlantirish platformasi.">
+  <meta name="keywords" content="Zokirov Education, ta'lim, test, matematika, ingliz tili, informatika, tarix">
+  <meta name="robots" content="index, follow">
 
-<meta name="description"
-content="Zokirov Education — testlar, darslar, fanlar va bilimni rivojlantirish platformasi.">
+  <meta name="google-site-verification" content="B_YC70Pw0zbyxlEpfZCFssHNOtzFiUQA6Z9QRyNr7Y">
 
-<meta name="keywords"
-content="Zokirov Education, online ta'lim, testlar, matematika, ingliz tili, informatika">
+  <link rel="canonical" href="https://newyoutuber2003-svg.github.io/Feruzbekning-sayti/">
 
-<meta name="robots" content="index, follow">
+  <title>Zokirov Education — Online Ta'lim</title>
 
-<meta name="google-site-verification"
-content="B_YC70Pw0zbyxlEpfZCFssHNOtzFiUQA6Z9QRyNr7Y">
-
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #172033;
-}
-
-header {
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: white;
-    padding: 18px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-nav button {
-    border: 0;
-    padding: 10px 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    background: rgba(255,255,255,.15);
-    color: white;
-    font-weight: bold;
-}
-
-nav button:hover {
-    background: rgba(255,255,255,.3);
-}
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 15px 60px;
-}
-
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.07);
-}
-
-.hero {
-    text-align: center;
-    padding: 55px 20px;
-    border-radius: 22px;
-    background: linear-gradient(135deg,#dbeafe,#ede9fe);
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin: 0 0 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #475569;
-}
-
-button {
-    font-family: inherit;
-}
-
-.btn {
-    border: 0;
-    padding: 12px 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.primary {
-    background: #2563eb;
-    color: white;
-}
-
-.primary:hover {
-    background: #1d4ed8;
-}
-
-.secondary {
-    background: #e2e8f0;
-    color: #172033;
-}
-
-input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
-    gap: 15px;
-}
-
-.subject {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 20px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.subject:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
-}
-
-.subject h3 {
-    margin-top: 0;
-}
-
-.muted {
-    color: #64748b;
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-}
-
-.stat {
-    background: #f8fafc;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.stat strong {
-    display: block;
-    font-size: 30px;
-    color: #2563eb;
-}
-
-.test-question {
-    background: #f8fafc;
-    border-radius: 15px;
-    padding: 18px;
-    margin-bottom: 15px;
-}
-
-.answers {
-    display: grid;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.answer {
-    border: 1px solid #cbd5e1;
-    background: white;
-    padding: 13px;
-    border-radius: 10px;
-    text-align: left;
-    cursor: pointer;
-}
-
-.answer:hover {
-    background: #eff6ff;
-}
-
-.answer.selected {
-    background: #dbeafe;
-    border-color: #2563eb;
-}
-
-.rank {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.rank-number {
-    width: 35px;
-    font-weight: bold;
-}
-
-.rank-score {
-    margin-left: auto;
-    color: #2563eb;
-    font-weight: bold;
-}
-
-.badge {
-    display: inline-block;
-    background: #ede9fe;
-    color: #6d28d9;
-    padding: 6px 10px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.hidden {
-    display: none !important;
-}
-
-footer {
-    text-align: center;
-    color: #64748b;
-    padding: 30px;
-}
-
-.error {
-    color: #dc2626;
-    font-weight: bold;
-}
-
-.success {
-    color: #16a34a;
-    font-weight: bold;
-}
-
-@media(max-width:650px) {
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #172033;
+      min-height: 100vh;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* LOGIN */
+    #loginPage {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 540px;
+      background: white;
+      border-radius: 24px;
+      padding: 45px 36px;
+      box-shadow: 0 15px 45px rgba(20, 40, 80, 0.12);
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: 800;
+      color: #172b4d;
+      margin-bottom: 10px;
+    }
+
+    .logo span {
+      margin-right: 8px;
+    }
+
+    .subtitle {
+      color: #63748b;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .name-input {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid #d3dbe8;
+      border-radius: 12px;
+      outline: none;
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+
+    .name-input:focus {
+      border-color: #2864dc;
+      box-shadow: 0 0 0 3px rgba(40,100,220,.12);
+    }
+
+    .primary-btn {
+      border: none;
+      background: #2864dc;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .primary-btn:hover {
+      background: #174ebc;
+      transform: translateY(-1px);
+    }
+
+    .error {
+      color: #d93025;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    /* APP */
+    #app {
+      min-height: 100vh;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e3e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      color: #172b4d;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav button {
+      border: none;
+      background: transparent;
+      padding: 10px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+      color: #52627a;
+      font-weight: 600;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: #edf3ff;
+      color: #2864dc;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px 60px;
+    }
+
+    .welcome {
+      background: linear-gradient(135deg, #2864dc, #5a8ff0);
+      color: white;
+      border-radius: 22px;
+      padding: 35px;
+      margin-bottom: 28px;
+    }
+
+    .welcome h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      opacity: .92;
+      font-size: 16px;
+    }
+
+    .section-title {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    /* SUBJECTS */
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .subject-card {
+      background: white;
+      border: 1px solid #e4e9f1;
+      border-radius: 18px;
+      padding: 23px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(30,50,90,.1);
+      border-color: #b8c9ed;
+    }
+
+    .subject-icon {
+      font-size: 38px;
+      margin-bottom: 13px;
+    }
+
+    .subject-card h3 {
+      margin-bottom: 7px;
+      font-size: 19px;
+    }
+
+    .subject-card p {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    /* LEVELS */
+    .back-btn {
+      border: none;
+      background: #eaf0fa;
+      color: #2855a8;
+      padding: 11px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .level-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      border: 1px solid #e3e8f0;
+    }
+
+    .level-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .level-card p {
+      color: #68778d;
+      margin-bottom: 18px;
+      min-height: 40px;
+    }
+
+    .level-btn {
+      width: 100%;
+      border: none;
+      background: #2864dc;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .level-btn:hover {
+      background: #174ebc;
+    }
+
+    /* TEST */
+    .test-header {
+      background: white;
+      padding: 22px;
+      border-radius: 17px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .question-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 18px;
+      border: 1px solid #e3e8f0;
+    }
+
+    .question-number {
+      color: #2864dc;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .question-text {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 17px;
+      line-height: 1.5;
+    }
+
+    .answers {
+      display: grid;
+      gap: 10px;
+    }
+
+    .answer {
+      border: 1px solid #dce3ed;
+      background: #f9fbfe;
+      border-radius: 11px;
+      padding: 13px 15px;
+      cursor: pointer;
+      text-align: left;
+      transition: .15s;
+    }
+
+    .answer:hover {
+      border-color: #2864dc;
+      background: #f0f5ff;
+    }
+
+    .answer.selected {
+      background: #e8f0ff;
+      border-color: #2864dc;
+      color: #174ebc;
+      font-weight: 700;
+    }
+
+    .finish-area {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .finish-btn {
+      border: none;
+      background: #16a36a;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 11px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .finish-btn:hover {
+      background: #118355;
+    }
+
+    /* RESULT */
+    .result-card {
+      background: white;
+      border-radius: 22px;
+      padding: 40px;
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .result-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .result-score {
+      font-size: 38px;
+      font-weight: 900;
+      color: #2864dc;
+      margin: 15px 0;
+    }
+
+    /* RANKING */
+    .ranking-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    .rank-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 130px;
+      gap: 10px;
+      padding: 17px 20px;
+      border-bottom: 1px solid #edf0f5;
+      align-items: center;
+    }
+
+    .rank-row:last-child {
+      border-bottom: none;
+    }
+
+    .rank-number {
+      font-weight: 900;
+      color: #2864dc;
+    }
+
+    .rank-name {
+      font-weight: 700;
+    }
+
+    .rank-score {
+      text-align: right;
+      font-weight: 800;
+    }
+
+    /* PROFILE */
+    .profile-card {
+      background: white;
+      border-radius: 22px;
+      padding: 35px;
+      max-width: 700px;
+    }
+
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #2864dc;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .profile-card h2 {
+      margin-bottom: 7px;
+    }
+
+    .profile-level {
+      color: #2864dc;
+      font-weight: 800;
+      margin-bottom: 25px;
     }
 
     .stats {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
     }
-}
-</style>
+
+    .stat {
+      background: #f4f7fc;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: #718096;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      color: #8290a5;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .subjects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .levels {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .subjects,
+      .levels {
+        grid-template-columns: 1fr;
+      }
+
+      .welcome {
+        padding: 25px;
+      }
+
+      .welcome h1 {
+        font-size: 25px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .rank-row {
+        grid-template-columns: 50px 1fr 90px;
+      }
+
+      .login-card {
+        padding: 35px 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+<!-- NAME PAGE -->
+<section id="loginPage">
+  <div class="login-card">
+    <div class="logo"><span>🎓</span>Zokirov Education</div>
+    <div class="subtitle">
+      Ta'lim oling, test ishlang va bilimingizni rivojlantiring.
+    </div>
 
-<div class="logo">
-🎓 Zokirov Education
-</div>
+    <input
+      id="nameInput"
+      class="name-input"
+      type="text"
+      placeholder="Ismingizni kiriting"
+      maxlength="40"
+      autocomplete="off"
+    >
 
-<nav>
-<button onclick="showPage('home')">Bosh sahifa</button>
-<button onclick="showPage('subjects')">Fanlar</button>
-<button onclick="showPage('rating')">🏆 Reyting</button>
-<button onclick="showPage('profile')">👤 Profil</button>
-</nav>
+    <button class="primary-btn" onclick="registerUser()">
+      🚀 Kirish
+    </button>
 
-</header>
-
-<main>
-
-<!-- ISM KIRITISH -->
-
-<section id="loginPage" class="card" style="max-width:550px;margin:60px auto;text-align:center">
-
-<h2>👋 Zokirov Education'ga xush kelibsiz!</h2>
-
-<p class="muted">
-Boshlash uchun ismingizni kiriting.
-</p>
-
-<input
-id="nameInput"
-type="text"
-maxlength="30"
-placeholder="Ismingizni yozing..."
->
-
-<button
-class="btn primary"
-style="width:100%"
-onclick="registerUser()"
->
-Boshlash
-</button>
-
-<p id="nameError" class="error"></p>
-
+    <div id="nameError" class="error"></div>
+  </div>
 </section>
 
 
-<!-- ASOSIY SAYT -->
-
+<!-- MAIN APP -->
 <div id="app" class="hidden">
 
+  <header>
+    <div class="header-inner">
 
-<!-- BOSH SAHIFA -->
+      <div class="brand">
+        🎓 Zokirov Education
+      </div>
 
-<section id="home" class="page">
+      <nav>
+        <button onclick="showHome()" id="navHome">Bosh sahifa</button>
+        <button onclick="showRanking()" id="navRanking">🏆 Reyting</button>
+        <button onclick="showProfile()" id="navProfile">👤 Profil</button>
+      </nav>
 
-<div class="hero">
+    </div>
+  </header>
 
-<h1>🎓 Zokirov Education</h1>
+  <main>
 
-<h2>
-Salom, <span id="welcomeName"></span>!
-</h2>
+    <!-- HOME -->
+    <section id="homePage">
 
-<p>
-Bilimingizni oshiring, test ishlang va ball to'plang.
-</p>
-
-<button
-class="btn primary"
-onclick="showPage('subjects')"
->
-📚 Test boshlash
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h2>📊 Natijangiz</h2>
-
-<div class="stats">
-
-<div class="stat">
-<strong id="homeScore">0</strong>
-Ball
-</div>
-
-<div class="stat">
-<strong id="homeTests">0</strong>
-Test
-</div>
-
-<div class="stat">
-<strong id="homeCorrect">0</strong>
-To'g'ri javob
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<h2>📚 Fanlar</h2>
-
-<div id="homeSubjects" class="grid"></div>
-
-</div>
-
-</section>
-
-
-<!-- FANLAR -->
-
-<section id="subjects" class="page hidden">
-
-<div class="card">
-
-<h2>📚 Fanlar</h2>
-
-<p class="muted">
-O'zingizga kerakli fanni tanlang.
-</p>
-
-<div id="subjectsGrid" class="grid"></div>
-
-</div>
-
-</section>
-
-
-<!-- TEST -->
-
-<section id="tests" class="page hidden">
-
-<div class="card">
-
-<button
-class="btn secondary"
-onclick="showPage('subjects')"
->
-← Orqaga
-</button>
-
-<h2 id="testTitle"></h2>
-
-<p class="muted">
-Har bir test 20 ta savoldan iborat.
-</p>
-
-<div id="questions"></div>
-
-<button
-id="finishButton"
-class="btn primary hidden"
-style="width:100%"
-onclick="finishTest()"
->
-✅ Testni yakunlash
-</button>
-
-</div>
-
-</section>
-
-
-<!-- REYTING -->
-
-<section id="rating" class="page hidden">
-
-<div class="card">
-
-<h2>🏆 O'quvchilar reytingi</h2>
-
-<p class="muted">
-Ushbu brauzerda ro'yxatdan o'tgan o'quvchilar.
-</p>
-
-<div id="ranking"></div>
-
-</div>
-
-</section>
-
-
-<!-- PROFIL -->
-
-<section id="profile" class="page hidden">
-
-<div class="card">
-
-<h2>👤 Profil</h2>
-
-<p>
-<b>Ism:</b>
-<span id="profileName"></span>
-</p>
-
-<p>
-<b>Daraja:</b>
-<span id="profileLevel" class="badge"></span>
-</p>
-
-<div class="stats">
-
-<div class="stat">
-<strong id="profileScore">0</strong>
-Ball
-</div>
-
-<div class="stat">
-<strong id="profileTests">0</strong>
-Test
-</div>
-
-<div class="stat">
-<strong id="profileCorrect">0</strong>
-To'g'ri
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</div>
-
-</main>
-
-
-<footer>
-
-© 2026 Zokirov Education
-
-</footer>
-
-
-<script>
-
-/* =========================
-   FANLAR
-========================= */
-
-const subjects = [
-
-{
-name:"Matematika",
-icon:"📐"
-},
-
-{
-name:"Ingliz tili",
-icon:"🇬🇧"
-},
-
-{
-name:"Informatika",
-icon:"💻"
-},
-
-{
-name:"Tarix",
-icon:"📜"
-},
-
-{
-name:"Biologiya",
-icon:"🧬"
-},
-
-{
-name:"Kimyo",
-icon:"⚗️"
-},
-
-{
-name:"Geografiya",
-icon:"🌍"
-},
-
-{
-name:"Ona tili",
-icon:"📖"
-},
-
-{
-name:"Mantiq",
-icon:"🧠"
-}
-
-];
-
-
-/* =========================
-   TEST DARAJALARI
-========================= */
-
-const levels = [
-
-{
-name:"Boshlang'ich",
-points:5,
-icon:"🟢"
-},
-
-{
-name:"O'rta",
-points:10,
-icon:"🔵"
-},
-
-{
-name:"Yuqori",
-points:15,
-icon:"🟠"
-},
-
-{
-name:"Qiyin",
-points:20,
-icon:"🔴"
-}
-
-];
-
-
-/* =========================
-   SAVOLLAR
-========================= */
-
-const questionBank = {
-
-"Matematika":[
-
-["5 + 7 = ?",["10","11","12","13"],2],
-
-["12 × 3 = ?",["24","30","36","42"],2],
-
-["100 ÷ 4 = ?",["20","25","30","40"],1],
-
-["15 − 8 = ?",["5","6","7","8"],2],
-
-["9 × 9 = ?",["72","81","90","99"],1],
-
-["√64 = ?",["6","7","8","9"],2],
-
-["2³ = ?",["6","8","9","12"],1],
-
-["1/2 + 1/2 = ?",["0","1/2","1","2"],2],
-
-["200 ning 25% i?",["25","40","50","75"],2],
-
-["3² + 4² = ?",["12","20","25","49"],2],
-
-["144 ÷ 12 = ?",["10","11","12","14"],2],
-
-["7 × 8 = ?",["48","54","56","64"],2],
-
-["50 − 17 = ?",["23","33","37","43"],1],
-
-["2x = 18. x = ?",["6","8","9","12"],2],
-
-["10² = ?",["20","50","100","1000"],2],
-
-["36 ning kvadrat ildizi?",["4","5","6","7"],2],
-
-["3/4 = ? foiz",["25%","50%","75%","80%"],2],
-
-["80 ning 10% i?",["4","8","10","16"],1],
-
-["17 + 23 = ?",["30","35","40","45"],2],
-
-["90 − 45 = ?",["35","40","45","50"],2]
-
-],
-
-
-"Ingliz tili":[
-
-["I ___ a student.",["am","is","are","be"],0],
-
-["Past of 'go'?",["goed","went","gone","going"],1],
-
-["Opposite of 'big'?",["large","small","long","high"],1],
-
-["Plural of 'child'?",["childs","children","childes","child"],1],
-
-["She ___ English every day.",["study","studies","studied","studying"],1],
-
-["They ___ happy.",["is","am","are","be"],2],
-
-["Past of 'eat'?",["eated","ate","eaten","eating"],1],
-
-["Synonym of 'fast'?",["slow","quick","late","weak"],1],
-
-["I have ___ apple.",["a","an","the","no"],1],
-
-["Opposite of 'easy'?",["simple","hard","light","soft"],1],
-
-["He ___ football yesterday.",["play","plays","played","playing"],2],
-
-["Plural of 'book'?",["bookes","books","bookies","book"],1],
-
-["We ___ learning.",["is","am","are","be"],2],
-
-["Past of 'see'?",["saw","seed","seen","see"],0],
-
-["Opposite of 'hot'?",["warm","cold","fire","dry"],1],
-
-["She has ___ orange.",["a","an","some","any"],1],
-
-["Synonym of 'smart'?",["clever","slow","sad","angry"],0],
-
-["I ___ to school every day.",["go","goes","went","going"],0],
-
-["Past of 'write'?",["writed","wrote","written","writing"],1],
-
-["There ___ two books.",["is","am","are","be"],2]
-
-],
-
-
-"Informatika":[
-
-["Kompyuterning 'miyasi' nima?",["Monitor","CPU","Sichqoncha","Printer"],1],
-
-["HTML nimaga ishlatiladi?",["Web sahifa","Video karta","Antivirus","Printer"],0],
-
-["1 KB nechta bayt?",["100","512","1024","2048"],2],
-
-["CSS nimani boshqaradi?",["Web sahifa ko'rinishi","Internet tezligi","Fayl hajmi","CPU"],0],
-
-["JavaScript nima?",["Dasturlash tili","Monitor","Operatsion tizim","Brauzer"],0],
-
-["RAM nima?",["Tezkor xotira","Qattiq disk","Protsessor","Sichqoncha"],0],
-
-["URL nimani bildiradi?",["Web manzil","Fayl turi","Virus","Klaviatura"],0],
-
-["Python nima?",["Dasturlash tili","Brauzer","OS","Monitor"],0],
-
-["Wi-Fi nima?",["Simsiz tarmoq","Printer","Fayl","CPU"],0],
-
-["OS nimani anglatadi?",["Operating System","Online Search","Open Software","Output System"],0],
-
-["Ctrl+C nima?",["Nusxalash","Joylash","O'chirish","Saqlash"],0],
-
-["Ctrl+V nima?",["Nusxalash","Joylash","Qidirish","Yopish"],1],
-
-["PDF nima?",["Hujjat formati","Virus","Brauzer","O'yin"],0],
-
-["SSD nima?",["Saqlash qurilmasi","Monitor","CPU","Printer"],0],
-
-["Browser nima?",["Internet sahifalarini ochuvchi dastur","Kamera","OS","CPU"],0],
-
-["Algoritm nima?",["Amallar ketma-ketligi","Rasm","Virus","Kompyuter"],0],
-
-["Bug nima?",["Dastur xatosi","Fayl","Monitor","Tarmoq"],0],
-
-["Cloud storage nima?",["Bulutli saqlash","Printer","CPU","Kabel"],0],
-
-["Email nima?",["Elektron pochta","Video","O'yin","Disk"],0],
-
-["Firewall nima?",["Tarmoq himoyasi","Monitor","Klaviatura","Fayl"],0]
-
-],
-
-
-"Tarix":[
-
-["O'zbekiston poytaxti?",["Samarqand","Toshkent","Buxoro","Xiva"],1],
-
-["Amir Temur qaysi asrda yashagan?",["XIII-XIV","XIV-XV","XV-XVI","XII-XIII"],1],
-
-["Qadimgi Misr qaysi daryo bo'yida?",["Nil","Amudaryo","Sirdaryo","Gang"],0],
-
-["Buyuk Ipak yo'li nima edi?",["Savdo yo'li","Urush","Qal'a","Daryo"],0],
-
-["Rim imperiyasi markazi?",["Rim","Afina","Parij","London"],0],
-
-["Arxeologiya nimani o'rganadi?",["Qadimiy yodgorliklar","Ob-havo","Sayyoralar","Til"],0],
-
-["Ulug'bek kim bo'lgan?",["Astronom va hukmdor","Shoir","Faqat askar","Rassom"],0],
-
-["Tarix nimani o'rganadi?",["O'tmish","Kelajak","Faqat tabiat","Faqat matematika"],0],
-
-["Qadimgi Rim tili?",["Lotin","Ingliz","Rus","O'zbek"],0],
-
-["Qadimgi Misr yozuvi?",["Iyeroglif","Kirill","Lotin","Braille"],0],
-
-["Samarqand nimasi bilan mashhur?",["Ilm va madaniyat","Faqat dengiz","Neft","O'rmon"],0],
-
-["Xiva qaysi tarixiy hududda?",["Xorazm","Farg'ona","Toshkent","Surxon"],0],
-
-["Qadimgi Yunoniston markazi?",["Afina","London","Berlin","Madrid"],0],
-
-["Buxoro qaysi mintaqada?",["Markaziy Osiyo","Yevropa","Afrika","Amerika"],0],
-
-["Xronologiya nima?",["Voqealarni vaqt bo'yicha tartiblash","Xarita","Til","Hisob"],0],
-
-["Muzey nima saqlaydi?",["Tarixiy va madaniy buyumlar","Faqat ovqat","Faqat pul","Faqat kiyim"],0],
-
-["Tarixiy manba nima?",["O'tmish haqida dalil","Kompyuter","O'yin","Formula"],0],
-
-["Ipak yo'li nima uchun muhim?",["Savdo va madaniy almashinuv","Sport","Kosmos","Elektr"],0],
-
-["Temuriylar davrida rivojlangan shahar?",["Samarqand","London","Tokio","Madrid"],0],
-
-["O'rta asrlar qaysi davr?",["Qadimgi va yangi davr oralig'i","Kelajak","XXI asr","Faqat tosh davri"],0]
-
-],
-
-
-"Biologiya":[
-
-["O'simliklar fotosintezda nima ishlab chiqaradi?",["Kislorod","Temir","Tuz","Oltin"],0],
-
-["Inson yuragi nechta bo'lmadan iborat?",["2","3","4","5"],2],
-
-["DNK nima?",["Genetik material","Vitamin","Mineral","Gormon"],0],
-
-["Odam nafas olishda qaysi gazni oladi?",["Kislorod","Azot","Geliy","Vodorod"],0],
-
-["Qonning qizil hujayralari?",["Eritrotsitlar","Neyronlar","Trombotsitlar","Leykotsitlar"],0],
-
-["Miya qaysi tizimga kiradi?",["Asab tizimi","Hazm","Suyak","Nafas"],0],
-
-["O'simlikning suvni shimuvchi qismi?",["Ildiz","Gul","Meva","Barg"],0],
-
-["Fotosintez asosan qayerda?",["Barglarda","Ildizda","Urug'da","Mevada"],0],
-
-["Inson skeleti nima vazifa bajaradi?",["Tana tayanchi","Ovqat hazmi","Qon ishlab chiqarish","Nafas"],0],
-
-["Hujayraning boshqaruv markazi?",["Yadro","Membrana","Suv","Ribosoma"],0],
-
-["Odamda nechta o'pka bor?",["1","2","3","4"],1],
-
-["Gen nima?",["Irsiy axborot birligi","Vitamin","Organ","Suyak"],0],
-
-["Neyron nima?",["Asab hujayrasi","Qon hujayrasi","Suyak","Mushak"],0],
-
-["Mushaklar nima qiladi?",["Harakatni ta'minlaydi","Qon hosil qiladi","Ko'rishni ta'minlaydi","Ovqatni saqlaydi"],0],
-
-["Ekologiya nimani o'rganadi?",["Organizm va muhit munosabati","Faqat hujayra","Faqat tarix","Faqat matematika"],0],
-
-["Hayvonlarni o'rganuvchi fan?",["Zoologiya","Botanika","Geologiya","Astronomiya"],0],
-
-["O'simliklar uchun quyosh nuri nima uchun?",["Fotosintez uchun","Sovutish uchun","Yomg'ir uchun","Hech narsa"],0],
-
-["Vitaminlar nima uchun kerak?",["Organizm faoliyati uchun","Faqat bo'yash uchun","Faqat uyqu uchun","Faqat suv uchun"],0],
-
-["Suv organizm uchun?",["Muhim modda","Keraksiz","Zahar","Faqat tashqi vosita"],0],
-
-["Qon ivishida muhim hujayralar?",["Trombotsitlar","Eritrotsitlar","Neyronlar","Suyaklar"],0]
-
-],
-
-
-"Kimyo":[
-
-["Suv formulasi?",["CO2","H2O","O2","NaCl"],1],
-
-["Kislorod belgisi?",["O","K","C","H"],0],
-
-["Oltin belgisi?",["Ag","Au","Fe","Al"],1],
-
-["Tuzning mashhur formulasi?",["NaCl","H2O","CO2","O2"],0],
-
-["CO2 nima?",["Karbonat angidrid","Suv","Kislorod","Vodorod"],0],
-
-["H nimani bildiradi?",["Vodorod","Geliy","Temir","Oltin"],0],
-
-["Fe qaysi element?",["Temir","Ftor","Fosfor","Mis"],0],
-
-["Atomning markazi?",["Yadro","Elektron","Qobiq","Molekula"],0],
-
-["pH 7 odatda?",["Neytral","Kuchli kislota","Kuchli ishqor","Zahar"],0],
-
-["O2 nima?",["Kislorod molekulasi","Suv","Tuz","Vodorod"],0],
-
-["Na qaysi element?",["Natriy","Azot","Neon","Nikel"],0],
-
-["Cl qaysi element?",["Xlor","Kalsiy","Uglerod","Kobalt"],0],
-
-["C qaysi element?",["Uglerod","Kalsiy","Xlor","Mis"],0],
-
-["H2 nima?",["Vodorod molekulasi","Suv","Kislorod","Tuz"],0],
-
-["Kimyo nimani o'rganadi?",["Moddalar va ularning o'zgarishi","Tarix","Sayyoralar","Sport"],0],
-
-["Molekula nima?",["Moddaning zarracha birligi","Faqat atom yadrosi","Elektron","Vitamin"],0],
-
-["Kislota pH qiymati odatda?",["7 dan kichik","7","7 dan katta","0 dan katta emas"],0],
-
-["Ishqor pH qiymati odatda?",["7 dan katta","7 dan kichik","0","1"],0],
-
-["Ag qaysi element?",["Kumush","Oltin","Argon","Alyuminiy"],0],
-
-["Al qaysi element?",["Alyuminiy","Oltin","Kumush","Argon"],0]
-
-],
-
-
-"Geografiya":[
-
-["Eng katta materik?",["Osiyo","Afrika","Yevropa","Avstraliya"],0],
-
-["Eng katta okean?",["Tinch","Atlantika","Hind","Shimoliy Muz"],0],
-
-["O'zbekiston qaysi qit'ada?",["Osiyo","Afrika","Yevropa","Amerika"],0],
-
-["Yerning tabiiy yo'ldoshi?",["Oy","Quyosh","Mars","Venera"],0],
-
-["Eng baland tog'?",["Everest","Elbrus","Kilimanjaro","Pomir"],0],
-
-["Nil daryosi qaysi qit'ada?",["Afrika","Osiyo","Yevropa","Amerika"],0],
-
-["Sahara qayerda?",["Afrika","Osiyo","Yevropa","Avstraliya"],0],
-
-["Amazonka daryosi qaysi qit'ada?",["Janubiy Amerika","Afrika","Osiyo","Yevropa"],0],
-
-["Globus nima?",["Yerning modeli","Oy modeli","Xarita dasturi","Kompas"],0],
-
-["Kompas nima ko'rsatadi?",["Yo'nalish","Harorat","Vaqt","Bosim"],0],
-
-["Ekvator nimani ajratadi?",["Shimoliy va Janubiy yarim shar","Sharq va G'arb","Dengiz va quruqlik","Tog' va tekislik"],0],
-
-["Eng kichik materik?",["Avstraliya","Osiyo","Afrika","Antarktida"],0],
-
-["Antarktida qanday qit'a?",["Muzliklar bilan qoplangan","Tropik","O'rmonli","Cho'l emas"],0],
-
-["O'zbekiston dengizga chiqish imkoniga egami?",["Yo'q","Ha","Faqat yozda","Faqat qishda"],0],
-
-["Geografiya nimani o'rganadi?",["Yer va undagi jarayonlar","Faqat kimyo","Faqat tarix","Faqat matematika"],0],
-
-["Iqlim nima?",["Uzoq muddatli ob-havo xususiyatlari","Bir kunlik harorat","Faqat yomg'ir","Faqat shamol"],0],
-
-["Vulqon nima?",["Yer ichki moddalari chiqadigan geologik tuzilma","Daryo","Ko'l","Tog' daryosi"],0],
-
-["Orol dengizi qaysi hududda?",["Markaziy Osiyo","Yevropa","Afrika","Amerika"],0],
-
-["Xarita nima?",["Hududning tasviri","Faqat rasm","Kompas","Globusning o'zi"],0],
-
-["Amudaryo qaysi hudud bilan bog'liq?",["Markaziy Osiyo","Afrika","Yevropa","Amerika"],0]
-
-],
-
-
-"Ona tili":[
-
-["Ot nimani bildiradi?",["Shaxs, narsa yoki tushuncha","Harakat","Belgi","Son"],0],
-
-["Fe'l nimani bildiradi?",["Harakat yoki holat","Narsa","Belgi","Son"],0],
-
-["Sifat nimani bildiradi?",["Belgi-xususiyat","Harakat","Narsa","Son"],0],
-
-["Son nimani bildiradi?",["Miqdor yoki tartib","Harakat","Belgi","Narsa"],0],
-
-["Darak gap oxirida qaysi belgi?",[".","?","!",";"],0],
-
-["Savol gap oxirida?",["?","!",";",":"],0],
-
-["Sinonimlar nima?",["Ma'nodosh so'zlar","Qarama-qarshi so'zlar","Bir xil tovush","Sonlar"],0],
-
-["Antonimlar nima?",["Qarama-qarshi ma'noli so'zlar","Ma'nodosh so'zlar","Fe'llar","Otlar"],0],
-
-["Alifbo nima?",["Harf tartibi","Gap","Matn","Lug'at"],0],
-
-["So'z nima?",["Ma'no bildiruvchi til birligi","Faqat tovush","Faqat harf","Gap"],0],
-
-["Gap nima?",["Tugallangan fikr","Bitta harf","Faqat fe'l","Faqat ot"],0],
-
-["Imlo nimani o'rganadi?",["To'g'ri yozish qoidalarini","Talaffuzni","Matematikani","Tarixni"],0],
-
-["Lug'at nima?",["So'zlar to'plami","Faqat gaplar","Faqat harflar","Rasm"],0],
-
-["Ravish nimani bildiradi?",["Harakatning belgisini","Narsani","Shaxsni","Sonni"],0],
-
-["Ega nimani bildiradi?",["Harakat egasini","Harakatni","Belgini","Miqdorni"],0],
-
-["Kesim nimani bildiradi?",["Ega haqida xabarni","Faqat sonni","Faqat sifatni","Faqat undalmani"],0],
-
-["Undalma nima?",["Murojaat bildiruvchi so'z","Harakat","Son","Sifat"],0],
-
-["Tinish belgilari nima uchun?",["Yozma nutqni tartibga solish","Rasm chizish","Hisoblash","Tarjima"],0],
-
-["Ko'makchi nima?",["Yordamchi so'z turkumi","Ot","Fe'l","Sifat"],0],
-
-["O'zbek tilida nechta unli harf bor?",["5","6","7","8"],1]
-
-],
-
-
-"Mantiq":[
-
-["2, 4, 6, 8, ?",["9","10","11","12"],1],
-
-["1, 3, 5, 7, ?",["8","9","10","11"],1],
-
-["10 dan 2 ni ayirsak?",["6","7","8","9"],2],
-
-["Qaysi biri ortiqcha: olma, nok, sabzi, shaftoli?",["Olma","Nok","Sabzi","Shaftoli"],2],
-
-["3 ta mushukning jami oyoqlari?",["6","9","12","15"],2],
-
-["Bugun dushanba bo'lsa, ertaga?",["Yakshanba","Seshanba","Chorshanba","Juma"],1],
-
-["5 × 0 = ?",["0","5","1","10"],0],
-
-["Qaysi son juft?",["3","5","8","11"],2],
-
-["20 ning yarmi?",["5","10","15","20"],1],
-
-["2, 4, 8, 16, ?",["20","24","32","36"],2],
-
-["1 kg paxta va 1 kg temir qaysi og'ir?",["Paxta","Temir","Ikkalasi teng","Bilmaymiz"],2],
-
-["Barcha A lar B. X A bo'lsa, X nima?",["B","C","D","Hech narsa"],0],
-
-["7 + 3 × 2 = ?",["20","13","17","14"],1],
-
-["100 ning choragi?",["20","25","30","40"],1],
-
-["12, 9, 6, 3, ?",["0","1","2","4"],0],
-
-["Qaysi biri eng katta?",["0.5","0.05","0.15","0.25"],0],
-
-["4 ta qalamdan 1 tasi olindi. Nechta qoldi?",["1","2","3","4"],2],
-
-["Bir soat nechta daqiqa?",["30","45","60","100"],2],
-
-["2 ta o'nlik nechaga teng?",["10","20","30","40"],1],
-
-["5 ta olmadan 2 tasi yeyilsa?",["2","3","4","5"],1]
-
-]
-
-};
-
-
-/* =========================
-   O'ZGARUVCHILAR
-========================= */
-
-let currentUser = null;
-
-let currentSubject = "";
-
-let currentLevel = null;
-
-let testQuestions = [];
-
-let answers = {};
-
-
-/* =========================
-   LOCAL STORAGE
-========================= */
-
-function getUsers() {
-
-    return JSON.parse(
-        localStorage.getItem("zokirov_users") || "[]"
-    );
-
-}
-
-function saveUsers(users) {
-
-    localStorage.setItem(
-        "zokirov_users",
-        JSON.stringify(users)
-    );
-
-}
-
-
-/* =========================
-   RO'YXATDAN O'TISH
-========================= */
-
-function registerUser() {
-
-    const input =
-        document.getElementById("nameInput");
-
-    const error =
-        document.getElementById("nameError");
-
-    const name =
-        input.value.trim().replace(/\s+/g," ");
-
-    if(name.length < 2) {
-
-        error.textContent =
-        "Iltimos, ismingizni to'g'ri kiriting.";
-
-        return;
-    }
-
-
-    if(!/^[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳʼ' -]+$/u.test(name)) {
-
-        error.textContent =
-        "Ism faqat harflardan iborat bo'lsin.";
-
-        return;
-    }
-
-
-    const users = getUsers();
-
-    const exists =
-    users.some(
-        user =>
-        user.name.toLowerCase()
-        ===
-        name.toLowerCase()
-    );
-
-
-    if(exists) {
-
-        error.textContent =
-        "Bu ism allaqachon ishlatilgan.";
-
-        return;
-    }
-
-
-    currentUser = {
-
-        name:name,
-
-        score:0,
-
-        tests:0,
-
-        correct:0
-
-    };
-
-
-    users.push(currentUser);
-
-    saveUsers(users);
-
-
-    localStorage.setItem(
-        "zokirov_current",
-        JSON.stringify(currentUser)
-    );
-
-
-    openApp();
-
-}
-
-
-/* =========================
-   SAYTNI OCHISH
-========================= */
-
-function openApp() {
-
-    document
-    .getElementById("loginPage")
-    .classList.add("hidden");
-
-
-    document
-    .getElementById("app")
-    .classList.remove("hidden");
-
-
-    updateUI();
-
-    showPage("home");
-
-}
-
-
-/* =========================
-   SAHIFANI O'ZGARTIRISH
-========================= */
-
-function showPage(page) {
-
-    document
-    .querySelectorAll(".page")
-    .forEach(
-        p => p.classList.add("hidden")
-    );
-
-
-    const selected =
-    document.getElementById(page);
-
-
-    if(selected) {
-
-        selected.classList.remove("hidden");
-
-    }
-
-
-    if(page === "rating") {
-
-        renderRanking();
-
-    }
-
-}
-
-
-/* =========================
-   UI
-========================= */
-
-function updateUI() {
-
-    if(!currentUser) return;
-
-
-    document
-    .getElementById("welcomeName")
-    .textContent = currentUser.name;
-
-
-    document
-    .getElementById("profileName")
-    .textContent = currentUser.name;
-
-
-    document
-    .getElementById("homeScore")
-    .textContent = currentUser.score;
-
-
-    document
-    .getElementById("homeTests")
-    .textContent = currentUser.tests;
-
-
-    document
-    .getElementById("homeCorrect")
-    .textContent = currentUser.correct;
-
-
-    document
-    .getElementById("profileScore")
-    .textContent = currentUser.score;
-
-
-    document
-    .getElementById("profileTests")
-    .textContent = currentUser.tests;
-
-
-    document
-    .getElementById("profileCorrect")
-    .textContent = currentUser.correct;
-
-
-    document
-    .getElementById("profileLevel")
-    .textContent =
-    getLevel(currentUser.score);
-
-
-    renderSubjects();
-
-    renderRanking();
-
-}
-
-
-/* =========================
-   DARAJA
-========================= */
-
-function getLevel(score) {
-
-    if(score >= 1000)
-        return "Afsona";
-
-    if(score >= 600)
-        return "Ekspert";
-
-    if(score >= 300)
-        return "Usta";
-
-    if(score >= 150)
-        return "Ilg'or";
-
-    if(score >= 50)
-        return "Faol";
-
-    return "Boshlovchi";
-
-}
-
-
-/* =========================
-   FANLAR
-========================= */
-
-function renderSubjects() {
-
-    const html =
-    subjects.map(
-        subject => `
-
-        <div
-        class="subject"
-        onclick="selectSubject('${subject.name}')"
-        >
-
-        <h3>
-        ${subject.icon}
-        ${subject.name}
-        </h3>
-
-        <p class="muted">
-        20 ta savollik testlar
-        </p>
-
-        </div>
-
-        `
-    ).join("");
-
-
-    document
-    .getElementById("subjectsGrid")
-    .innerHTML = html;
-
-
-    document
-    .getElementById("homeSubjects")
-    .innerHTML = html;
-
-}
-
-
-/* =========================
-   FAN TANLASH
-========================= */
-
-function selectSubject(subject) {
-
-    currentSubject = subject;
-
-
-    const box =
-    document.getElementById("subjectsGrid");
-
-
-    box.innerHTML = `
-
-    <div style="grid-column:1/-1">
-
-    <h3>
-    ${subject} — darajani tanlang
-    </h3>
-
-    <div class="grid">
-
-    ${levels.map(
-        (level,index) => `
-
-        <div
-        class="subject"
-        onclick="startTest(${index})"
-        >
-
-        <h3>
-        ${level.icon}
-        ${level.name}
-        </h3>
-
+      <div class="welcome">
+        <h1>Salom, <span id="welcomeName"></span>! 👋</h1>
         <p>
-        Har bir to'g'ri javob:
-        <b>${level.points}</b> ball
+          Zokirov Education platformasida bilimlaringizni sinab ko'ring.
         </p>
+      </div>
 
-        </div>
+      <h2 class="section-title">📚 Fanlar</h2>
 
-        `
-    ).join("")}
+      <div class="subjects" id="subjectsContainer"></div>
 
-    </div>
+    </section>
 
-    </div>
 
-    `;
+    <!-- LEVEL PAGE -->
+    <section id="levelPage" class="hidden">
 
-}
+      <button class="back-btn" onclick="showHome()">
+        ← Fanlarga qaytish
+      </button>
 
+      <h2 class="section-title">
+        <span id="selectedSubjectIcon"></span>
+        <span id="selectedSubjectName"></span>
+      </h2>
 
-/* =========================
-   TEST BOSHLASH
-========================= */
+      <div class="levels" id="levelsContainer"></div>
 
-function startTest(levelIndex) {
+    </section>
 
-    currentLevel =
-    levels[levelIndex];
 
+    <!-- TEST PAGE -->
+    <section id="testPage" class="hidden">
 
-    const bank =
-    questionBank[currentSubject];
+      <button class="back-btn" onclick="backToLevels()">
+        ← Darajaga qaytish
+      </button>
 
-
-    testQuestions =
-    shuffle([...bank]).slice(0,20);
-
-
-    answers = {};
-
-
-    document
-    .getElementById("testTitle")
-    .textContent =
-    currentSubject
-    + " — "
-    + currentLevel.name;
-
-
-    const container =
-    document.getElementById("questions");
-
-
-    container.innerHTML =
-    testQuestions.map(
-        (question,index) => `
-
-        <div class="test-question">
-
-        <b>
-        ${index+1}.
-        ${question[0]}
-        </b>
-
-        <div class="answers">
-
-        ${question[1].map(
-            (answer,aIndex) => `
-
-            <button
-            class="answer"
-            id="answer-${index}-${aIndex}"
-            onclick="chooseAnswer(${index},${aIndex})"
-            >
-
-            ${String.fromCharCode(65+aIndex)})
-            ${answer}
-
-            </button>
-
-            `
-        ).join("")}
-
-        </div>
-
-        </div>
-
-        `
-    ).join("");
-
-
-    document
-    .getElementById("finishButton")
-    .classList.remove("hidden");
-
-
-    showPage("tests");
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =========================
-   JAVOB TANLASH
-========================= */
-
-function chooseAnswer(questionIndex,answerIndex) {
-
-    answers[questionIndex] =
-    answerIndex;
-
-
-    for(
-        let i=0;
-        i<4;
-        i++
-    ) {
-
-        const button =
-        document.getElementById(
-            `answer-${questionIndex}-${i}`
-        );
-
-
-        if(button) {
-
-            button.classList.toggle(
-                "selected",
-                i === answerIndex
-            );
-
-        }
-
-    }
-
-}
-
-
-/* =========================
-   TESTNI YAKUNLASH
-========================= */
-
-function finishTest() {
-
-    if(
-        Object.keys(answers).length
-        !==
-        testQuestions.length
-    ) {
-
-        alert(
-            "Barcha 20 ta savolga javob bering!"
-        );
-
-        return;
-
-    }
-
-
-    let correct = 0;
-
-
-    testQuestions.forEach(
-        (question,index) => {
-
-            if(
-                answers[index]
-                ===
-                question[2]
-            ) {
-
-                correct++;
-
-            }
-
-        }
-    );
-
-
-    const earned =
-    correct *
-    currentLevel.points;
-
-
-    currentUser.score += earned;
-
-    currentUser.tests++;
-
-    currentUser.correct += correct;
-
-
-    const users = getUsers();
-
-
-    const index =
-    users.findIndex(
-        user =>
-        user.name
-        ===
-        currentUser.name
-    );
-
-
-    if(index !== -1) {
-
-        users[index] =
-        currentUser;
-
-    }
-
-
-    saveUsers(users);
-
-
-    localStorage.setItem(
-        "zokirov_current",
-        JSON.stringify(currentUser)
-    );
-
-
-    alert(
-        "Test tugadi!\n\n"
-        +
-        "To'g'ri javoblar: "
-        +
-        correct
-        +
-        "/20\n"
-        +
-        "Yig'ilgan ball: +"
-        +
-        earned
-    );
-
-
-    updateUI();
-
-    showPage("profile");
-
-}
-
-
-/* =========================
-   REYTING
-========================= */
-
-function renderRanking() {
-
-    const users =
-    getUsers().sort(
-        (a,b) =>
-        b.score - a.score
-    );
-
-
-    const container =
-    document.getElementById("ranking");
-
-
-    if(users.length === 0) {
-
-        container.innerHTML =
-        "<p>Hali o'quvchilar yo'q.</p>";
-
-        return;
-
-    }
-
-
-    container.innerHTML =
-    users.map(
-        (user,index) => `
-
-        <div class="rank">
-
-        <div class="rank-number">
-        ${index+1}
+      <div class="test-header">
+        <div>
+          <strong id="testTitle"></strong>
         </div>
 
         <div>
+          Savollar: <strong>20</strong>
+        </div>
+      </div>
 
-        <b>
-        ${escapeHTML(user.name)}
-        </b>
+      <div id="questionsContainer"></div>
+
+      <div class="finish-area">
+        <button class="finish-btn" onclick="finishTest()">
+          ✅ Testni yakunlash
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- RESULT PAGE -->
+    <section id="resultPage" class="hidden">
+
+      <div class="result-card">
+
+        <div class="result-icon">🎉</div>
+
+        <h2>Test yakunlandi!</h2>
+
+        <div class="result-score" id="resultScore">
+          0 ball
+        </div>
+
+        <p id="resultText"></p>
 
         <br>
 
-        <span class="muted">
-        ${getLevel(user.score)}
-        ·
-        ${user.tests} ta test
-        </span>
+        <button class="primary-btn" onclick="showHome()">
+          🏠 Bosh sahifaga
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- RANKING -->
+    <section id="rankingPage" class="hidden">
+
+      <h2 class="section-title">🏆 Reyting</h2>
+
+      <div class="ranking-card" id="rankingContainer"></div>
+
+    </section>
+
+
+    <!-- PROFILE -->
+    <section id="profilePage" class="hidden">
+
+      <h2 class="section-title">👤 Profil</h2>
+
+      <div class="profile-card">
+
+        <div class="profile-avatar" id="profileAvatar">F</div>
+
+        <h2 id="profileName"></h2>
+
+        <div class="profile-level" id="profileLevel"></div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong id="profileScore">0</strong>
+            <span>Ball</span>
+          </div>
+
+          <div class="stat">
+            <strong id="profileTests">0</strong>
+            <span>Test</span>
+          </div>
+
+          <div class="stat">
+            <strong id="profileCorrect">0</strong>
+            <span>To'g'ri javob</span>
+          </div>
 
         </div>
 
-        <div class="rank-score">
+      </div>
 
-        ${user.score} ball
+    </section>
 
-        </div>
+  </main>
 
-        </div>
+  <footer>
+    © 2026 Zokirov Education — Online Ta'lim Platformasi
+  </footer>
 
-        `
-    ).join("");
-
-}
+</div>
 
 
-/* =========================
-   XAVFSIZ MATN
-========================= */
+<script>
+/* =========================================
+   ZOKIROV EDUCATION
+   FIREBASE YO'Q
+   ========================================= */
 
-function escapeHTML(text) {
 
-    return text.replace(
-        /[&<>"']/g,
-        function(char) {
+/* ---------- DATA ---------- */
 
-            return {
+const subjects = [
+  {
+    id: "math",
+    name: "Matematika",
+    icon: "📐",
+    description: "Hisoblash, algebra va mantiqiy masalalar."
+  },
+  {
+    id: "english",
+    name: "Ingliz tili",
+    icon: "🇬🇧",
+    description: "So'zlar, grammatika va ingliz tili."
+  },
+  {
+    id: "computer",
+    name: "Informatika",
+    icon: "💻",
+    description: "Kompyuter, dasturlash va texnologiyalar."
+  },
+  {
+    id: "history",
+    name: "Tarix",
+    icon: "🏛️",
+    description: "Tarixiy voqealar va buyuk shaxslar."
+  },
+  {
+    id: "biology",
+    name: "Biologiya",
+    icon: "🧬",
+    description: "Tirik organizmlar va tabiat."
+  },
+  {
+    id: "chemistry",
+    name: "Kimyo",
+    icon: "⚗️",
+    description: "Elementlar, moddalar va reaksiyalar."
+  },
+  {
+    id: "geography",
+    name: "Geografiya",
+    icon: "🌍",
+    description: "Yer, davlatlar, iqlim va tabiat."
+  },
+  {
+    id: "language",
+    name: "Ona tili",
+    icon: "📖",
+    description: "Til, grammatika va imlo."
+  },
+  {
+    id: "logic",
+    name: "Mantiq",
+    icon: "🧠",
+    description: "Fikrlash va mantiqiy masalalar."
+  }
+];
 
-                "&":"&amp;",
-                "<":"&lt;",
-                ">":"&gt;",
-                '"':"&quot;",
-                "'":"&#039;"
 
-            }[char];
+const levels = [
+  {
+    name: "Boshlang'ich",
+    points: 5,
+    description: "Oson savollar"
+  },
+  {
+    name: "O'rta",
+    points: 10,
+    description: "O'rtacha savollar"
+  },
+  {
+    name: "Yuqori",
+    points: 15,
+    description: "Murakkab savollar"
+  },
+  {
+    name: "Qiyin",
+    points: 20,
+    description: "Eng murakkab savollar"
+  }
+];
 
-        }
+
+/* ---------- QUESTION BANK ---------- */
+
+const questionBank = {
+
+  math: [
+    ["5 + 7 = ?", ["10", "11", "12", "13"], 2],
+    ["9 × 6 = ?", ["45", "54", "56", "63"], 1],
+    ["100 ÷ 4 = ?", ["20", "25", "30", "40"], 1],
+    ["15 − 8 = ?", ["5", "6", "7", "8"], 2],
+    ["12 × 12 = ?", ["124", "134", "144", "154"], 2],
+    ["√81 = ?", ["7", "8", "9", "10"], 2],
+    ["2³ = ?", ["6", "8", "9", "12"], 1],
+    ["50 ning 20% i nechaga teng?", ["5", "10", "15", "20"], 1],
+    ["x + 8 = 15. x = ?", ["5", "6", "7", "8"], 2],
+    ["3² + 4² = ?", ["12", "20", "25", "30"], 2],
+    ["1/2 + 1/2 = ?", ["0", "1/2", "1", "2"], 2],
+    ["7 × 8 = ?", ["54", "56", "58", "64"], 1],
+    ["200 ning 10% i?", ["10", "20", "30", "40"], 1],
+    ["18 ÷ 3 = ?", ["5", "6", "7", "8"], 1],
+    ["2x = 20. x = ?", ["5", "10", "15", "20"], 1],
+    ["64 ning kvadrat ildizi?", ["6", "7", "8", "9"], 2],
+    ["5² = ?", ["10", "15", "20", "25"], 3],
+    ["45 + 35 = ?", ["70", "75", "80", "85"], 2],
+    ["90 − 37 = ?", ["43", "53", "63", "73"], 1],
+    ["4 × 15 = ?", ["45", "50", "60", "75"], 2]
+  ],
+
+  english: [
+    ["What is the opposite of 'hot'?", ["Cold", "Fast", "Big", "Tall"], 0],
+    ["Choose the correct: She ___ a student.", ["am", "is", "are", "be"], 1],
+    ["What is the plural of 'book'?", ["bookes", "books", "bookies", "book"], 1],
+    ["I ___ football every day.", ["play", "plays", "playing", "played"], 0],
+    ["What is 'olma' in English?", ["Orange", "Apple", "Banana", "Pear"], 1],
+    ["Past tense of 'go'?", ["goed", "goes", "went", "gone"], 2],
+    ["He ___ two brothers.", ["have", "has", "having", "had"], 1],
+    ["Which is a color?", ["Table", "Blue", "Run", "Book"], 1],
+    ["What is the opposite of 'big'?", ["Long", "Small", "Fast", "High"], 1],
+    ["We ___ students.", ["is", "am", "are", "be"], 2],
+    ["What is 10 in English?", ["Ten", "Two", "Teen", "Twelve"], 0],
+    ["She ___ English.", ["speak", "speaks", "speaking", "spoke"], 1],
+    ["What is the past of 'eat'?", ["eated", "ate", "eats", "eating"], 1],
+    ["Choose: They ___ happy.", ["is", "am", "are", "be"], 2],
+    ["What is 'kitob'?", ["Pen", "Book", "Bag", "Chair"], 1],
+    ["I ___ a car.", ["has", "have", "having", "had"], 1],
+    ["Which is a fruit?", ["Apple", "Table", "House", "School"], 0],
+    ["What is the opposite of 'old'?", ["Young", "Long", "Short", "Cold"], 0],
+    ["He ___ every morning.", ["run", "runs", "running", "ran"], 1],
+    ["What is 'suv'?", ["Fire", "Water", "Air", "Earth"], 1]
+  ],
+
+  computer: [
+    ["CPU nimani anglatadi?", ["Central Processing Unit", "Computer Personal Unit", "Control Program Unit", "Central Power Unit"], 0],
+    ["HTML nima uchun ishlatiladi?", ["Veb sahifa tuzish", "Rasm chizish", "Video montaj", "Musiqa yozish"], 0],
+    ["CSS nima uchun kerak?", ["Veb sahifa dizayni", "Ma'lumot saqlash", "Internet ulash", "Kompyuterni o'chirish"], 0],
+    ["RAM nima?", ["Tezkor xotira", "Qattiq disk", "Protsessor", "Monitor"], 0],
+    ["1 KB taxminan nechta bayt?", ["100", "512", "1024", "2048"], 2],
+    ["JavaScript nima?", ["Dasturlash tili", "Operatsion tizim", "Brauzer", "Monitor"], 0],
+    ["Google Chrome nima?", ["Brauzer", "Antivirus", "Operatsion tizim", "O'yin"], 0],
+    ["URL nima?", ["Veb manzil", "Parol", "Virus", "Fayl turi"], 0],
+    ["USB nima uchun ishlatilishi mumkin?", ["Qurilma ulash", "Faqat internet", "Faqat ovoz", "Faqat ekran"], 0],
+    ["Windows nima?", ["Operatsion tizim", "Brauzer", "Dasturlash tili", "Antivirus"], 0],
+    ["Python nima?", ["Dasturlash tili", "Kompyuter", "Brauzer", "Fayl"], 0],
+    ["Mouse nima?", ["Sichqoncha", "Klaviatura", "Monitor", "Printer"], 0],
+    ["Keyboard nima?", ["Klaviatura", "Sichqoncha", "Printer", "Kamera"], 0],
+    ["Monitor nima qiladi?", ["Tasvir ko'rsatadi", "Ovoz yozadi", "Internet beradi", "Qog'oz chiqaradi"], 0],
+    ["PDF qanday fayl turi?", ["Hujjat", "Audio", "Video", "Virus"], 0],
+    ["Wi-Fi nima?", ["Simsiz tarmoq", "Printer", "Kabel", "Dastur"], 0],
+    ["Internet nima?", ["Global tarmoq", "Monitor", "Klaviatura", "Protsessor"], 0],
+    ["Bug nima?", ["Dasturdagi xato", "Kompyuter", "Virus nomi", "Fayl"], 0],
+    ["Algorithm nima?", ["Muammoni yechish ketma-ketligi", "Rasm", "Video", "Kompyuter"], 0],
+    ["App nima?", ["Dastur/ilova", "Monitor", "Kabel", "Klaviatura"], 0]
+  ],
+
+  history: [
+    ["O'zbekiston mustaqillik kuni qachon?", ["1 sentyabr", "8 dekabr", "21 mart", "9 may"], 0],
+    ["Amir Temur qaysi asrda yashagan?", ["XII", "XIII-XIV", "XVII", "XIX"], 1],
+    ["O'zbekiston poytaxti?", ["Samarqand", "Buxoro", "Toshkent", "Xiva"], 2],
+    ["Buyuk Ipak yo'li nima?", ["Savdo yo'li", "Daryo", "Shahar", "Urush"], 0],
+    ["Alisher Navoiy kim bo'lgan?", ["Shoir", "Sarkarda", "Dengizchi", "Olim"], 0],
+    ["Registon qaysi shaharda?", ["Toshkent", "Samarqand", "Xiva", "Andijon"], 1],
+    ["Buxoro qadimiy shaharlaridanmi?", ["Ha", "Yo'q", "Faqat yangi", "Noma'lum"], 0],
+    ["Xiva qaysi hududda joylashgan?", ["Xorazm", "Farg'ona", "Toshkent", "Surxondaryo"], 0],
+    ["Jaloliddin Manguberdi kim bo'lgan?", ["Sarkarda", "Shoir", "Rassom", "Tabib"], 0],
+    ["Mirzo Ulug'bek nimasi bilan mashhur?", ["Astronomiya", "Futbol", "Musiqa", "Arxitektura"], 0],
+    ["O'zbekiston davlat tili?", ["Rus tili", "O'zbek tili", "Ingliz tili", "Arab tili"], 1],
+    ["Amir Temur davlatining markazlaridan biri?", ["Samarqand", "London", "Parij", "Rim"], 0],
+    ["Navro'z qachon nishonlanadi?", ["21 mart", "1 yanvar", "9 may", "31 dekabr"], 0],
+    ["O'zbekiston bayrog'ida nechta rang asosiy?", ["2", "3", "4", "5"], 2],
+    ["Ichan qal'a qaysi shaharda?", ["Xiva", "Buxoro", "Toshkent", "Qo'qon"], 0],
+    ["Bobur qaysi sulolaga asos solgan?", ["Boburiylar", "Temuriylar", "Somoniylar", "Qoraxoniylar"], 0],
+    ["Samarqandning qadimiy nomlaridan biri?", ["Afrosiyob", "Bobil", "Rim", "Qohira"], 0],
+    ["O'zbekiston qaysi qit'ada?", ["Osiyo", "Afrika", "Yevropa", "Amerika"], 0],
+    ["Qadimgi Misr qaysi daryo bilan bog'liq?", ["Nil", "Amudaryo", "Sirdaryo", "Volga"], 0],
+    ["Tarix nimani o'rganadi?", ["O'tmish voqealarini", "Faqat matematikani", "Faqat tabiatni", "Faqat tilni"], 0]
+  ],
+
+  biology: [
+    ["Insonda nechta yurak bor?", ["1", "2", "3", "4"], 0],
+    ["O'simliklar fotosintezda nima chiqaradi?", ["Kislorod", "Azot", "Temir", "Tuz"], 0],
+    ["Inson nafas olish organi?", ["O'pka", "Yurak", "Oshqozon", "Buyrak"], 0],
+    ["Qon haydashda asosiy organ?", ["Yurak", "O'pka", "Miya", "Jigar"], 0],
+    ["DNK nima saqlaydi?", ["Genetik ma'lumot", "Suv", "Havo", "Mineral"], 0],
+    ["O'simlikning ildizi nima qiladi?", ["Suv va mineral oladi", "Faqat gul chiqaradi", "Ovoz chiqaradi", "Harakat qiladi"], 0],
+    ["Miya qaysi tizimga tegishli?", ["Asab", "Ovqat hazm", "Nafas", "Suyak"], 0],
+    ["Inson skeletining vazifasi?", ["Tayanch va himoya", "Faqat qon ishlab chiqarish", "Ovoz chiqarish", "Nafas olish"], 0],
+    ["Qaysi biri sutemizuvchi?", ["Sigir", "Baliq", "Ilon", "Qurbaqa"], 0],
+    ["Baliq nima bilan nafas oladi?", ["Jabra", "O'pka", "Teri", "Burun"], 0],
+    ["Qushlarning tanasi nima bilan qoplangan?", ["Pat", "Jun", "Tangacha", "Qobiq"], 0],
+    ["Fotosintez uchun nima kerak?", ["Yorug'lik", "Temir", "Tuz", "Qum"], 0],
+    ["Qonning qizil rangini nima beradi?", ["Gemoglobin", "Kalsiy", "Suv", "Yog'"], 0],
+    ["Odamning normal tana harorati taxminan?", ["37°C", "20°C", "50°C", "10°C"], 0],
+    ["O'simliklarda yashil rangni nima beradi?", ["Xlorofill", "Gemoglobin", "Kalsiy", "Protein"], 0],
+    ["Inson nechta o'pka bilan tug'iladi?", ["2", "1", "3", "4"], 0],
+    ["Tishlarning vazifasi?", ["Ovqatni maydalash", "Qon haydash", "Nafas olish", "Ko'rish"], 0],
+    ["Ko'zning vazifasi?", ["Ko'rish", "Eshitish", "Hid bilish", "Ta'm bilish"], 0],
+    ["Quloqning asosiy vazifasi?", ["Eshitish", "Ko'rish", "Nafas olish", "Yurish"], 0],
+    ["Biologiya nimani o'rganadi?", ["Tirik organizmlarni", "Sayyoralarni", "Sonlarni", "Tarixni"], 0]
+  ],
+
+  chemistry: [
+    ["Suvning kimyoviy formulasi?", ["H2O", "CO2", "O2", "NaCl"], 0],
+    ["Kislorod belgisi?", ["O", "K", "C", "H"], 0],
+    ["Vodorod belgisi?", ["H", "O", "N", "C"], 0],
+    ["CO2 nima?", ["Karbonat angidrid", "Suv", "Kislorod", "Tuz"], 0],
+    ["NaCl nima?", ["Osh tuzi", "Suv", "Shakar", "Temir"], 0],
+    ["Temir belgisi?", ["Fe", "F", "Te", "T"], 0],
+    ["Oltin belgisi?", ["Au", "Ag", "O", "G"], 0],
+    ["Kislorodning atom raqami?", ["8", "6", "1", "12"], 0],
+    ["Vodorodning atom raqami?", ["1", "2", "8", "10"], 0],
+    ["Kimyo nimani o'rganadi?", ["Moddalarni", "Tarixni", "Tilni", "Geografiyani"], 0],
+    ["Havo tarkibida eng ko'p gaz?", ["Azot", "Kislorod", "CO2", "Vodorod"], 0],
+    ["CO2 tarkibida nechta kislorod atomi bor?", ["2", "1", "3", "4"], 0],
+    ["H2O tarkibida nechta vodorod atomi bor?", ["2", "1", "3", "4"], 0],
+    ["Kislotalarning ta'mi odatda qanday?", ["Nordon", "Shirin", "Sho'r", "Achchiq"], 0],
+    ["pH 7 qanday muhit?", ["Neytral", "Kislotali", "Ishqoriy", "Gaz"], 0],
+    ["Shakar suvda nima bo'ladi?", ["Eriydi", "Yonadi", "Muzlaydi", "Bug'lanadi"], 0],
+    ["Muzning kimyoviy formulasi?", ["H2O", "CO2", "O2", "NaCl"], 0],
+    ["Kumush belgisi?", ["Ag", "Au", "Fe", "Cu"], 0],
+    ["Mis belgisi?", ["Cu", "C", "Co", "Ca"], 0],
+    ["Temir zanglaganda nima hosil bo'ladi?", ["Temir oksidi", "Suv", "Tuz", "Shakar"], 0]
+  ],
+
+  geography: [
+    ["Yerning eng katta okeani?", ["Tinch", "Atlantika", "Hind", "Shimoliy Muz"], 0],
+    ["O'zbekiston poytaxti?", ["Toshkent", "Samarqand", "Buxoro", "Xiva"], 0],
+    ["Eng katta materik?", ["Osiyo", "Afrika", "Avstraliya", "Antarktida"], 0],
+    ["Eng katta okean?", ["Tinch", "Atlantika", "Hind", "Arktika"], 0],
+    ["Nil daryosi qaysi qit'ada?", ["Afrika", "Osiyo", "Yevropa", "Amerika"], 0],
+    ["Sahara nima?", ["Cho'l", "Daryo", "Tog'", "Ko'l"], 0],
+    ["Everest qaysi tog' tizmasida?", ["Himolay", "And", "Alp", "Ural"], 0],
+    ["Yerning tabiiy yo'ldoshi?", ["Oy", "Quyosh", "Mars", "Venera"], 0],
+    ["Amudaryo O'zbekistondagi muhim daryolardanmi?", ["Ha", "Yo'q", "Faqat dengiz", "Noma'lum"], 0],
+    ["Sirdaryo nima?", ["Daryo", "Ko'l", "Tog'", "Cho'l"], 0],
+    ["Orol dengizi qaysi hududda?", ["Markaziy Osiyo", "Afrika", "Yevropa", "Amerika"], 0],
+    ["Yer necha qutbga ega?", ["2", "1", "3", "4"], 0],
+    ["Ekvatorda iqlim odatda qanday?", ["Issiq", "Juda sovuq", "Muzlik", "Quruq cho'l"], 0],
+    ["Kompas nimani ko'rsatadi?", ["Yo'nalishni", "Haroratni", "Vaqtni", "Bosimni"], 0],
+    ["Dunyoning eng baland tog'i?", ["Everest", "Elbrus", "Kilimanjaro", "Alp"], 0],
+    ["Yaponiya qaysi qit'a yaqinida?", ["Osiyo", "Afrika", "Yevropa", "Amerika"], 0],
+    ["Misr qaysi qit'ada?", ["Afrika", "Osiyo", "Yevropa", "Avstraliya"], 0],
+    ["Amazonka daryosi qaysi qit'ada?", ["Janubiy Amerika", "Afrika", "Osiyo", "Yevropa"], 0],
+    ["Eng kichik materik?", ["Avstraliya", "Osiyo", "Afrika", "Yevropa"], 0],
+    ["Geografiya nimani o'rganadi?", ["Yer va undagi hududlarni", "Faqat sonlarni", "Faqat tilni", "Faqat tarixni"], 0]
+  ],
+
+  language: [
+    ["O'zbek tilida nechta unli harf bor?", ["6", "5", "7", "8"], 0],
+    ["Ot so'z turkumi nimani bildiradi?", ["Shaxs va narsani", "Harakatni", "Belgini", "Sonni"], 0],
+    ["Fe'l nimani bildiradi?", ["Harakatni", "Narsani", "Belgini", "Sonni"], 0],
+    ["Sifat nimani bildiradi?", ["Belgini", "Harakatni", "Narsani", "Sonni"], 0],
+    ["Son so'z turkumi nimani bildiradi?", ["Miqdor yoki tartibni", "Harakatni", "Belgini", "Narsani"], 0],
+    ["Gapning oxirida darak gapda nima qo'yiladi?", [".", "?", "!", ",,,,,",], 0],
+    ["Savol gap oxirida nima qo'yiladi?", ["?", ".", ",", ":"], 0],
+    ["Undov gap oxirida nima qo'yilishi mumkin?", ["!", ".", ",", ";"], 0],
+    ["Alifbo nima?", ["Harf tartibi", "Gap", "So'z", "Matn"], 0],
+    ["Sinonim so'zlar qanday bo'ladi?", ["Ma'nodosh", "Qarama-qarshi", "Bir xil yoziladigan", "Son"], 0],
+    ["Antonim so'zlar qanday?", ["Qarama-qarshi ma'noli", "Ma'nodosh", "Bir xil", "Son"], 0],
+    ["'Chiroyli' qanday so'z turkumi?", ["Sifat", "Ot", "Fe'l", "Son"], 0],
+    ["'Yugurdi' qanday so'z turkumi?", ["Fe'l", "Ot", "Sifat", "Son"], 0],
+    ["'Kitob' qanday so'z turkumi?", ["Ot", "Fe'l", "Sifat", "Son"], 0],
+    ["'Besh' qanday so'z turkumi?", ["Son", "Ot", "Fe'l", "Sifat"], 0],
+    ["O'zbek tili qaysi til oilasiga kiradi?", ["Turkiy", "Roman", "German", "Slavyan"], 0],
+    ["So'z nima?", ["Ma'no bildiruvchi birlik", "Faqat harf", "Faqat raqam", "Faqat belgi"], 0],
+    ["Gap nima?", ["Tugallangan fikr", "Faqat so'z", "Faqat harf", "Faqat son"], 0],
+    ["Imlo nimani o'rganadi?", ["To'g'ri yozishni", "Faqat talaffuzni", "Tarixni", "Matematikani"], 0],
+    ["Ona tili nimani o'rgatadi?", ["Til va nutqni", "Faqat matematikani", "Faqat tarixni", "Faqat biologiyani"], 0]
+  ],
+
+  logic: [
+    ["2, 4, 6, 8, ?","",0]
+  ]
+};
+
+
+/* Mantiq savollarini alohida to'g'ri formatda beramiz */
+questionBank.logic = [
+  ["2, 4, 6, 8, ?",
+    ["9", "10", "11", "12"], 1],
+
+  ["1, 3, 5, 7, ?",
+    ["8", "9", "10", "11"], 1],
+
+  ["10, 20, 30, 40, ?",
+    ["45", "50", "55", "60"], 1],
+
+  ["5, 10, 15, 20, ?",
+    ["22", "24", "25", "30"], 2],
+
+  ["Agar barcha mushuklar hayvon bo'lsa, mushuk hayvonmi?",
+    ["Ha", "Yo'q", "Faqat ba'zida", "Noma'lum"], 0],
+
+  ["3, 6, 12, 24, ?",
+    ["36", "42", "48", "50"], 2],
+
+  ["100, 90, 80, 70, ?",
+    ["50", "60", "65", "75"], 1],
+
+  ["Qaysi biri boshqalaridan farq qiladi?",
+    ["Olma", "Nok", "Sabzi", "Uzum"], 2],
+
+  ["2 + 2 × 2 = ?",
+    ["6", "8", "4", "10"], 0],
+
+  ["Bir haftada nechta kun bor?",
+    ["5", "6", "7", "8"], 2],
+
+  ["12 oy ichida nechta fasl bor?",
+    ["2", "3", "4", "5"], 2],
+
+  ["Agar bugun dushanba bo'lsa, ertaga qaysi kun?",
+    ["Yakshanba", "Seshanba", "Chorshanba", "Juma"], 1],
+
+  ["20 ning yarmi?", ["5", "10", "15", "20"], 1],
+
+  ["9 ning kvadrati?", ["18", "27", "81", "90"], 2],
+
+  ["4, 8, 12, 16, ?",
+    ["18", "20", "22", "24"], 1],
+
+  ["100 dan 1 ni ayirsak?", ["98", "99", "100", "101"], 1],
+
+  ["Qaysi biri juft son?",
+    ["3", "5", "7", "8"], 3],
+
+  ["Qaysi biri toq son?",
+    ["2", "4", "7", "10"], 2],
+
+  ["10 + 5 − 3 = ?",
+    ["10", "12", "13", "15"], 1],
+
+  ["Bir oyda odatda nechta kun bo'ladi?",
+    ["10", "20", "30 atrofida", "50"], 2]
+];
+
+
+/* ---------- STATE ---------- */
+
+let currentUser = null;
+let currentSubject = null;
+let currentLevel = null;
+let testQuestions = [];
+let answers = {};
+
+
+/* ---------- STORAGE ---------- */
+
+function getUsers() {
+  try {
+    return JSON.parse(
+      localStorage.getItem("zokirov_users") || "[]"
     );
+  } catch {
+    return [];
+  }
+}
 
+function saveUsers(users) {
+  localStorage.setItem(
+    "zokirov_users",
+    JSON.stringify(users)
+  );
+}
+
+function saveCurrentUser() {
+  localStorage.setItem(
+    "zokirov_current",
+    JSON.stringify(currentUser)
+  );
 }
 
 
-/* =========================
-   RANDOM
-========================= */
+/* ---------- REGISTER ---------- */
 
-function shuffle(array) {
+function registerUser() {
 
-    for(
-        let i=array.length-1;
-        i>0;
-        i--
-    ) {
+  const input = document.getElementById("nameInput");
+  const error = document.getElementById("nameError");
 
-        const j =
-        Math.floor(
-            Math.random()*(i+1)
-        );
+  const name = input.value
+    .trim()
+    .replace(/\s+/g, " ");
 
+  error.textContent = "";
 
-        [
-            array[i],
-            array[j]
-        ] =
-        [
-            array[j],
-            array[i]
-        ];
+  if (name.length < 2) {
+    error.textContent =
+      "Iltimos, ismingizni to'g'ri kiriting.";
+    return;
+  }
 
-    }
+  if (
+    !/^[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳʼ' -]+$/u.test(name)
+  ) {
+    error.textContent =
+      "Ism faqat harflardan iborat bo'lsin.";
+    return;
+  }
 
-    return array;
+  const users = getUsers();
 
+  const exists = users.some(
+    user =>
+      user.name.toLowerCase() ===
+      name.toLowerCase()
+  );
+
+  if (exists) {
+    error.textContent =
+      "Bu ism allaqachon ishlatilgan.";
+    return;
+  }
+
+  currentUser = {
+    name: name,
+    score: 0,
+    tests: 0,
+    correct: 0
+  };
+
+  users.push(currentUser);
+
+  saveUsers(users);
+  saveCurrentUser();
+
+  openApp();
 }
 
 
-/* =========================
-   AVVALGI FOYDALANUVCHI
-========================= */
+/* ---------- OPEN APP ---------- */
 
-window.addEventListener(
-"load",
-function() {
+function openApp() {
 
-    const saved =
-    localStorage.getItem(
-        "zokirov_current"
-    );
+  document
+    .getElementById("loginPage")
+    .classList.add("hidden");
 
+  document
+    .getElementById("app")
+    .classList.remove("hidden");
 
-    if(saved) {
+  document.getElementById("welcomeName")
+    .textContent = currentUser.name;
 
-        try {
+  renderSubjects();
 
-            const user =
-            JSON.parse(saved);
-
-
-            const users =
-            getUsers();
+  showHome();
+}
 
 
-            const found =
-            users.find(
-                u =>
-                u.name
-                ===
-                user.name
-            );
+/* ---------- STARTUP ---------- */
 
+window.addEventListener("load", () => {
 
-            if(found) {
+  const saved =
+    localStorage.getItem("zokirov_current");
 
-                currentUser =
-                found;
+  if (saved) {
 
-                openApp();
+    try {
+      currentUser = JSON.parse(saved);
 
-            }
+      document
+        .getElementById("loginPage")
+        .classList.add("hidden");
 
-        }
+      document
+        .getElementById("app")
+        .classList.remove("hidden");
 
-        catch(error) {
+      document.getElementById("welcomeName")
+        .textContent = currentUser.name;
 
-            console.log(error);
+      renderSubjects();
+      showHome();
 
-        }
-
+    } catch {
+      localStorage.removeItem("zokirov_current");
     }
+  }
+
+  document
+    .getElementById("nameInput")
+    .addEventListener("keydown", function(e) {
+
+      if (e.key === "Enter") {
+        registerUser();
+      }
+
+    });
 
 });
 
+
+/* ---------- PAGE CONTROL ---------- */
+
+function hidePages() {
+
+  [
+    "homePage",
+    "levelPage",
+    "testPage",
+    "resultPage",
+    "rankingPage",
+    "profilePage"
+  ].forEach(id => {
+    document
+      .getElementById(id)
+      .classList.add("hidden");
+  });
+
+}
+
+function showHome() {
+
+  hidePages();
+
+  document
+    .getElementById("homePage")
+    .classList.remove("hidden");
+
+  setActive("navHome");
+
+  window.scrollTo(0, 0);
+}
+
+function showRanking() {
+
+  hidePages();
+
+  document
+    .getElementById("rankingPage")
+    .classList.remove("hidden");
+
+  renderRanking();
+
+  setActive("navRanking");
+
+  window.scrollTo(0, 0);
+}
+
+function showProfile() {
+
+  hidePages();
+
+  document
+    .getElementById("profilePage")
+    .classList.remove("hidden");
+
+  renderProfile();
+
+  setActive("navProfile");
+
+  window.scrollTo(0, 0);
+}
+
+function setActive(id) {
+
+  ["navHome", "navRanking", "navProfile"]
+    .forEach(nav => {
+      document
+        .getElementById(nav)
+        .classList.remove("active");
+    });
+
+  document
+    .getElementById(id)
+    .classList.add("active");
+}
+
+
+/* ---------- SUBJECTS ---------- */
+
+function renderSubjects() {
+
+  const container =
+    document.getElementById("subjectsContainer");
+
+  container.innerHTML = "";
+
+  subjects.forEach(subject => {
+
+    const card =
+      document.createElement("div");
+
+    card.className = "subject-card";
+
+    card.innerHTML = `
+      <div class="subject-icon">${subject.icon}</div>
+      <h3>${subject.name}</h3>
+      <p>${subject.description}</p>
+    `;
+
+    card.onclick = () => {
+      openSubject(subject.id);
+    };
+
+    container.appendChild(card);
+  });
+}
+
+
+/* ---------- SUBJECT ---------- */
+
+function openSubject(subjectId) {
+
+  currentSubject =
+    subjects.find(s => s.id === subjectId);
+
+  document.getElementById(
+    "selectedSubjectIcon"
+  ).textContent = currentSubject.icon;
+
+  document.getElementById(
+    "selectedSubjectName"
+  ).textContent = currentSubject.name;
+
+  renderLevels();
+
+  hidePages();
+
+  document
+    .getElementById("levelPage")
+    .classList.remove("hidden");
+
+  window.scrollTo(0, 0);
+}
+
+
+/* ---------- LEVELS ---------- */
+
+function renderLevels() {
+
+  const container =
+    document.getElementById("levelsContainer");
+
+  container.innerHTML = "";
+
+  levels.forEach((level, index) => {
+
+    const card =
+      document.createElement("div");
+
+    card.className = "level-card";
+
+    card.innerHTML = `
+      <h3>${level.name}</h3>
+
+      <p>
+        ${level.description}<br>
+        Har bir to'g'ri javob: 
+        <strong>${level.points} ball</strong>
+      </p>
+
+      <button
+        class="level-btn"
+        onclick="startTest(${index})">
+        Testni boshlash
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+
+/* ---------- SHUFFLE ---------- */
+
+function shuffle(array) {
+
+  const arr = [...array];
+
+  for (
+    let i = arr.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    const j =
+      Math.floor(Math.random() * (i + 1));
+
+    [arr[i], arr[j]] =
+      [arr[j], arr[i]];
+  }
+
+  return arr;
+}
+
+
+/* ---------- TEST ---------- */
+
+function startTest(levelIndex) {
+
+  currentLevel =
+    levels[levelIndex];
+
+  const bank =
+    questionBank[currentSubject.id];
+
+  testQuestions =
+    shuffle(bank).slice(0, 20);
+
+  answers = {};
+
+  document.getElementById(
+    "testTitle"
+  ).textContent =
+    currentSubject.name +
+    " — " +
+    currentLevel.name;
+
+  renderQuestions();
+
+  hidePages();
+
+  document
+    .getElementById("testPage")
+    .classList.remove("hidden");
+
+  window.scrollTo(0, 0);
+}
+
+
+/* ---------- QUESTIONS ---------- */
+
+function renderQuestions() {
+
+  const container =
+    document.getElementById(
+      "questionsContainer"
+    );
+
+  container.innerHTML = "";
+
+  testQuestions.forEach(
+    (question, index) => {
+
+      const card =
+        document.createElement("div");
+
+      card.className = "question-card";
+
+      const answersHtml =
+        question[1]
+          .map((answer, answerIndex) => {
+
+            return `
+              <button
+                class="answer"
+                id="answer-${index}-${answerIndex}"
+                onclick="chooseAnswer(${index}, ${answerIndex})">
+                ${String.fromCharCode(65 + answerIndex)}.
+                ${answer}
+              </button>
+            `;
+
+          })
+          .join("");
+
+      card.innerHTML = `
+
+        <div class="question-number">
+          ${index + 1}-savol
+        </div>
+
+        <div class="question-text">
+          ${question[0]}
+        </div>
+
+        <div class="answers">
+          ${answersHtml}
+        </div>
+
+      `;
+
+      container.appendChild(card);
+    }
+  );
+}
+
+
+/* ---------- ANSWER ---------- */
+
+function chooseAnswer(
+  questionIndex,
+  answerIndex
+) {
+
+  answers[questionIndex] =
+    answerIndex;
+
+  testQuestions.forEach(
+    (_, i) => {
+
+      const buttons =
+        document.querySelectorAll(
+          `[id^="answer-${i}-"]`
+        );
+
+      buttons.forEach(btn => {
+        btn.classList.remove("selected");
+      });
+
+    }
+  );
+
+  document
+    .getElementById(
+      `answer-${questionIndex}-${answerIndex}`
+    )
+    .classList.add("selected");
+}
+
+
+/* ---------- FINISH TEST ---------- */
+
+function finishTest() {
+
+  if (
+    Object.keys(answers).length !==
+    testQuestions.length
+  ) {
+
+    alert(
+      "Barcha 20 ta savolga javob bering!"
+    );
+
+    return;
+  }
+
+  let correct = 0;
+
+  testQuestions.forEach(
+    (question, index) => {
+
+      if (
+        answers[index] ===
+        question[2]
+      ) {
+        correct++;
+      }
+
+    }
+  );
+
+  const earned =
+    correct * currentLevel.points;
+
+  currentUser.score += earned;
+  currentUser.tests++;
+  currentUser.correct += correct;
+
+  updateStoredUser();
+
+  document.getElementById(
+    "resultScore"
+  ).textContent =
+    "+" + earned + " ball";
+
+  document.getElementById(
+    "resultText"
+  ).textContent =
+    `20 ta savoldan ${correct} tasiga to'g'ri javob berdingiz.`;
+
+  hidePages();
+
+  document
+    .getElementById("resultPage")
+    .classList.remove("hidden");
+
+  window.scrollTo(0, 0);
+}
+
+
+/* ---------- UPDATE USER ---------- */
+
+function updateStoredUser() {
+
+  const users = getUsers();
+
+  const index =
+    users.findIndex(
+      user =>
+        user.name.toLowerCase() ===
+        currentUser.name.toLowerCase()
+    );
+
+  if (index !== -1) {
+    users[index] = currentUser;
+  }
+
+  saveUsers(users);
+  saveCurrentUser();
+}
+
+
+/* ---------- BACK ---------- */
+
+function backToLevels() {
+
+  renderLevels();
+
+  hidePages();
+
+  document
+    .getElementById("levelPage")
+    .classList.remove("hidden");
+}
+
+
+/* ---------- RANKING ---------- */
+
+function renderRanking() {
+
+  const container =
+    document.getElementById(
+      "rankingContainer"
+    );
+
+  const users =
+    getUsers()
+      .sort(
+        (a, b) =>
+          b.score - a.score
+      );
+
+  if (users.length === 0) {
+
+    container.innerHTML = `
+      <div style="padding:30px;text-align:center;">
+        Hozircha reyting bo'sh.
+      </div>
+    `;
+
+    return;
+  }
+
+  container.innerHTML = "";
+
+  users.forEach((user, index) => {
+
+    const row =
+      document.createElement("div");
+
+    row.className = "rank-row";
+
+    row.innerHTML = `
+
+      <div class="rank-number">
+        #${index + 1}
+      </div>
+
+      <div class="rank-name">
+        ${escapeHtml(user.name)}
+      </div>
+
+      <div class="rank-score">
+        ${user.score} ball
+      </div>
+
+    `;
+
+    container.appendChild(row);
+  });
+}
+
+
+/* ---------- PROFILE ---------- */
+
+function renderProfile() {
+
+  document.getElementById(
+    "profileName"
+  ).textContent = currentUser.name;
+
+  document.getElementById(
+    "profileAvatar"
+  ).textContent =
+    currentUser.name
+      .charAt(0)
+      .toUpperCase();
+
+  document.getElementById(
+    "profileScore"
+  ).textContent =
+    currentUser.score;
+
+  document.getElementById(
+    "profileTests"
+  ).textContent =
+    currentUser.tests;
+
+  document.getElementById(
+    "profileCorrect"
+  ).textContent =
+    currentUser.correct;
+
+  document.getElementById(
+    "profileLevel"
+  ).textContent =
+    getUserLevel(currentUser.score);
+}
+
+
+/* ---------- USER LEVEL ---------- */
+
+function getUserLevel(score) {
+
+  if (score >= 1000)
+    return "🏆 Afsona";
+
+  if (score >= 700)
+    return "⭐ Ekspert";
+
+  if (score >= 450)
+    return "🔥 Usta";
+
+  if (score >= 250)
+    return "🚀 Ilg'or";
+
+  if (score >= 100)
+    return "💪 Faol";
+
+  return "🌱 Boshlovchi";
+}
+
+
+/* ---------- SECURITY ---------- */
+
+function escapeHtml(text) {
+
+  const div =
+    document.createElement("div");
+
+  div.textContent = text;
+
+  return div.innerHTML;
+}
 </script>
 
 </body>
