@@ -2,1438 +2,1543 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-
-<meta name="google-site-verification"
-      content="B_YC70Pw0zbyxlEpfZCFssyHNOtzFiUQA6Z9QRyNr7Y">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Zokirov Education — Online Ta'lim</title>
 
 <meta name="description"
-content="Zokirov Education — online ta'lim, testlar, darslar va o'quvchilar reytingi.">
+content="Zokirov Education — testlar, darslar, fanlar va bilimni rivojlantirish platformasi.">
 
 <meta name="keywords"
-content="Zokirov Education, online test, ta'lim, matematika, ingliz tili">
+content="Zokirov Education, online ta'lim, testlar, matematika, ingliz tili, informatika">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical"
-href="https://newyoutuber2003-svg.github.io/Feruzbekning-sayti/">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification"
+content="B_YC70Pw0zbyxlEpfZCFssHNOtzFiUQA6Z9QRyNr7Y">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f3f6fb;
-    color:#172033;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
 }
 
-header{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:white;
-    padding:20px;
-    position:sticky;
-    top:0;
-    z-index:100;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.header-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
+.logo {
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.logo{
-    font-size:25px;
-    font-weight:bold;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.user-mini{
-    background:rgba(255,255,255,.15);
-    padding:10px 15px;
-    border-radius:12px;
+nav button {
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,.15);
+    color: white;
+    font-weight: bold;
 }
 
-.container{
-    max-width:1200px;
-    margin:30px auto;
-    padding:0 15px;
+nav button:hover {
+    background: rgba(255,255,255,.3);
 }
 
-.hidden{
-    display:none!important;
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 15px 60px;
 }
 
-/* LOGIN */
-
-.login-box{
-    max-width:500px;
-    margin:100px auto;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 35px rgba(0,0,0,.12);
-    text-align:center;
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
 }
 
-.login-box h1{
-    margin-bottom:10px;
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#dbeafe,#ede9fe);
 }
 
-.login-box p{
-    color:#64748b;
-    margin-bottom:25px;
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
 }
 
-input{
-    width:100%;
-    padding:14px;
-    border:1px solid #d1d5db;
-    border-radius:10px;
-    font-size:16px;
-    outline:none;
+.hero p {
+    font-size: 18px;
+    color: #475569;
 }
 
-input:focus{
-    border-color:#2563eb;
+button {
+    font-family: inherit;
 }
 
-button{
-    border:0;
-    border-radius:10px;
-    padding:13px 18px;
-    font-size:15px;
-    cursor:pointer;
-    font-weight:bold;
+.btn {
+    border: 0;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
 }
 
-.primary{
-    background:#2563eb;
-    color:white;
+.primary {
+    background: #2563eb;
+    color: white;
 }
 
-.primary:hover{
-    background:#1d4ed8;
+.primary:hover {
+    background: #1d4ed8;
 }
 
-/* NAV */
-
-.nav{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:25px;
+.secondary {
+    background: #e2e8f0;
+    color: #172033;
 }
 
-.nav button{
-    background:white;
-    color:#334155;
-    border:1px solid #e2e8f0;
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-.nav button.active,
-.nav button:hover{
-    background:#2563eb;
-    color:white;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 15px;
 }
 
-/* CARDS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+.subject {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: .2s;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+.subject:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
 
-.card h2{
-    margin-bottom:10px;
+.subject h3 {
+    margin-top: 0;
 }
 
-.stat{
-    font-size:32px;
-    font-weight:bold;
-    color:#2563eb;
+.muted {
+    color: #64748b;
 }
 
-.hero{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:white;
-    padding:35px;
-    border-radius:22px;
-    margin-bottom:25px;
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
 }
 
-.hero h1{
-    font-size:34px;
-    margin-bottom:10px;
+.stat {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-/* TEST */
-
-.test-box{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+.stat strong {
+    display: block;
+    font-size: 30px;
+    color: #2563eb;
 }
 
-.question{
-    margin-bottom:25px;
-    padding-bottom:20px;
-    border-bottom:1px solid #e5e7eb;
+.test-question {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 18px;
+    margin-bottom: 15px;
 }
 
-.question h3{
-    margin-bottom:15px;
+.answers {
+    display: grid;
+    gap: 8px;
+    margin-top: 15px;
 }
 
-.answers{
-    display:grid;
-    gap:10px;
+.answer {
+    border: 1px solid #cbd5e1;
+    background: white;
+    padding: 13px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
 }
 
-.answer{
-    background:#f8fafc;
-    border:1px solid #e2e8f0;
-    text-align:left;
+.answer:hover {
+    background: #eff6ff;
 }
 
-.answer:hover{
-    background:#eff6ff;
-    border-color:#2563eb;
+.answer.selected {
+    background: #dbeafe;
+    border-color: #2563eb;
 }
 
-.answer.selected{
-    background:#dbeafe;
-    border-color:#2563eb;
+.rank {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.level-buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
+.rank-number {
+    width: 35px;
+    font-weight: bold;
 }
 
-.level-buttons button{
-    background:#e2e8f0;
+.rank-score {
+    margin-left: auto;
+    color: #2563eb;
+    font-weight: bold;
 }
 
-.level-buttons button.selected{
-    background:#2563eb;
-    color:white;
+.badge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #6d28d9;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-/* RANKING */
-
-.ranking{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+.hidden {
+    display: none !important;
 }
 
-.rank-row{
-    display:grid;
-    grid-template-columns:70px 1fr 130px 130px;
-    align-items:center;
-    gap:10px;
-    padding:17px 20px;
-    border-bottom:1px solid #e5e7eb;
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 30px;
 }
 
-.rank-row:first-child{
-    background:#fff7ed;
+.error {
+    color: #dc2626;
+    font-weight: bold;
 }
 
-.rank-number{
-    font-size:22px;
-    font-weight:bold;
+.success {
+    color: #16a34a;
+    font-weight: bold;
 }
 
-.username{
-    font-weight:bold;
-}
+@media(max-width:650px) {
 
-.score{
-    color:#2563eb;
-    font-weight:bold;
-}
-
-.level{
-    color:#7c3aed;
-    font-weight:bold;
-}
-
-.profile{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-    .header-inner{
-        flex-direction:column;
-        align-items:flex-start;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .hero h1{
-        font-size:27px;
+    .hero h1 {
+        font-size: 30px;
     }
 
-    .rank-row{
-        grid-template-columns:45px 1fr;
+    .stats {
+        grid-template-columns: 1fr;
     }
-
-    .rank-row .score,
-    .rank-row .level{
-        grid-column:2;
-    }
-
-    .profile{
-        grid-template-columns:1fr;
-    }
-}
-
-.message{
-    margin-top:15px;
-    padding:12px;
-    border-radius:10px;
-    background:#eff6ff;
-    color:#1e40af;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGIN -->
+<header>
 
-<div id="loginScreen">
-    <div class="login-box">
-
-        <h1>🎓 Zokirov Education</h1>
-
-        <p>
-            Ta'lim oling, test ishlang va reytingda yuqorilang.
-        </p>
-
-        <input
-            id="usernameInput"
-            maxlength="20"
-            placeholder="Ismingiz yoki username">
-
-        <br><br>
-
-        <button
-            class="primary"
-            onclick="loginUser()">
-            🚀 Kirish
-        </button>
-
-        <div id="loginMessage"></div>
-
-    </div>
+<div class="logo">
+🎓 Zokirov Education
 </div>
 
+<nav>
+<button onclick="showPage('home')">Bosh sahifa</button>
+<button onclick="showPage('subjects')">Fanlar</button>
+<button onclick="showPage('rating')">🏆 Reyting</button>
+<button onclick="showPage('profile')">👤 Profil</button>
+</nav>
 
-<!-- MAIN SITE -->
-
-<div id="mainSite" class="hidden">
-
-<header>
-    <div class="header-inner">
-
-        <div class="logo">
-            🎓 Zokirov Education
-        </div>
-
-        <div class="user-mini">
-            👤 <span id="headerUsername">...</span>
-        </div>
-
-    </div>
 </header>
 
+<main>
 
-<div class="container">
+<!-- ISM KIRITISH -->
 
-    <div class="nav">
+<section id="loginPage" class="card" style="max-width:550px;margin:60px auto;text-align:center">
 
-        <button
-            id="homeBtn"
-            class="active"
-            onclick="showPage('home')">
-            🏠 Bosh sahifa
-        </button>
+<h2>👋 Zokirov Education'ga xush kelibsiz!</h2>
 
-        <button
-            onclick="showPage('tests')">
-            📝 Testlar
-        </button>
+<p class="muted">
+Boshlash uchun ismingizni kiriting.
+</p>
 
-        <button
-            onclick="showPage('ranking')">
-            🏆 Reyting
-        </button>
+<input
+id="nameInput"
+type="text"
+maxlength="30"
+placeholder="Ismingizni yozing..."
+>
 
-        <button
-            onclick="showPage('profile')">
-            👤 Profil
-        </button>
+<button
+class="btn primary"
+style="width:100%"
+onclick="registerUser()"
+>
+Boshlash
+</button>
 
-    </div>
+<p id="nameError" class="error"></p>
 
+</section>
 
-    <!-- HOME -->
 
-    <section id="homePage">
+<!-- ASOSIY SAYT -->
 
-        <div class="hero">
+<div id="app" class="hidden">
 
-            <h1>
-                Zokirov Education'ga xush kelibsiz!
-            </h1>
 
-            <p>
-                Bilimingizni sinang, ball to'plang
-                va reytingda yuqorilang.
-            </p>
+<!-- BOSH SAHIFA -->
 
-        </div>
+<section id="home" class="page">
 
-        <div class="grid">
+<div class="hero">
 
-            <div class="card">
-                <h2>⭐ Ball</h2>
-                <div class="stat" id="homeScore">0</div>
-            </div>
+<h1>🎓 Zokirov Education</h1>
 
-            <div class="card">
-                <h2>📝 Testlar</h2>
-                <div class="stat" id="homeTests">0</div>
-            </div>
+<h2>
+Salom, <span id="welcomeName"></span>!
+</h2>
 
-            <div class="card">
-                <h2>🎯 To'g'ri javoblar</h2>
-                <div class="stat" id="homeCorrect">0</div>
-            </div>
+<p>
+Bilimingizni oshiring, test ishlang va ball to'plang.
+</p>
 
-            <div class="card">
-                <h2>🏅 Daraja</h2>
-                <div class="stat" id="homeLevel">Boshlovchi</div>
-            </div>
+<button
+class="btn primary"
+onclick="showPage('subjects')"
+>
+📚 Test boshlash
+</button>
 
-        </div>
+</div>
 
-    </section>
 
+<div class="card">
 
-    <!-- TESTS -->
+<h2>📊 Natijangiz</h2>
 
-    <section id="testsPage" class="hidden">
+<div class="stats">
 
-        <div class="card">
+<div class="stat">
+<strong id="homeScore">0</strong>
+Ball
+</div>
 
-            <h1>📝 Testlar</h1>
+<div class="stat">
+<strong id="homeTests">0</strong>
+Test
+</div>
 
-            <br>
-
-            <div class="level-buttons">
-
-                <button
-                    onclick="startTest('easy')">
-                    🟢 Oson — 5 ball
-                </button>
-
-                <button
-                    onclick="startTest('medium')">
-                    🟡 O'rta — 10 ball
-                </button>
-
-                <button
-                    onclick="startTest('hard')">
-                    🔴 Qiyin — 20 ball
-                </button>
-
-            </div>
-
-        </div>
-
-        <br>
-
-        <div id="testArea"></div>
-
-    </section>
-
-
-    <!-- RANKING -->
-
-    <section id="rankingPage" class="hidden">
-
-        <div class="card">
-
-            <h1>🏆 O'quvchilar reytingi</h1>
-
-            <p style="color:#64748b;margin-top:8px;">
-                Barcha foydalanuvchilar ballari bo'yicha
-                yuqoridan pastga ko'rsatiladi.
-            </p>
-
-        </div>
-
-        <br>
-
-        <div class="ranking" id="rankingList">
-
-            <div style="padding:25px;">
-                Reyting yuklanmoqda...
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROFILE -->
-
-    <section id="profilePage" class="hidden">
-
-        <div class="profile">
-
-            <div class="card">
-
-                <h2>👤 Profil</h2>
-
-                <br>
-
-                <p>
-                    <b>Username:</b>
-                    <span id="profileUsername"></span>
-                </p>
-
-                <br>
-
-                <p>
-                    Username'ni keyinchalik
-                    o'zgartirib bo'lmaydi.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h2>📊 Statistikangiz</h2>
-
-                <br>
-
-                <p>
-                    ⭐ Ball:
-                    <b id="profileScore">0</b>
-                </p>
-
-                <br>
-
-                <p>
-                    📝 Testlar:
-                    <b id="profileTests">0</b>
-                </p>
-
-                <br>
-
-                <p>
-                    🎯 To'g'ri:
-                    <b id="profileCorrect">0</b>
-                </p>
-
-                <br>
-
-                <p>
-                    🏅 Daraja:
-                    <b id="profileLevel">Boshlovchi</b>
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+<div class="stat">
+<strong id="homeCorrect">0</strong>
+To'g'ri javob
+</div>
 
 </div>
 
 </div>
 
 
-<!-- FIREBASE -->
+<div class="card">
 
-<script type="module">
+<h2>📚 Fanlar</h2>
 
-import {
-    initializeApp
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+<div id="homeSubjects" class="grid"></div>
 
-import {
-    getAuth,
-    signInAnonymously,
-    onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+</div>
 
-import {
-    getFirestore,
-    doc,
-    getDoc,
-    setDoc,
-    updateDoc,
-    runTransaction,
-    collection,
-    onSnapshot,
-    query,
-    orderBy
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+</section>
 
 
-/* FIREBASE */
+<!-- FANLAR -->
 
-const firebaseConfig = {
+<section id="subjects" class="page hidden">
 
-    apiKey: "AIzaSyAdHgnxrD0cGrX9FVj1NKx3MwMWc46UXpg",
+<div class="card">
 
-    authDomain:
-        "zokirov-education.firebaseapp.com",
+<h2>📚 Fanlar</h2>
 
-    projectId:
-        "zokirov-education",
+<p class="muted">
+O'zingizga kerakli fanni tanlang.
+</p>
 
-    storageBucket:
-        "zokirov-education.firebasestorage.app",
+<div id="subjectsGrid" class="grid"></div>
 
-    messagingSenderId:
-        "315505802643",
+</div>
 
-    appId:
-        "1:315505802643:web:74e44450fbe5e351637c66",
-
-    measurementId:
-        "G-WW2XZTJMME"
-};
+</section>
 
 
-const app = initializeApp(firebaseConfig);
+<!-- TEST -->
 
-const auth = getAuth(app);
+<section id="tests" class="page hidden">
 
-const db = getFirestore(app);
+<div class="card">
+
+<button
+class="btn secondary"
+onclick="showPage('subjects')"
+>
+← Orqaga
+</button>
+
+<h2 id="testTitle"></h2>
+
+<p class="muted">
+Har bir test 20 ta savoldan iborat.
+</p>
+
+<div id="questions"></div>
+
+<button
+id="finishButton"
+class="btn primary hidden"
+style="width:100%"
+onclick="finishTest()"
+>
+✅ Testni yakunlash
+</button>
+
+</div>
+
+</section>
 
 
-let currentUser = null;
+<!-- REYTING -->
 
-let currentProfile = null;
+<section id="rating" class="page hidden">
 
-let currentQuestions = [];
+<div class="card">
 
-let currentAnswers = {};
+<h2>🏆 O'quvchilar reytingi</h2>
 
-let currentLevel = "easy";
+<p class="muted">
+Ushbu brauzerda ro'yxatdan o'tgan o'quvchilar.
+</p>
+
+<div id="ranking"></div>
+
+</div>
+
+</section>
 
 
-/* TEST SAVOLLARI */
+<!-- PROFIL -->
 
-const questions = {
+<section id="profile" class="page hidden">
 
-easy: [
+<div class="card">
+
+<h2>👤 Profil</h2>
+
+<p>
+<b>Ism:</b>
+<span id="profileName"></span>
+</p>
+
+<p>
+<b>Daraja:</b>
+<span id="profileLevel" class="badge"></span>
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong id="profileScore">0</strong>
+Ball
+</div>
+
+<div class="stat">
+<strong id="profileTests">0</strong>
+Test
+</div>
+
+<div class="stat">
+<strong id="profileCorrect">0</strong>
+To'g'ri
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<footer>
+
+© 2026 Zokirov Education
+
+</footer>
+
+
+<script>
+
+/* =========================
+   FANLAR
+========================= */
+
+const subjects = [
 
 {
-q:"5 + 7 = ?",
-a:["10","11","12","13"],
-c:2
+name:"Matematika",
+icon:"📐"
 },
 
 {
-q:"10 - 3 = ?",
-a:["5","6","7","8"],
-c:2
+name:"Ingliz tili",
+icon:"🇬🇧"
 },
 
 {
-q:"2 × 6 = ?",
-a:["10","12","14","16"],
-c:1
+name:"Informatika",
+icon:"💻"
 },
 
 {
-q:"20 ÷ 4 = ?",
-a:["4","5","6","7"],
-c:1
+name:"Tarix",
+icon:"📜"
 },
 
 {
-q:"9 + 8 = ?",
-a:["15","16","17","18"],
-c:2
+name:"Biologiya",
+icon:"🧬"
 },
 
 {
-q:"15 - 7 = ?",
-a:["6","7","8","9"],
-c:2
+name:"Kimyo",
+icon:"⚗️"
 },
 
 {
-q:"3 × 5 = ?",
-a:["12","15","18","20"],
-c:1
+name:"Geografiya",
+icon:"🌍"
 },
 
 {
-q:"18 ÷ 3 = ?",
-a:["5","6","7","8"],
-c:1
+name:"Ona tili",
+icon:"📖"
 },
 
 {
-q:"7 + 6 = ?",
-a:["11","12","13","14"],
-c:2
-},
-
-{
-q:"4 × 4 = ?",
-a:["12","14","16","18"],
-c:2
-},
-
-{
-q:"30 ÷ 5 = ?",
-a:["4","5","6","7"],
-c:2
-},
-
-{
-q:"11 + 9 = ?",
-a:["18","19","20","21"],
-c:2
-},
-
-{
-q:"14 - 6 = ?",
-a:["6","7","8","9"],
-c:2
-},
-
-{
-q:"5 × 5 = ?",
-a:["20","25","30","35"],
-c:1
-},
-
-{
-q:"24 ÷ 6 = ?",
-a:["3","4","5","6"],
-c:1
-},
-
-{
-q:"13 + 7 = ?",
-a:["18","19","20","21"],
-c:2
-},
-
-{
-q:"16 - 9 = ?",
-a:["5","6","7","8"],
-c:2
-},
-
-{
-q:"7 × 3 = ?",
-a:["18","21","24","27"],
-c:1
-},
-
-{
-q:"40 ÷ 8 = ?",
-a:["4","5","6","7"],
-c:1
-},
-
-{
-q:"6 + 15 = ?",
-a:["19","20","21","22"],
-c:2
+name:"Mantiq",
+icon:"🧠"
 }
+
+];
+
+
+/* =========================
+   TEST DARAJALARI
+========================= */
+
+const levels = [
+
+{
+name:"Boshlang'ich",
+points:5,
+icon:"🟢"
+},
+
+{
+name:"O'rta",
+points:10,
+icon:"🔵"
+},
+
+{
+name:"Yuqori",
+points:15,
+icon:"🟠"
+},
+
+{
+name:"Qiyin",
+points:20,
+icon:"🔴"
+}
+
+];
+
+
+/* =========================
+   SAVOLLAR
+========================= */
+
+const questionBank = {
+
+"Matematika":[
+
+["5 + 7 = ?",["10","11","12","13"],2],
+
+["12 × 3 = ?",["24","30","36","42"],2],
+
+["100 ÷ 4 = ?",["20","25","30","40"],1],
+
+["15 − 8 = ?",["5","6","7","8"],2],
+
+["9 × 9 = ?",["72","81","90","99"],1],
+
+["√64 = ?",["6","7","8","9"],2],
+
+["2³ = ?",["6","8","9","12"],1],
+
+["1/2 + 1/2 = ?",["0","1/2","1","2"],2],
+
+["200 ning 25% i?",["25","40","50","75"],2],
+
+["3² + 4² = ?",["12","20","25","49"],2],
+
+["144 ÷ 12 = ?",["10","11","12","14"],2],
+
+["7 × 8 = ?",["48","54","56","64"],2],
+
+["50 − 17 = ?",["23","33","37","43"],1],
+
+["2x = 18. x = ?",["6","8","9","12"],2],
+
+["10² = ?",["20","50","100","1000"],2],
+
+["36 ning kvadrat ildizi?",["4","5","6","7"],2],
+
+["3/4 = ? foiz",["25%","50%","75%","80%"],2],
+
+["80 ning 10% i?",["4","8","10","16"],1],
+
+["17 + 23 = ?",["30","35","40","45"],2],
+
+["90 − 45 = ?",["35","40","45","50"],2]
 
 ],
 
-medium: [
 
-{
-q:"12 × 4 = ?",
-a:["36","48","52","56"],
-c:1
-},
+"Ingliz tili":[
 
-{
-q:"144 ÷ 12 = ?",
-a:["10","11","12","13"],
-c:2
-},
+["I ___ a student.",["am","is","are","be"],0],
 
-{
-q:"25% of 80 = ?",
-a:["15","20","25","30"],
-c:1
-},
+["Past of 'go'?",["goed","went","gone","going"],1],
 
-{
-q:"3² + 4² = ?",
-a:["20","25","30","35"],
-c:1
-},
+["Opposite of 'big'?",["large","small","long","high"],1],
 
-{
-q:"120 - 45 = ?",
-a:["65","70","75","80"],
-c:2
-},
+["Plural of 'child'?",["childs","children","childes","child"],1],
 
-{
-q:"15 × 6 = ?",
-a:["80","90","100","110"],
-c:1
-},
+["She ___ English every day.",["study","studies","studied","studying"],1],
 
-{
-q:"225 ÷ 15 = ?",
-a:["12","15","18","20"],
-c:1
-},
+["They ___ happy.",["is","am","are","be"],2],
 
-{
-q:"7² = ?",
-a:["42","49","56","63"],
-c:1
-},
+["Past of 'eat'?",["eated","ate","eaten","eating"],1],
 
-{
-q:"50% of 150 = ?",
-a:["50","65","75","80"],
-c:2
-},
+["Synonym of 'fast'?",["slow","quick","late","weak"],1],
 
-{
-q:"18 × 5 = ?",
-a:["80","90","100","110"],
-c:1
-},
+["I have ___ apple.",["a","an","the","no"],1],
 
-{
-q:"200 ÷ 25 = ?",
-a:["6","8","10","12"],
-c:1
-},
+["Opposite of 'easy'?",["simple","hard","light","soft"],1],
 
-{
-q:"9² - 5² = ?",
-a:["46","50","56","60"],
-c:2
-},
+["He ___ football yesterday.",["play","plays","played","playing"],2],
 
-{
-q:"3 × (8 + 2) = ?",
-a:["20","25","30","35"],
-c:2
-},
+["Plural of 'book'?",["bookes","books","bookies","book"],1],
 
-{
-q:"1000 - 375 = ?",
-a:["525","575","625","675"],
-c:2
-},
+["We ___ learning.",["is","am","are","be"],2],
 
-{
-q:"2.5 × 4 = ?",
-a:["8","9","10","12"],
-c:2
-},
+["Past of 'see'?",["saw","seed","seen","see"],0],
 
-{
-q:"64 ÷ 8 + 5 = ?",
-a:["11","12","13","14"],
-c:2
-},
+["Opposite of 'hot'?",["warm","cold","fire","dry"],1],
 
-{
-q:"15% of 200 = ?",
-a:["20","25","30","35"],
-c:2
-},
+["She has ___ orange.",["a","an","some","any"],1],
 
-{
-q:"11 × 11 = ?",
-a:["111","121","131","141"],
-c:1
-},
+["Synonym of 'smart'?",["clever","slow","sad","angry"],0],
 
-{
-q:"360 ÷ 9 = ?",
-a:["30","40","50","60"],
-c:1
-},
+["I ___ to school every day.",["go","goes","went","going"],0],
 
-{
-q:"(20 + 10) ÷ 5 = ?",
-a:["4","5","6","7"],
-c:2
-}
+["Past of 'write'?",["writed","wrote","written","writing"],1],
+
+["There ___ two books.",["is","am","are","be"],2]
 
 ],
 
-hard: [
 
-{
-q:"2x + 8 = 20. x = ?",
-a:["4","5","6","7"],
-c:2
-},
+"Informatika":[
 
-{
-q:"3x - 9 = 18. x = ?",
-a:["7","8","9","10"],
-c:2
-},
+["Kompyuterning 'miyasi' nima?",["Monitor","CPU","Sichqoncha","Printer"],1],
 
-{
-q:"x² = 81, x musbat. x = ?",
-a:["7","8","9","10"],
-c:2
-},
+["HTML nimaga ishlatiladi?",["Web sahifa","Video karta","Antivirus","Printer"],0],
 
-{
-q:"25 × 24 = ?",
-a:["500","550","600","650"],
-c:2
-},
+["1 KB nechta bayt?",["100","512","1024","2048"],2],
 
-{
-q:"1440 ÷ 12 = ?",
-a:["100","110","120","130"],
-c:2
-},
+["CSS nimani boshqaradi?",["Web sahifa ko'rinishi","Internet tezligi","Fayl hajmi","CPU"],0],
 
-{
-q:"2⁵ = ?",
-a:["16","24","32","64"],
-c:2
-},
+["JavaScript nima?",["Dasturlash tili","Monitor","Operatsion tizim","Brauzer"],0],
 
-{
-q:"√144 = ?",
-a:["10","11","12","13"],
-c:2
-},
+["RAM nima?",["Tezkor xotira","Qattiq disk","Protsessor","Sichqoncha"],0],
 
-{
-q:"15² = ?",
-a:["200","215","225","250"],
-c:2
-},
+["URL nimani bildiradi?",["Web manzil","Fayl turi","Virus","Klaviatura"],0],
 
-{
-q:"30% of 450 = ?",
-a:["125","135","145","155"],
-c:1
-},
+["Python nima?",["Dasturlash tili","Brauzer","OS","Monitor"],0],
 
-{
-q:"5x = 65. x = ?",
-a:["11","12","13","14"],
-c:2
-},
+["Wi-Fi nima?",["Simsiz tarmoq","Printer","Fayl","CPU"],0],
 
-{
-q:"7² + 24² = ?",
-a:["575","625","675","725"],
-c:1
-},
+["OS nimani anglatadi?",["Operating System","Online Search","Open Software","Output System"],0],
 
-{
-q:"999 + 999 = ?",
-a:["1898","1998","2098","2198"],
-c:1
-},
+["Ctrl+C nima?",["Nusxalash","Joylash","O'chirish","Saqlash"],0],
 
-{
-q:"48 × 25 = ?",
-a:["1000","1100","1200","1300"],
-c:2
-},
+["Ctrl+V nima?",["Nusxalash","Joylash","Qidirish","Yopish"],1],
 
-{
-q:"10000 ÷ 125 = ?",
-a:["60","70","80","90"],
-c:2
-},
+["PDF nima?",["Hujjat formati","Virus","Brauzer","O'yin"],0],
 
-{
-q:"4x + 4 = 28. x = ?",
-a:["5","6","7","8"],
-c:1
-},
+["SSD nima?",["Saqlash qurilmasi","Monitor","CPU","Printer"],0],
 
-{
-q:"12³ = ?",
-a:["144","1224","1728","2028"],
-c:2
-},
+["Browser nima?",["Internet sahifalarini ochuvchi dastur","Kamera","OS","CPU"],0],
 
-{
-q:"√225 = ?",
-a:["12","13","14","15"],
-c:3
-},
+["Algoritm nima?",["Amallar ketma-ketligi","Rasm","Virus","Kompyuter"],0],
 
-{
-q:"45% of 200 = ?",
-a:["80","90","100","110"],
-c:1
-},
+["Bug nima?",["Dastur xatosi","Fayl","Monitor","Tarmoq"],0],
 
-{
-q:"17 × 17 = ?",
-a:["279","289","299","309"],
-c:1
-},
+["Cloud storage nima?",["Bulutli saqlash","Printer","CPU","Kabel"],0],
 
-{
-q:"2x - 5 = 21. x = ?",
-a:["11","12","13","14"],
-c:2
-}
+["Email nima?",["Elektron pochta","Video","O'yin","Disk"],0],
+
+["Firewall nima?",["Tarmoq himoyasi","Monitor","Klaviatura","Fayl"],0]
+
+],
+
+
+"Tarix":[
+
+["O'zbekiston poytaxti?",["Samarqand","Toshkent","Buxoro","Xiva"],1],
+
+["Amir Temur qaysi asrda yashagan?",["XIII-XIV","XIV-XV","XV-XVI","XII-XIII"],1],
+
+["Qadimgi Misr qaysi daryo bo'yida?",["Nil","Amudaryo","Sirdaryo","Gang"],0],
+
+["Buyuk Ipak yo'li nima edi?",["Savdo yo'li","Urush","Qal'a","Daryo"],0],
+
+["Rim imperiyasi markazi?",["Rim","Afina","Parij","London"],0],
+
+["Arxeologiya nimani o'rganadi?",["Qadimiy yodgorliklar","Ob-havo","Sayyoralar","Til"],0],
+
+["Ulug'bek kim bo'lgan?",["Astronom va hukmdor","Shoir","Faqat askar","Rassom"],0],
+
+["Tarix nimani o'rganadi?",["O'tmish","Kelajak","Faqat tabiat","Faqat matematika"],0],
+
+["Qadimgi Rim tili?",["Lotin","Ingliz","Rus","O'zbek"],0],
+
+["Qadimgi Misr yozuvi?",["Iyeroglif","Kirill","Lotin","Braille"],0],
+
+["Samarqand nimasi bilan mashhur?",["Ilm va madaniyat","Faqat dengiz","Neft","O'rmon"],0],
+
+["Xiva qaysi tarixiy hududda?",["Xorazm","Farg'ona","Toshkent","Surxon"],0],
+
+["Qadimgi Yunoniston markazi?",["Afina","London","Berlin","Madrid"],0],
+
+["Buxoro qaysi mintaqada?",["Markaziy Osiyo","Yevropa","Afrika","Amerika"],0],
+
+["Xronologiya nima?",["Voqealarni vaqt bo'yicha tartiblash","Xarita","Til","Hisob"],0],
+
+["Muzey nima saqlaydi?",["Tarixiy va madaniy buyumlar","Faqat ovqat","Faqat pul","Faqat kiyim"],0],
+
+["Tarixiy manba nima?",["O'tmish haqida dalil","Kompyuter","O'yin","Formula"],0],
+
+["Ipak yo'li nima uchun muhim?",["Savdo va madaniy almashinuv","Sport","Kosmos","Elektr"],0],
+
+["Temuriylar davrida rivojlangan shahar?",["Samarqand","London","Tokio","Madrid"],0],
+
+["O'rta asrlar qaysi davr?",["Qadimgi va yangi davr oralig'i","Kelajak","XXI asr","Faqat tosh davri"],0]
+
+],
+
+
+"Biologiya":[
+
+["O'simliklar fotosintezda nima ishlab chiqaradi?",["Kislorod","Temir","Tuz","Oltin"],0],
+
+["Inson yuragi nechta bo'lmadan iborat?",["2","3","4","5"],2],
+
+["DNK nima?",["Genetik material","Vitamin","Mineral","Gormon"],0],
+
+["Odam nafas olishda qaysi gazni oladi?",["Kislorod","Azot","Geliy","Vodorod"],0],
+
+["Qonning qizil hujayralari?",["Eritrotsitlar","Neyronlar","Trombotsitlar","Leykotsitlar"],0],
+
+["Miya qaysi tizimga kiradi?",["Asab tizimi","Hazm","Suyak","Nafas"],0],
+
+["O'simlikning suvni shimuvchi qismi?",["Ildiz","Gul","Meva","Barg"],0],
+
+["Fotosintez asosan qayerda?",["Barglarda","Ildizda","Urug'da","Mevada"],0],
+
+["Inson skeleti nima vazifa bajaradi?",["Tana tayanchi","Ovqat hazmi","Qon ishlab chiqarish","Nafas"],0],
+
+["Hujayraning boshqaruv markazi?",["Yadro","Membrana","Suv","Ribosoma"],0],
+
+["Odamda nechta o'pka bor?",["1","2","3","4"],1],
+
+["Gen nima?",["Irsiy axborot birligi","Vitamin","Organ","Suyak"],0],
+
+["Neyron nima?",["Asab hujayrasi","Qon hujayrasi","Suyak","Mushak"],0],
+
+["Mushaklar nima qiladi?",["Harakatni ta'minlaydi","Qon hosil qiladi","Ko'rishni ta'minlaydi","Ovqatni saqlaydi"],0],
+
+["Ekologiya nimani o'rganadi?",["Organizm va muhit munosabati","Faqat hujayra","Faqat tarix","Faqat matematika"],0],
+
+["Hayvonlarni o'rganuvchi fan?",["Zoologiya","Botanika","Geologiya","Astronomiya"],0],
+
+["O'simliklar uchun quyosh nuri nima uchun?",["Fotosintez uchun","Sovutish uchun","Yomg'ir uchun","Hech narsa"],0],
+
+["Vitaminlar nima uchun kerak?",["Organizm faoliyati uchun","Faqat bo'yash uchun","Faqat uyqu uchun","Faqat suv uchun"],0],
+
+["Suv organizm uchun?",["Muhim modda","Keraksiz","Zahar","Faqat tashqi vosita"],0],
+
+["Qon ivishida muhim hujayralar?",["Trombotsitlar","Eritrotsitlar","Neyronlar","Suyaklar"],0]
+
+],
+
+
+"Kimyo":[
+
+["Suv formulasi?",["CO2","H2O","O2","NaCl"],1],
+
+["Kislorod belgisi?",["O","K","C","H"],0],
+
+["Oltin belgisi?",["Ag","Au","Fe","Al"],1],
+
+["Tuzning mashhur formulasi?",["NaCl","H2O","CO2","O2"],0],
+
+["CO2 nima?",["Karbonat angidrid","Suv","Kislorod","Vodorod"],0],
+
+["H nimani bildiradi?",["Vodorod","Geliy","Temir","Oltin"],0],
+
+["Fe qaysi element?",["Temir","Ftor","Fosfor","Mis"],0],
+
+["Atomning markazi?",["Yadro","Elektron","Qobiq","Molekula"],0],
+
+["pH 7 odatda?",["Neytral","Kuchli kislota","Kuchli ishqor","Zahar"],0],
+
+["O2 nima?",["Kislorod molekulasi","Suv","Tuz","Vodorod"],0],
+
+["Na qaysi element?",["Natriy","Azot","Neon","Nikel"],0],
+
+["Cl qaysi element?",["Xlor","Kalsiy","Uglerod","Kobalt"],0],
+
+["C qaysi element?",["Uglerod","Kalsiy","Xlor","Mis"],0],
+
+["H2 nima?",["Vodorod molekulasi","Suv","Kislorod","Tuz"],0],
+
+["Kimyo nimani o'rganadi?",["Moddalar va ularning o'zgarishi","Tarix","Sayyoralar","Sport"],0],
+
+["Molekula nima?",["Moddaning zarracha birligi","Faqat atom yadrosi","Elektron","Vitamin"],0],
+
+["Kislota pH qiymati odatda?",["7 dan kichik","7","7 dan katta","0 dan katta emas"],0],
+
+["Ishqor pH qiymati odatda?",["7 dan katta","7 dan kichik","0","1"],0],
+
+["Ag qaysi element?",["Kumush","Oltin","Argon","Alyuminiy"],0],
+
+["Al qaysi element?",["Alyuminiy","Oltin","Kumush","Argon"],0]
+
+],
+
+
+"Geografiya":[
+
+["Eng katta materik?",["Osiyo","Afrika","Yevropa","Avstraliya"],0],
+
+["Eng katta okean?",["Tinch","Atlantika","Hind","Shimoliy Muz"],0],
+
+["O'zbekiston qaysi qit'ada?",["Osiyo","Afrika","Yevropa","Amerika"],0],
+
+["Yerning tabiiy yo'ldoshi?",["Oy","Quyosh","Mars","Venera"],0],
+
+["Eng baland tog'?",["Everest","Elbrus","Kilimanjaro","Pomir"],0],
+
+["Nil daryosi qaysi qit'ada?",["Afrika","Osiyo","Yevropa","Amerika"],0],
+
+["Sahara qayerda?",["Afrika","Osiyo","Yevropa","Avstraliya"],0],
+
+["Amazonka daryosi qaysi qit'ada?",["Janubiy Amerika","Afrika","Osiyo","Yevropa"],0],
+
+["Globus nima?",["Yerning modeli","Oy modeli","Xarita dasturi","Kompas"],0],
+
+["Kompas nima ko'rsatadi?",["Yo'nalish","Harorat","Vaqt","Bosim"],0],
+
+["Ekvator nimani ajratadi?",["Shimoliy va Janubiy yarim shar","Sharq va G'arb","Dengiz va quruqlik","Tog' va tekislik"],0],
+
+["Eng kichik materik?",["Avstraliya","Osiyo","Afrika","Antarktida"],0],
+
+["Antarktida qanday qit'a?",["Muzliklar bilan qoplangan","Tropik","O'rmonli","Cho'l emas"],0],
+
+["O'zbekiston dengizga chiqish imkoniga egami?",["Yo'q","Ha","Faqat yozda","Faqat qishda"],0],
+
+["Geografiya nimani o'rganadi?",["Yer va undagi jarayonlar","Faqat kimyo","Faqat tarix","Faqat matematika"],0],
+
+["Iqlim nima?",["Uzoq muddatli ob-havo xususiyatlari","Bir kunlik harorat","Faqat yomg'ir","Faqat shamol"],0],
+
+["Vulqon nima?",["Yer ichki moddalari chiqadigan geologik tuzilma","Daryo","Ko'l","Tog' daryosi"],0],
+
+["Orol dengizi qaysi hududda?",["Markaziy Osiyo","Yevropa","Afrika","Amerika"],0],
+
+["Xarita nima?",["Hududning tasviri","Faqat rasm","Kompas","Globusning o'zi"],0],
+
+["Amudaryo qaysi hudud bilan bog'liq?",["Markaziy Osiyo","Afrika","Yevropa","Amerika"],0]
+
+],
+
+
+"Ona tili":[
+
+["Ot nimani bildiradi?",["Shaxs, narsa yoki tushuncha","Harakat","Belgi","Son"],0],
+
+["Fe'l nimani bildiradi?",["Harakat yoki holat","Narsa","Belgi","Son"],0],
+
+["Sifat nimani bildiradi?",["Belgi-xususiyat","Harakat","Narsa","Son"],0],
+
+["Son nimani bildiradi?",["Miqdor yoki tartib","Harakat","Belgi","Narsa"],0],
+
+["Darak gap oxirida qaysi belgi?",[".","?","!",";"],0],
+
+["Savol gap oxirida?",["?","!",";",":"],0],
+
+["Sinonimlar nima?",["Ma'nodosh so'zlar","Qarama-qarshi so'zlar","Bir xil tovush","Sonlar"],0],
+
+["Antonimlar nima?",["Qarama-qarshi ma'noli so'zlar","Ma'nodosh so'zlar","Fe'llar","Otlar"],0],
+
+["Alifbo nima?",["Harf tartibi","Gap","Matn","Lug'at"],0],
+
+["So'z nima?",["Ma'no bildiruvchi til birligi","Faqat tovush","Faqat harf","Gap"],0],
+
+["Gap nima?",["Tugallangan fikr","Bitta harf","Faqat fe'l","Faqat ot"],0],
+
+["Imlo nimani o'rganadi?",["To'g'ri yozish qoidalarini","Talaffuzni","Matematikani","Tarixni"],0],
+
+["Lug'at nima?",["So'zlar to'plami","Faqat gaplar","Faqat harflar","Rasm"],0],
+
+["Ravish nimani bildiradi?",["Harakatning belgisini","Narsani","Shaxsni","Sonni"],0],
+
+["Ega nimani bildiradi?",["Harakat egasini","Harakatni","Belgini","Miqdorni"],0],
+
+["Kesim nimani bildiradi?",["Ega haqida xabarni","Faqat sonni","Faqat sifatni","Faqat undalmani"],0],
+
+["Undalma nima?",["Murojaat bildiruvchi so'z","Harakat","Son","Sifat"],0],
+
+["Tinish belgilari nima uchun?",["Yozma nutqni tartibga solish","Rasm chizish","Hisoblash","Tarjima"],0],
+
+["Ko'makchi nima?",["Yordamchi so'z turkumi","Ot","Fe'l","Sifat"],0],
+
+["O'zbek tilida nechta unli harf bor?",["5","6","7","8"],1]
+
+],
+
+
+"Mantiq":[
+
+["2, 4, 6, 8, ?",["9","10","11","12"],1],
+
+["1, 3, 5, 7, ?",["8","9","10","11"],1],
+
+["10 dan 2 ni ayirsak?",["6","7","8","9"],2],
+
+["Qaysi biri ortiqcha: olma, nok, sabzi, shaftoli?",["Olma","Nok","Sabzi","Shaftoli"],2],
+
+["3 ta mushukning jami oyoqlari?",["6","9","12","15"],2],
+
+["Bugun dushanba bo'lsa, ertaga?",["Yakshanba","Seshanba","Chorshanba","Juma"],1],
+
+["5 × 0 = ?",["0","5","1","10"],0],
+
+["Qaysi son juft?",["3","5","8","11"],2],
+
+["20 ning yarmi?",["5","10","15","20"],1],
+
+["2, 4, 8, 16, ?",["20","24","32","36"],2],
+
+["1 kg paxta va 1 kg temir qaysi og'ir?",["Paxta","Temir","Ikkalasi teng","Bilmaymiz"],2],
+
+["Barcha A lar B. X A bo'lsa, X nima?",["B","C","D","Hech narsa"],0],
+
+["7 + 3 × 2 = ?",["20","13","17","14"],1],
+
+["100 ning choragi?",["20","25","30","40"],1],
+
+["12, 9, 6, 3, ?",["0","1","2","4"],0],
+
+["Qaysi biri eng katta?",["0.5","0.05","0.15","0.25"],0],
+
+["4 ta qalamdan 1 tasi olindi. Nechta qoldi?",["1","2","3","4"],2],
+
+["Bir soat nechta daqiqa?",["30","45","60","100"],2],
+
+["2 ta o'nlik nechaga teng?",["10","20","30","40"],1],
+
+["5 ta olmadan 2 tasi yeyilsa?",["2","3","4","5"],1]
 
 ]
 
 };
 
 
-/* LOGIN */
+/* =========================
+   O'ZGARUVCHILAR
+========================= */
 
-window.loginUser = async function(){
+let currentUser = null;
+
+let currentSubject = "";
+
+let currentLevel = null;
+
+let testQuestions = [];
+
+let answers = {};
+
+
+/* =========================
+   LOCAL STORAGE
+========================= */
+
+function getUsers() {
+
+    return JSON.parse(
+        localStorage.getItem("zokirov_users") || "[]"
+    );
+
+}
+
+function saveUsers(users) {
+
+    localStorage.setItem(
+        "zokirov_users",
+        JSON.stringify(users)
+    );
+
+}
+
+
+/* =========================
+   RO'YXATDAN O'TISH
+========================= */
+
+function registerUser() {
 
     const input =
-        document.getElementById("usernameInput");
+        document.getElementById("nameInput");
 
-    const message =
-        document.getElementById("loginMessage");
+    const error =
+        document.getElementById("nameError");
 
-    let username =
-        input.value.trim();
+    const name =
+        input.value.trim().replace(/\s+/g," ");
 
-    username =
-        username.replace(/\s+/g," ");
+    if(name.length < 2) {
 
-    if(username.length < 3){
-
-        message.innerHTML =
-            "<div class='message'>Kamida 3 ta belgi yozing.</div>";
+        error.textContent =
+        "Iltimos, ismingizni to'g'ri kiriting.";
 
         return;
     }
 
-    if(username.length > 20){
 
-        message.innerHTML =
-            "<div class='message'>Username 20 belgidan oshmasin.</div>";
+    if(!/^[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳʼ' -]+$/u.test(name)) {
+
+        error.textContent =
+        "Ism faqat harflardan iborat bo'lsin.";
 
         return;
     }
 
-    message.innerHTML =
-        "<div class='message'>Kirilmoqda...</div>";
 
-    try{
+    const users = getUsers();
 
-        const result =
-            await signInAnonymously(auth);
-
-        currentUser =
-            result.user;
-
-        const normalized =
-            username.toLowerCase();
-
-        const usernameRef =
-            doc(db,"usernames",normalized);
-
-        const userRef =
-            doc(db,"users",currentUser.uid);
+    const exists =
+    users.some(
+        user =>
+        user.name.toLowerCase()
+        ===
+        name.toLowerCase()
+    );
 
 
-        await runTransaction(db, async(transaction)=>{
+    if(exists) {
 
-            const claim =
-                await transaction.get(usernameRef);
+        error.textContent =
+        "Bu ism allaqachon ishlatilgan.";
 
-            const existingUser =
-                await transaction.get(userRef);
-
-
-            /* USERNAME ALLAQACHON BOR */
-
-            if(claim.exists()){
-
-                const owner =
-                    claim.data().uid;
-
-                if(owner !== currentUser.uid){
-
-                    throw new Error(
-                        "Bu username allaqachon olingan."
-                    );
-                }
-
-            }else{
-
-                transaction.set(
-                    usernameRef,
-                    {
-                        uid:currentUser.uid,
-                        username:username
-                    }
-                );
-
-            }
+        return;
+    }
 
 
-            /* USER PROFILI */
+    currentUser = {
 
-            if(!existingUser.exists()){
+        name:name,
 
-                transaction.set(
-                    userRef,
-                    {
-                        uid:currentUser.uid,
-                        username:username,
-                        usernameNormalized:normalized,
-                        score:0,
-                        tests:0,
-                        correctAnswers:0,
-                        createdAt:Date.now()
-                    }
-                );
+        score:0,
 
-            }
+        tests:0,
 
-        });
+        correct:0
+
+    };
 
 
-        await loadProfile();
+    users.push(currentUser);
 
-        document
-            .getElementById("loginScreen")
-            .classList.add("hidden");
+    saveUsers(users);
 
-        document
-            .getElementById("mainSite")
-            .classList.remove("hidden");
 
-        subscribeRanking();
+    localStorage.setItem(
+        "zokirov_current",
+        JSON.stringify(currentUser)
+    );
 
-    }catch(error){
 
-        console.error(error);
+    openApp();
 
-        message.innerHTML =
-            "<div class='message'>❌ " +
-            error.message +
-            "</div>";
+}
+
+
+/* =========================
+   SAYTNI OCHISH
+========================= */
+
+function openApp() {
+
+    document
+    .getElementById("loginPage")
+    .classList.add("hidden");
+
+
+    document
+    .getElementById("app")
+    .classList.remove("hidden");
+
+
+    updateUI();
+
+    showPage("home");
+
+}
+
+
+/* =========================
+   SAHIFANI O'ZGARTIRISH
+========================= */
+
+function showPage(page) {
+
+    document
+    .querySelectorAll(".page")
+    .forEach(
+        p => p.classList.add("hidden")
+    );
+
+
+    const selected =
+    document.getElementById(page);
+
+
+    if(selected) {
+
+        selected.classList.remove("hidden");
 
     }
 
-};
+
+    if(page === "rating") {
+
+        renderRanking();
+
+    }
+
+}
 
 
-/* PROFILE */
+/* =========================
+   UI
+========================= */
 
-async function loadProfile(){
+function updateUI() {
 
     if(!currentUser) return;
 
-    const ref =
-        doc(db,"users",currentUser.uid);
 
-    const snap =
-        await getDoc(ref);
+    document
+    .getElementById("welcomeName")
+    .textContent = currentUser.name;
 
-    if(!snap.exists()) return;
 
-    currentProfile =
-        snap.data();
+    document
+    .getElementById("profileName")
+    .textContent = currentUser.name;
 
-    updateProfileUI();
+
+    document
+    .getElementById("homeScore")
+    .textContent = currentUser.score;
+
+
+    document
+    .getElementById("homeTests")
+    .textContent = currentUser.tests;
+
+
+    document
+    .getElementById("homeCorrect")
+    .textContent = currentUser.correct;
+
+
+    document
+    .getElementById("profileScore")
+    .textContent = currentUser.score;
+
+
+    document
+    .getElementById("profileTests")
+    .textContent = currentUser.tests;
+
+
+    document
+    .getElementById("profileCorrect")
+    .textContent = currentUser.correct;
+
+
+    document
+    .getElementById("profileLevel")
+    .textContent =
+    getLevel(currentUser.score);
+
+
+    renderSubjects();
+
+    renderRanking();
 
 }
 
 
-function getLevel(score){
+/* =========================
+   DARAJA
+========================= */
+
+function getLevel(score) {
 
     if(score >= 1000)
-        return "👑 Afsona";
+        return "Afsona";
 
-    if(score >= 500)
-        return "💎 Ekspert";
+    if(score >= 600)
+        return "Ekspert";
 
-    if(score >= 250)
-        return "🔥 Usta";
+    if(score >= 300)
+        return "Usta";
 
-    if(score >= 100)
-        return "🥇 Ilg'or";
+    if(score >= 150)
+        return "Ilg'or";
 
     if(score >= 50)
-        return "🥈 Faol";
+        return "Faol";
 
-    return "🌱 Boshlovchi";
-}
-
-
-function updateProfileUI(){
-
-    const p =
-        currentProfile;
-
-    document
-        .getElementById("headerUsername")
-        .textContent =
-        p.username;
-
-    document
-        .getElementById("profileUsername")
-        .textContent =
-        p.username;
-
-    document
-        .getElementById("homeScore")
-        .textContent =
-        p.score || 0;
-
-    document
-        .getElementById("homeTests")
-        .textContent =
-        p.tests || 0;
-
-    document
-        .getElementById("homeCorrect")
-        .textContent =
-        p.correctAnswers || 0;
-
-    document
-        .getElementById("homeLevel")
-        .textContent =
-        getLevel(p.score || 0);
-
-    document
-        .getElementById("profileScore")
-        .textContent =
-        p.score || 0;
-
-    document
-        .getElementById("profileTests")
-        .textContent =
-        p.tests || 0;
-
-    document
-        .getElementById("profileCorrect")
-        .textContent =
-        p.correctAnswers || 0;
-
-    document
-        .getElementById("profileLevel")
-        .textContent =
-        getLevel(p.score || 0);
+    return "Boshlovchi";
 
 }
 
 
-/* NAVIGATION */
+/* =========================
+   FANLAR
+========================= */
 
-window.showPage = function(page){
+function renderSubjects() {
 
-    const pages = [
-        "homePage",
-        "testsPage",
-        "rankingPage",
-        "profilePage"
-    ];
+    const html =
+    subjects.map(
+        subject => `
 
-    pages.forEach(p=>{
-        document
-            .getElementById(p)
-            .classList.add("hidden");
-    });
+        <div
+        class="subject"
+        onclick="selectSubject('${subject.name}')"
+        >
+
+        <h3>
+        ${subject.icon}
+        ${subject.name}
+        </h3>
+
+        <p class="muted">
+        20 ta savollik testlar
+        </p>
+
+        </div>
+
+        `
+    ).join("");
 
 
     document
-        .getElementById(page+"Page")
-        .classList.remove("hidden");
-
-};
+    .getElementById("subjectsGrid")
+    .innerHTML = html;
 
 
-/* START TEST */
+    document
+    .getElementById("homeSubjects")
+    .innerHTML = html;
 
-window.startTest = function(level){
+}
+
+
+/* =========================
+   FAN TANLASH
+========================= */
+
+function selectSubject(subject) {
+
+    currentSubject = subject;
+
+
+    const box =
+    document.getElementById("subjectsGrid");
+
+
+    box.innerHTML = `
+
+    <div style="grid-column:1/-1">
+
+    <h3>
+    ${subject} — darajani tanlang
+    </h3>
+
+    <div class="grid">
+
+    ${levels.map(
+        (level,index) => `
+
+        <div
+        class="subject"
+        onclick="startTest(${index})"
+        >
+
+        <h3>
+        ${level.icon}
+        ${level.name}
+        </h3>
+
+        <p>
+        Har bir to'g'ri javob:
+        <b>${level.points}</b> ball
+        </p>
+
+        </div>
+
+        `
+    ).join("")}
+
+    </div>
+
+    </div>
+
+    `;
+
+}
+
+
+/* =========================
+   TEST BOSHLASH
+========================= */
+
+function startTest(levelIndex) {
 
     currentLevel =
-        level;
-
-    currentQuestions =
-        questions[level];
-
-    currentAnswers = {};
+    levels[levelIndex];
 
 
-    let html = `
-        <div class="test-box">
-
-        <h2>
-        📝 ${level.toUpperCase()} TEST
-        </h2>
-
-        <p style="margin:10px 0 25px;color:#64748b;">
-        20 ta savol
-        </p>
-    `;
+    const bank =
+    questionBank[currentSubject];
 
 
-    currentQuestions.forEach((item,index)=>{
-
-        html += `
-        <div class="question">
-
-            <h3>
-            ${index+1}. ${item.q}
-            </h3>
-
-            <div class="answers">
-        `;
+    testQuestions =
+    shuffle([...bank]).slice(0,20);
 
 
-        item.a.forEach((answer,answerIndex)=>{
-
-            html += `
-            <button
-                class="answer"
-                onclick="selectAnswer(
-                    ${index},
-                    ${answerIndex},
-                    this
-                )">
-
-                ${answer}
-
-            </button>
-            `;
-
-        });
-
-
-        html += `
-            </div>
-        </div>
-        `;
-
-    });
-
-
-    html += `
-        <button
-            class="primary"
-            onclick="finishTest()">
-
-            ✅ Testni yakunlash
-
-        </button>
-
-        </div>
-    `;
+    answers = {};
 
 
     document
-        .getElementById("testArea")
-        .innerHTML =
-        html;
-
-};
-
-
-window.selectAnswer =
-function(questionIndex,answerIndex,button){
-
-    currentAnswers[questionIndex] =
-        answerIndex;
+    .getElementById("testTitle")
+    .textContent =
+    currentSubject
+    + " — "
+    + currentLevel.name;
 
 
-    const parent =
-        button.parentElement;
-
-    parent
-        .querySelectorAll(".answer")
-        .forEach(btn=>{
-            btn.classList.remove("selected");
-        });
+    const container =
+    document.getElementById("questions");
 
 
-    button.classList.add("selected");
+    container.innerHTML =
+    testQuestions.map(
+        (question,index) => `
 
-};
+        <div class="test-question">
+
+        <b>
+        ${index+1}.
+        ${question[0]}
+        </b>
+
+        <div class="answers">
+
+        ${question[1].map(
+            (answer,aIndex) => `
+
+            <button
+            class="answer"
+            id="answer-${index}-${aIndex}"
+            onclick="chooseAnswer(${index},${aIndex})"
+            >
+
+            ${String.fromCharCode(65+aIndex)})
+            ${answer}
+
+            </button>
+
+            `
+        ).join("")}
+
+        </div>
+
+        </div>
+
+        `
+    ).join("");
 
 
-/* FINISH TEST */
+    document
+    .getElementById("finishButton")
+    .classList.remove("hidden");
 
-window.finishTest =
-async function(){
+
+    showPage("tests");
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   JAVOB TANLASH
+========================= */
+
+function chooseAnswer(questionIndex,answerIndex) {
+
+    answers[questionIndex] =
+    answerIndex;
+
+
+    for(
+        let i=0;
+        i<4;
+        i++
+    ) {
+
+        const button =
+        document.getElementById(
+            `answer-${questionIndex}-${i}`
+        );
+
+
+        if(button) {
+
+            button.classList.toggle(
+                "selected",
+                i === answerIndex
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   TESTNI YAKUNLASH
+========================= */
+
+function finishTest() {
 
     if(
-        Object.keys(currentAnswers).length
-        < currentQuestions.length
-    ){
+        Object.keys(answers).length
+        !==
+        testQuestions.length
+    ) {
 
         alert(
-            "Avval barcha savollarga javob bering!"
+            "Barcha 20 ta savolga javob bering!"
         );
 
         return;
+
     }
 
 
     let correct = 0;
 
 
-    currentQuestions.forEach(
-        (question,index)=>{
+    testQuestions.forEach(
+        (question,index) => {
 
             if(
-                currentAnswers[index]
-                === question.c
-            ){
+                answers[index]
+                ===
+                question[2]
+            ) {
 
                 correct++;
 
@@ -1443,290 +1548,251 @@ async function(){
     );
 
 
-    let pointsPerQuestion = 5;
-
-    if(currentLevel === "medium")
-        pointsPerQuestion = 10;
-
-    if(currentLevel === "hard")
-        pointsPerQuestion = 20;
-
-
     const earned =
-        correct * pointsPerQuestion;
+    correct *
+    currentLevel.points;
 
 
-    try{
+    currentUser.score += earned;
 
-        const userRef =
-            doc(db,"users",currentUser.uid);
+    currentUser.tests++;
 
-
-        await updateDoc(
-            userRef,
-            {
-                score:
-                    (currentProfile.score || 0)
-                    + earned,
-
-                tests:
-                    (currentProfile.tests || 0)
-                    + 1,
-
-                correctAnswers:
-                    (currentProfile.correctAnswers || 0)
-                    + correct
-            }
-        );
+    currentUser.correct += correct;
 
 
-        await loadProfile();
+    const users = getUsers();
 
 
-        document
-            .getElementById("testArea")
-            .innerHTML = `
+    const index =
+    users.findIndex(
+        user =>
+        user.name
+        ===
+        currentUser.name
+    );
 
-            <div class="card">
 
-                <h2>🎉 Test tugadi!</h2>
+    if(index !== -1) {
 
-                <br>
-
-                <p>
-                To'g'ri javoblar:
-                <b>${correct}/20</b>
-                </p>
-
-                <br>
-
-                <p>
-                Olingan ball:
-                <b>${earned}</b>
-                ⭐
-                </p>
-
-                <br>
-
-                <p>
-                Sizning umumiy balingiz:
-                <b>${currentProfile.score}</b>
-                ⭐
-                </p>
-
-                <br>
-
-                <p>
-                Darajangiz:
-                <b>${getLevel(currentProfile.score)}</b>
-                </p>
-
-                <br>
-
-                <button
-                    class="primary"
-                    onclick="showPage('ranking')">
-
-                    🏆 Reytingni ko'rish
-
-                </button>
-
-            </div>
-            `;
-
-    }catch(error){
-
-        alert(
-            "Ballni saqlashda xatolik: "
-            + error.message
-        );
+        users[index] =
+        currentUser;
 
     }
 
-};
+
+    saveUsers(users);
 
 
-/* REAL-TIME RANKING */
-
-function subscribeRanking(){
-
-    const usersRef =
-        collection(db,"users");
-
-    const q =
-        query(
-            usersRef,
-            orderBy("score","desc")
-        );
-
-
-    onSnapshot(
-        q,
-        snapshot=>{
-
-            const users = [];
-
-            snapshot.forEach(
-                docSnap=>{
-
-                    users.push(
-                        docSnap.data()
-                    );
-
-                }
-            );
-
-
-            renderRanking(users);
-
-        },
-        error=>{
-
-            console.error(
-                "Ranking error:",
-                error
-            );
-
-            document
-                .getElementById("rankingList")
-                .innerHTML = `
-                    <div style="padding:25px;">
-                        Reytingni yuklashda xatolik.
-                    </div>
-                `;
-
-        }
+    localStorage.setItem(
+        "zokirov_current",
+        JSON.stringify(currentUser)
     );
+
+
+    alert(
+        "Test tugadi!\n\n"
+        +
+        "To'g'ri javoblar: "
+        +
+        correct
+        +
+        "/20\n"
+        +
+        "Yig'ilgan ball: +"
+        +
+        earned
+    );
+
+
+    updateUI();
+
+    showPage("profile");
 
 }
 
 
-/* RENDER RANKING */
+/* =========================
+   REYTING
+========================= */
 
-function renderRanking(users){
+function renderRanking() {
 
-    const box =
-        document.getElementById(
-            "rankingList"
-        );
+    const users =
+    getUsers().sort(
+        (a,b) =>
+        b.score - a.score
+    );
 
 
-    if(users.length === 0){
+    const container =
+    document.getElementById("ranking");
 
-        box.innerHTML = `
-            <div style="padding:25px;">
-                Hozircha foydalanuvchilar yo'q.
-            </div>
-        `;
+
+    if(users.length === 0) {
+
+        container.innerHTML =
+        "<p>Hali o'quvchilar yo'q.</p>";
 
         return;
+
     }
 
 
-    let html = "";
+    container.innerHTML =
+    users.map(
+        (user,index) => `
+
+        <div class="rank">
+
+        <div class="rank-number">
+        ${index+1}
+        </div>
+
+        <div>
+
+        <b>
+        ${escapeHTML(user.name)}
+        </b>
+
+        <br>
+
+        <span class="muted">
+        ${getLevel(user.score)}
+        ·
+        ${user.tests} ta test
+        </span>
+
+        </div>
+
+        <div class="rank-score">
+
+        ${user.score} ball
+
+        </div>
+
+        </div>
+
+        `
+    ).join("");
+
+}
 
 
-    users.forEach(
-        (user,index)=>{
+/* =========================
+   XAVFSIZ MATN
+========================= */
 
-            let medal =
-                index === 0 ? "🥇" :
-                index === 1 ? "🥈" :
-                index === 2 ? "🥉" :
-                (index + 1);
+function escapeHTML(text) {
 
+    return text.replace(
+        /[&<>"']/g,
+        function(char) {
 
-            html += `
+            return {
 
-            <div class="rank-row">
+                "&":"&amp;",
+                "<":"&lt;",
+                ">":"&gt;",
+                '"':"&quot;",
+                "'":"&#039;"
 
-                <div class="rank-number">
-                    ${medal}
-                </div>
-
-                <div>
-                    <div class="username">
-                        👤 ${escapeHtml(user.username)}
-                    </div>
-                </div>
-
-                <div class="score">
-                    ⭐ ${user.score || 0}
-                </div>
-
-                <div class="level">
-                    ${getLevel(user.score || 0)}
-                </div>
-
-            </div>
-
-            `;
+            }[char];
 
         }
     );
 
+}
 
-    box.innerHTML =
-        html;
+
+/* =========================
+   RANDOM
+========================= */
+
+function shuffle(array) {
+
+    for(
+        let i=array.length-1;
+        i>0;
+        i--
+    ) {
+
+        const j =
+        Math.floor(
+            Math.random()*(i+1)
+        );
+
+
+        [
+            array[i],
+            array[j]
+        ] =
+        [
+            array[j],
+            array[i]
+        ];
+
+    }
+
+    return array;
 
 }
 
 
-/* SECURITY FOR DISPLAY */
+/* =========================
+   AVVALGI FOYDALANUVCHI
+========================= */
 
-function escapeHtml(text){
+window.addEventListener(
+"load",
+function() {
 
-    const div =
-        document.createElement("div");
-
-    div.textContent =
-        text;
-
-    return div.innerHTML;
-
-}
+    const saved =
+    localStorage.getItem(
+        "zokirov_current"
+    );
 
 
-/* AUTH */
+    if(saved) {
 
-onAuthStateChanged(
-    auth,
-    async(user)=>{
+        try {
 
-        if(user){
+            const user =
+            JSON.parse(saved);
 
-            currentUser =
-                user;
 
-            const ref =
-                doc(db,"users",user.uid);
+            const users =
+            getUsers();
 
-            const snap =
-                await getDoc(ref);
 
-            if(snap.exists()){
+            const found =
+            users.find(
+                u =>
+                u.name
+                ===
+                user.name
+            );
 
-                currentProfile =
-                    snap.data();
 
-                document
-                    .getElementById("loginScreen")
-                    .classList.add("hidden");
+            if(found) {
 
-                document
-                    .getElementById("mainSite")
-                    .classList.remove("hidden");
+                currentUser =
+                found;
 
-                updateProfileUI();
-
-                subscribeRanking();
+                openApp();
 
             }
 
         }
 
+        catch(error) {
+
+            console.log(error);
+
+        }
+
     }
-);
+
+});
 
 </script>
 
